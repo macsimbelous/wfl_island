@@ -18,7 +18,7 @@ country_event = {
 			desc = "POLITICS_ASUKA_DESC"
 			picture = "Portrait_Asuka_lider.dds"
 			expire = "1965.1.1"
-			ideology = waifuism_ideology
+			ideology = fascism_ideology
 			traits = {
 				wfl_tsundere
 				wfl_dictator
@@ -36,7 +36,7 @@ country_event = {
 			desc = "POLITICS_ANASTASIA_DESC"
 			picture = "ROA_Anastasia_lider_liberalism.tga"
 			expire = "1965.1.1"
-			ideology = waifuism_ideology
+			ideology = liberalism
 			traits = {
 				wfl_idol
 				wfl_patron_of_intelligence
@@ -53,7 +53,7 @@ country_event = {
 			desc = "POLITICS_ERZA_DESC"
 			picture = "ROA_Erza_lider_stalinism.tga"
 			expire = "1965.1.1"
-			ideology = waifuism_ideology
+			ideology = stalinism
 			traits = {
 				wfl_dictator
 				wfl_patron_of_industry
@@ -71,7 +71,7 @@ country_event = {
 			desc = "POLITICS_KOS-MOS_DESC"
 			picture = "ROA_KOS-MOS_lider_despotism.tga"
 			expire = "1965.1.1"
-			ideology = waifuism_ideology
+			ideology = despotism
 			traits = {
 				wfl_android
 				wfl_defender

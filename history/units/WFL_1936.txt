@@ -200,6 +200,33 @@ division_template = {
 	}
 }
 instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "WFL"
+		}
+		requested_factories = 2
+		progress = 0.67
+		efficiency = 80
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "WFL"
+		}
+		requested_factories = 1
+		progress = 0.19
+		efficiency = 80
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "WFL"
+		}
+		requested_factories = 1
+		progress = 0.24
+		efficiency = 80
+	}
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_0
 		amount = 21000
@@ -341,35 +368,4 @@ units = {
 		division_template = "Waifu light tank"
 		start_experience_factor = 0.3
 	}
-}
-###starting production###
-instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_1
-			creator = "ACW"
-		}
-		requested_factories = 2
-		progress = 0.67
-		efficiency = 80
-	}
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment_1
-			creator = "ACW"
-		}
-		requested_factories = 1
-		progress = 0.19
-		efficiency = 80
-	}
-	add_equipment_production = {
-		equipment = {
-			type = artillery_equipment_1
-			creator = "ACW"
-		}
-		requested_factories = 1
-		progress = 0.24
-		efficiency = 80
-	}
-
 }
