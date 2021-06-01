@@ -1,0 +1,264 @@
+wfl_propaganda_power = {
+	base = 0.001
+	modifier = {
+		415 = {
+			radar_station > 1
+		}
+		add = 0.001
+	}
+	modifier = {
+		415 = {
+			radar_station > 2
+		}
+		add = 0.001
+	}
+	modifier = {
+		415 = {
+			radar_station > 3
+		}
+		add = 0.001
+	}
+	modifier = {
+		415 = {
+			radar_station > 4
+		}
+		add = 0.001
+	}
+	modifier = {
+		415 = {
+			radar_station > 5
+		}
+		add = 0.001
+	}
+	modifier = {
+		FROM = {
+			has_tech = radio_detection
+		}
+		add = 0.001
+	}
+	modifier = {
+		FROM = {
+			has_tech = decimetric_radar
+		}
+		add = 0.001
+	}
+	modifier = {
+		FROM = {
+			has_tech = improved_decimetric_radar
+		}
+		add = 0.001
+	}
+	modifier = {
+		FROM = {
+			has_tech = centimetric_radar
+		}
+		add = 0.001
+	}
+	modifier = {
+		FROM = {
+			has_tech = improved_centimetric_radar
+		}
+		add = 0.001
+	}
+	modifier = {
+		FROM = {
+			has_tech = advanced_centimetric_radar
+		}
+		add = 0.001
+	}
+}
+
+wfl_propaganda_in_sov_power = {
+	base = 0.005
+	modifier = {
+		415 = {
+			radar_station > 1
+		}
+		add = 0.005
+	}
+	modifier = {
+		415 = {
+			radar_station > 2
+		}
+		add = 0.005
+	}
+	modifier = {
+		415 = {
+			radar_station > 3
+		}
+		add = 0.005
+	}
+	modifier = {
+		415 = {
+			radar_station > 4
+		}
+		add = 0.005
+	}
+	modifier = {
+		415 = {
+			radar_station > 5
+		}
+		add = 0.005
+	}
+	modifier = {
+		FROM = {
+			has_tech = radio_detection
+		}
+		add = 0.005
+	}
+	modifier = {
+		FROM = {
+			has_tech = decimetric_radar
+		}
+		add = 0.005
+	}
+	modifier = {
+		FROM = {
+			has_tech = improved_decimetric_radar
+		}
+		add = 0.005
+	}
+	modifier = {
+		FROM = {
+			has_tech = centimetric_radar
+		}
+		add = 0.005
+	}
+	modifier = {
+		FROM = {
+			has_tech = improved_centimetric_radar
+		}
+		add = 0.005
+	}
+	modifier = {
+		FROM = {
+			has_tech = advanced_centimetric_radar
+		}
+		add = 0.005
+	}
+}
+
+wfl_volunteers_base = {
+	base = 500
+	modifier = {
+		has_idea = wfl_minpropagand_idea
+		add = 250
+	}
+	modifier = {
+		FROM = {
+			has_tech = radio
+		}
+		add = 250
+	}
+}
+
+wfl_cloning_power = {
+	base = 10000
+	modifier = {
+		has_country_flag = wfl_cloning_level_2
+		add = 10000
+	}
+	modifier = {
+		has_country_flag = wfl_cloning_level_3
+		add = 10000
+	}
+	modifier = {
+		has_country_flag = wfl_cloning_level_4
+		add = 10000
+	}
+	modifier = {
+		has_country_flag = wfl_cloning_level_5
+		add = 10000
+	}
+}
+
+wfl_political_power_up_level = {
+	base = 0.1
+	modifier = {
+		num_of_factories > 10
+		add = 0.1
+	}
+	modifier = {
+		num_of_factories > 20
+		add = 0.1
+	}
+	modifier = {
+		set_temp_variable = {
+			temp1 = 0.1
+		}
+		multiply_temp_variable = {
+			temp1 = var:num_of_factories
+		}
+		add = var:temp1
+	}
+}
+wfl_get_investments_count_old = {
+	base = 0
+	modifier = {
+		FROM.OWNER = {
+			check_variable = {
+				var = wfl_investments_count
+				value = 0
+				compare = greater_than
+			}
+			set_temp_variable = {
+				tempv = wfl_investments_count
+			}
+		}
+		add = tempv
+	}
+}
+wfl_get_investments_count = {
+	base = 0
+	modifier = {
+		FROM = {
+			check_variable = {
+				var = wfl_investments_count
+				value = 0
+				compare = greater_than
+			}
+			set_temp_variable = {
+				tempv = wfl_investments_count
+			}
+		}
+		add = tempv
+	}
+}
+wfl_puppet_cost = {
+	base = 0
+	modifier = {
+		FROM = {
+			set_temp_variable = {
+				puppet_cost = 10
+			}
+			multiply_temp_variable = {
+				puppet_cost = owned_states
+			}
+		}
+		add = puppet_cost
+	}
+}
+wfl_uncore_states = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			temp = owned_states
+		}
+		subtract_from_temp_variable = {
+			temp = core_states
+		}
+		add = temp
+	}
+}
+wfl_occupied_states = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			temp = controlled_states
+		}
+		subtract_from_temp_variable = {
+			temp = owned_states
+		}
+		add = temp
+	}
+}

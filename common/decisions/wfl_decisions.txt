@@ -1,0 +1,3949 @@
+wfl_government_category = {
+	wfl_create_minprom_decision = {
+		name = wfl_create_minprom_decision.t
+		ai_will_do = {
+			base = 200
+			modifier = {
+				has_country_leader = {
+					name = "Erza"
+				}
+				add = 100
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		#days_re_enable = 30
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = wfl_minprom_idea
+			set_country_flag = wfl_minprom_flag
+		}
+	}
+	wfl_create_minoboron_decision = {
+		name = wfl_create_minoboron_decision.t
+		ai_will_do = {
+			factor = 300
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = wfl_minoboron_idea
+		}
+	}
+	wfl_create_stavka_decision = {
+		name = wfl_create_stavka_decision.t
+		ai_will_do = {
+			factor = 300
+		}
+		fire_only_once = yes
+		cost = 100
+		#days_re_enable = 30
+		visible = {
+			has_idea = wfl_minoboron_idea
+		}
+		available = {
+			has_idea = wfl_minoboron_idea
+			#num_divisions > 100
+			custom_trigger_tooltip = {
+				tooltip = wfl_create_stavka_decision_tt
+				check_variable = {
+					num_battalions > 1999
+				}
+			}
+			has_deployed_air_force_size = {
+				size > 999
+			}
+		}
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_ideas = wfl_stavka_idea
+		}
+	}
+	wfl_create_minscience_decision = {
+		name = wfl_create_minscience_decision.t
+		ai_will_do = {
+			base = 200
+			modifier = {
+				has_country_leader = {
+					name = "KOS-MOS"
+				}
+				add = 100
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = wfl_minscience_idea
+		}
+	}
+	wfl_create_KGB_decision = {
+		name = wfl_create_KGB_decision.t
+		ai_will_do = {
+			base = 200
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Anastasia"
+					}
+					has_country_leader = {
+						name = "Anastasia I"
+					}
+				}
+				add = 100
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			#create_intelligence_agency = yes
+			set_country_flag = wfl_KGB_flag
+			add_ideas = wfl_KGB_idea
+			create_intelligence_agency = {
+				icon = GFX_intelligence_agency_logo_generic_8
+				name = "KGB"
+			}
+		}
+	}
+	wfl_create_mintrans_decision = {
+		name = wfl_create_mintrans_decision.t
+		ai_will_do = {
+			base = 200
+			modifier = {
+				has_country_leader = {
+					name = "Asuka"
+				}
+				add = 100
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = wfl_mintrans_idea
+		}
+	}
+	wfl_create_minpropagand_decision = {
+		name = wfl_create_minpropagand_decision.t
+		ai_will_do = {
+			base = 200
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Anastasia"
+					}
+					has_country_leader = {
+						name = "Anastasia I"
+					}
+				}
+				add = 100
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = wfl_minpropagand_idea
+		}
+	}
+	wfl_create_colonial_office_decision = {
+		name = wfl_create_colonial_office_decision.t
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		cost = 100
+		available = {
+			num_subjects > 3
+		}
+		days_remove = 30
+		modifier = {
+			#stability_factor = -0.025
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			add_ideas = wfl_colonial_office
+		}
+	}
+	wfl_create_great_waifuland_decision = {
+		name = wfl_create_great_waifuland_decision.t
+		available = {
+			#num_of_controlled_states > 30
+			custom_trigger_tooltip = {
+				tooltip = wfl_create_great_waifuland_tt
+				check_variable = {
+					owned_states > 49
+				}
+			}
+			#has_war = no
+			#has_stability > 0.9
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			set_cosmetic_tag = WFL_EOW
+			IF = {
+				LIMIT = {
+					has_country_leader = {
+						name = "Anastasia"
+					}
+				}
+				create_country_leader = {
+					name = "Anastasia I"
+					desc = "POLITICS_ANASTASIA_I_DESC"
+					picture = "Portrait_Anastasia_I_Empress.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_idol
+						wfl_patron_of_intelligence
+						wfl_empress
+					}
+				}
+				news_event = {
+					id = wfl_news.2
+					hours = 5
+				}
+			}
+			ELSE = {
+				add_country_leader_trait = wfl_empress
+			}
+			add_political_power = 1000
+		}
+	}
+}
+
+wfl_cultural_assimilation_category = {
+	wfl_cultural_assimilation_decision = {
+		name = wfl_cultural_assimilation_decision.t
+		#icon = generic_nationalism
+		#icon = generic_form_nation
+		icon = decision_generic_brainwash
+		available = {
+			FROM = {
+				compliance > 0.5
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		#target_array = owned_controlled_states
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 30
+		modifier = {
+			stability_factor = -0.01
+		}
+		cancel_trigger = {
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		remove_effect = {
+			FROM = {
+				#add_core_of = ROOT
+				wfl_coring_state = yes
+			}
+		}
+		cancel_effect = {
+			add_political_power = 25
+		}
+	}
+}
+
+wfl_purge_category = {
+	wfl_purge_decision = {
+		name = wfl_purge_decision.t
+		icon = decision_generic_arrest
+		#icon = generic_form_nation
+		allowed = {
+			always = yes
+		}
+		available = {
+			#has_war = no
+			FROM = {
+				set_temp_variable = {
+					coring_ppcost = 100
+				}
+				subtract_from_temp_variable = {
+					coring_ppcost = compliance
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		#target_array = owned_controlled_states
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		cost = coring_ppcost
+		fire_only_once = yes
+		days_remove = 30
+		modifier = {
+			stability_factor = -0.05
+		}
+		complete_effect = {
+		}
+		cancel_trigger = {
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		remove_effect = {
+			FROM = {
+				#add_core_of = ROOT
+				wfl_coring_state = yes
+			}
+			#add_manpower = -100000
+		}
+		cancel_effect = {
+			add_political_power = 50
+		}
+	}
+}
+
+wfl_urbanisation_category = {
+	wfl_urbanisation_state_1 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 30
+		cost = 50
+		modifier = {
+			civilian_factory_use = 1
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_state_category = wasteland
+					has_state_category = tiny_island
+					has_state_category = enclave
+				}
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction1
+			FROM = {
+				infrastructure > 1
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 1
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_2 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 30
+		cost = 75
+		modifier = {
+			civilian_factory_use = 2
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = pastoral
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction1
+			FROM = {
+				infrastructure > 2
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_3 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 45
+		cost = 100
+		modifier = {
+			civilian_factory_use = 3
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = rural
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction1
+			FROM = {
+				infrastructure > 3
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 3
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_4 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 45
+		cost = 125
+		modifier = {
+			civilian_factory_use = 4
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = town
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction1
+			FROM = {
+				infrastructure > 4
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_5 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 60
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = large_town
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction2
+			FROM = {
+				infrastructure > 5
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 5
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_6 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 60
+		cost = 175
+		modifier = {
+			civilian_factory_use = 6
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = city
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction3
+			FROM = {
+				infrastructure > 6
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 6
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_7 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 75
+		cost = 200
+		modifier = {
+			civilian_factory_use = 7
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = large_city
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction4
+			FROM = {
+				infrastructure > 7
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 7
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+	wfl_urbanisation_state_8 = {
+		name = wfl_urbanisation_state.t
+		icon = generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = core_states
+		fire_only_once = yes
+		days_remove = 75
+		cost = 225
+		modifier = {
+			civilian_factory_use = 8
+		}
+		target_trigger = {
+			FROM = {
+				has_state_category = metropolis
+				impassable = no
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+		}
+		available = {
+			has_tech = construction5
+			FROM = {
+				infrastructure > 8
+				#state_population > urbanize_statepop
+			}
+			num_of_civilian_factories_available_for_projects > 8
+			#has_war = no
+		}
+		remove_trigger = {
+			ROOT = {
+				NOT = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+				add = 4
+			}
+		}
+	}
+}
+
+wfl_tentakles_decisions = {
+	wfl_tentakles_attack_decision = {
+		name = wfl_tentakles_attack_decision.t
+		icon = generic_prepare_civil_war
+		visible = {
+			FROM = {
+				is_capital = yes
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_wargoal_against = FROM.OWNER
+				add = 100
+			}
+			modifier = {
+				has_war_with = FROM.OWNER
+				add = 100
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		#target_array = all_states
+		target_trigger = {
+			FROM = {
+				is_capital = yes
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		cost = 100
+		fire_only_once = no
+		days_remove = 180
+		complete_effect = {
+			FROM = {
+				OWNER = {
+					add_timed_idea = {
+						idea = wfl_tantacle_attack
+						days = 90
+					}
+				}
+			}
+		}
+	}
+}
+
+wfl_discrediting_decisions = {
+	wfl_discrediting_decision = {
+		name = wfl_discrediting_decision.t
+		#icon = onmap_recruit_operative
+		visible = {
+			has_wargoal_against = FROM
+		}
+		available = {
+			#has_annex_war_goal = FROM
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_puppet_of = ROOT
+					}
+				}
+				has_capitulated = no
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			every_country = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = large_decrease
+				}
+				diplomatic_relation = {
+					country = FROM
+					relation = guarantee
+					active = no
+				}
+			}
+			FROM = {
+				IF = {
+					LIMIT = {
+						has_government = fascism
+					}
+					add_timed_idea = {
+						idea = fascism_discrediting
+						days = 180
+					}
+				}
+				IF = {
+					LIMIT = {
+						has_government = communism
+					}
+					add_timed_idea = {
+						idea = communism_discrediting
+						days = 180
+					}
+				}
+				IF = {
+					LIMIT = {
+						has_government = democratic
+					}
+					add_timed_idea = {
+						idea = democratic_discrediting
+						days = 180
+					}
+				}
+				IF = {
+					LIMIT = {
+						has_government = neutrality
+					}
+					add_timed_idea = {
+						idea = neutrality_discrediting
+						days = 180
+					}
+				}
+			}
+		}
+	}
+}
+
+wfl_concert_decisions = {
+	wfl_concert_love_laika_decision = {
+		name = wfl_concert_love_laika_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			#has_completed_focus = wfl_idols_agency
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_love_laika_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_love_laika_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_love_laika_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_love_laika_tour_decision = {
+		name = wfl_love_laika_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_love_laika_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_love_laika_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_love_laika_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+	wfl_concert_muse_decision = {
+		name = wfl_concert_muse_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_muse_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_muse_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_muse_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_muse_tour_decision = {
+		name = wfl_muse_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_muse_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_muse_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_muse_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+	wfl_concert_aqours_decision = {
+		name = wfl_concert_aqours_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_aqours_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_aqours_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_aqours_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_aqours_tour_decision = {
+		name = wfl_aqours_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_aqours_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_aqours_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_aqours_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+	wfl_concert_765_production_decision = {
+		name = wfl_concert_765_production_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_765_production_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_765_production_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_765_production_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_765_production_tour_decision = {
+		name = wfl_765_production_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_765_production_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_765_production_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_765_production_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+	wfl_concert_ranko_kanzaki_decision = {
+		name = wfl_concert_ranko_kanzaki_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_ranko_kanzaki_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_ranko_kanzaki_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_ranko_kanzaki_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_ranko_kanzaki_tour_decision = {
+		name = wfl_ranko_kanzaki_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_ranko_kanzaki_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_ranko_kanzaki_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_ranko_kanzaki_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+	wfl_concert_kaede_takagaki_decision = {
+		name = wfl_concert_kaede_takagaki_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_kaede_takagaki_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_kaede_takagaki_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_kaede_takagaki_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_kaede_takagaki_tour_decision = {
+		name = wfl_kaede_takagaki_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_kaede_takagaki_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_kaede_takagaki_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_kaede_takagaki_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+	wfl_concert_sheryl_nome_decision = {
+		name = wfl_concert_sheryl_nome_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_concert_run_flag
+						has_country_flag = wfl_sheryl_nome_is_busy_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_stability < 0.6
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 90
+		days_remove = 30
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_concert_run_flag
+			set_country_flag = wfl_sheryl_nome_is_busy_flag
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_concert_run_flag
+			clr_country_flag = wfl_sheryl_nome_is_busy_flag
+			add_stability = 0.05
+		}
+	}
+	wfl_sheryl_nome_tour_decision = {
+		name = wfl_sheryl_nome_tour_decision.t
+		icon = decision_category_generic_propaganda
+		available = {
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_flag = wfl_tour_run_flag
+						has_country_flag = wfl_sheryl_nome_is_busy_flag
+					}
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_world_tour_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 180
+		days_remove = 90
+		#on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = wfl_tour_run_flag
+			set_country_flag = wfl_sheryl_nome_is_busy_flag
+		}
+		modifier = {
+			#stability_factor = 0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = wfl_tour_run_flag
+			clr_country_flag = wfl_sheryl_nome_is_busy_flag
+			random_other_country = {
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 30
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_idols_tour_opinion
+				}
+			}
+		}
+	}
+}
+
+wfl_immigration_category = {
+	wfl_immigration_decision = {
+		name = wfl_immigration_decision.t
+		icon = decision_category_generic_propaganda
+		allowed = {
+			always = yes
+		}
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_political_power > 1500
+				add = 1
+			}
+		}
+		fire_only_once = no
+		cost = 200
+		days_re_enable = 60
+		days_remove = 30
+		modifier = {
+			monthly_population = 0.2
+			stability_factor = -0.05
+		}
+		remove_effect = {
+			every_owned_state = {
+				add_manpower = 10000
+			}
+			#add_stability = -0.01
+		}
+	}
+}
+
+wfl_resources_category = {
+	wfl_find_resources_decision = {
+		name = wfl_find_resources_decision.t
+		icon = generic_construction
+		cost = 50
+		days_remove = 30
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		target_array = owned_controlled_states
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		visible = {
+			#has_tech = excavation1
+			#excavation5
+		}
+		target_trigger = {
+			FROM = {
+				#NOT = {
+				#	has_state_flag = wfl_find_resources
+				#}
+				NOT = {
+					steel > 0
+					oil > 0
+					aluminium > 0
+					tungsten > 0
+					chromium > 0
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@steel
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				check_variable = {
+					var = resource@aluminium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				check_variable = {
+					var = resource@tungsten
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				check_variable = {
+					var = resource@chromium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		remove_effect = {
+			FROM = {
+				#set_state_flag = wfl_find_resources
+				random_list = {
+					20 = {
+						add_resource = {
+							type = steel
+							amount = 8
+						}
+					}
+					20 = {
+						add_resource = {
+							type = oil
+							amount = 8
+						}
+					}
+					20 = {
+						add_resource = {
+							type = aluminium
+							amount = 8
+						}
+					}
+					20 = {
+						add_resource = {
+							type = tungsten
+							amount = 8
+						}
+					}
+					20 = {
+						add_resource = {
+							type = chromium
+							amount = 8
+						}
+					}
+				}
+			}
+		}
+	}
+	wfl_up_resources_decision_1 = {
+		name = wfl_up_resources_decision.t
+		icon = generic_construction
+		cost = 100
+		days_remove = 30
+		#days_re_enable = 90
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		target_array = owned_controlled_states
+		fire_only_once = yes
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@steel
+					value = 0
+					compare = less_than
+				}
+				add = 4
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = oil
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@aluminium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = tungsten
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@tungsten
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@chromium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = {
+					has_state_flag = wfl_up_resources_1
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				#has_state_flag = wfl_find_resources
+				#NOT = {
+				#	has_state_flag = wfl_up_resources_1
+				#}
+				OR = {
+					steel > 0
+					oil > 0
+					aluminium > 0
+					tungsten > 0
+					chromium > 0
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				wfl_up_resources_state = yes
+				set_state_flag = wfl_up_resources_1
+			}
+		}
+	}
+	wfl_up_resources_decision_2 = {
+		name = wfl_up_resources_decision.t
+		icon = generic_construction
+		cost = 150
+		days_remove = 45
+		#days_re_enable = 90
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		target_array = owned_controlled_states
+		fire_only_once = yes
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 5
+		}
+		visible = {
+			FROM = {
+				has_state_flag = wfl_up_resources_1
+				NOT = {
+					has_state_flag = wfl_up_resources_2
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@steel
+					value = 0
+					compare = less_than
+				}
+				add = 4
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = oil
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@aluminium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = tungsten
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@tungsten
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@chromium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		target_trigger = {
+			always = yes
+		}
+		remove_effect = {
+			FROM = {
+				wfl_up_resources_state = yes
+				set_state_flag = wfl_up_resources_2
+			}
+		}
+	}
+	wfl_up_resources_decision_3 = {
+		name = wfl_up_resources_decision.t
+		icon = generic_construction
+		cost = 200
+		days_remove = 60
+		#days_re_enable = 90
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		target_array = owned_controlled_states
+		fire_only_once = yes
+		available = {
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 7
+		}
+		visible = {
+			FROM = {
+				has_state_flag = wfl_up_resources_2
+				NOT = {
+					has_state_flag = wfl_up_resources_3
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 7
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@steel
+					value = 0
+					compare = less_than
+				}
+				add = 4
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = oil
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@aluminium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = tungsten
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@tungsten
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@chromium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		target_trigger = {
+			always = yes
+		}
+		remove_effect = {
+			FROM = {
+				wfl_up_resources_state = yes
+				set_state_flag = wfl_up_resources_3
+			}
+		}
+	}
+	wfl_up_resources_decision_4 = {
+		name = wfl_up_resources_decision.t
+		icon = generic_construction
+		cost = 250
+		days_remove = 75
+		#days_re_enable = 90
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		target_array = owned_controlled_states
+		fire_only_once = yes
+		available = {
+			has_tech = excavation5
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			FROM = {
+				has_state_flag = wfl_up_resources_3
+				NOT = {
+					has_state_flag = wfl_up_resources_4
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@steel
+					value = 0
+					compare = less_than
+				}
+				add = 4
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = oil
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@aluminium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = tungsten
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@tungsten
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+			modifier = {
+				FROM = {
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+					}
+				}
+				check_variable = {
+					var = resource@chromium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		target_trigger = {
+			always = yes
+		}
+		remove_effect = {
+			FROM = {
+				wfl_up_resources_state = yes
+				set_state_flag = wfl_up_resources_4
+			}
+		}
+	}
+}
+
+political_actions = {
+	anti_waifuism_raids = {
+		name = anti_waifuism_raids.t
+		icon = generic_civil_support
+		visible = {
+			NOT = {
+				has_government = waifuism
+			}
+		}
+		available = {
+			waifuism > 0.1
+		}
+		modifier = {
+			waifuism_drift = -0.05
+			stability_weekly = 0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			add_stability = -0.1
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ban_waifuism_party = {
+		name = ban_waifuism_party.t
+		icon = generic_civil_support
+		available = {
+			waifuism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = waifuism
+			}
+			fascism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = waifuism
+			}
+		}
+		modifier = {
+			waifuism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@fascism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			#remove_fascist_spirits_effect = yes
+			custom_effect_tooltip = ban_waifuism_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	institute_press_censorship_waifuism_state = {
+		name = institute_press_censorship_waifuism_state.t
+		icon = generic_political_discourse
+		visible = {
+			has_government = waifuism
+		}
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = -0.01
+			democratic_drift = -0.01
+			neutrality_drift = -0.01
+			waifuism_drift = 0.03
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+foreign_influence = {
+	ultrawaifuism_coup = {
+		name = ultrawaifuism_coup.t
+		icon = generic_prepare_civil_war
+		cost = 50
+		available = {
+			FROM = {
+				is_puppet_of = ROOT
+			}
+			FROM = {
+				waifuism > 0.6
+			}
+			FROM = {
+				NOT = {
+					has_government = waifuism
+				}
+			}
+		}
+		visible = {
+			has_government = waifuism
+			FROM = {
+				is_puppet_of = ROOT
+				NOT = {
+					has_government = waifuism
+				}
+			}
+		}
+		target_array = subjects
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ROOT
+			}
+		}
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = mtg_generic.1
+				}
+			}
+			FROM = {
+				add_timed_idea = {
+					idea = political_turmoil
+					days = 365
+				}
+			}
+			FROM = {
+				set_politics = {
+					ruling_party = waifuism
+					elections_allowed = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	waifu_education = {
+		name = waifu_education.t
+		icon = eng_propaganda_campaigns
+		days_remove = 120
+		available = {
+			FROM = {
+				is_puppet_of = ROOT
+			}
+			FROM = {
+				waifuism < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+		visible = {
+			has_government = waifuism
+			FROM = {
+				is_puppet_of = ROOT
+				waifuism < 0.99
+			}
+		}
+		target_array = subjects
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ROOT
+			}
+		}
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = waifu_education
+					days = 120
+				}
+			}
+		}
+		modifier = {
+			political_power_cost = 0.5
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+waifuism_on_the_rise = {
+	prepare_for_waifuism_civil_war = {
+		name = prepare_for_waifuism_civil_war.t
+		icon = generic_prepare_civil_war
+		available = {
+			waifuism > 0.1
+			num_of_controlled_states > 1
+		}
+		visible = {
+			NOT = {
+				has_country_flag = preparation_for_waifuism_civil_war
+			}
+			#OR = {
+			#has_idea_with_trait = fascist_demagogue
+			#has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			set_country_flag = preparation_for_waifuism_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	expand_civil_waifuism_support = {
+		name = expand_civil_waifuism_support.t
+		icon = generic_civil_support
+		visible = {
+			OR = {
+				has_country_flag = preparation_for_waifuism_civil_war
+				has_country_flag = open_up_political_discourse_waifuism
+			}
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_remove = 30
+		modifier = {
+			waifuism_drift = 0.02
+			stability_weekly = -0.03
+			political_power_gain = -0.2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	army_support_for_waifuism_civil_war = {
+		name = army_support_for_waifuism_civil_war.t
+		icon = generic_army_support
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 30
+		modifier = {
+			command_power_gain = -0.2
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			set_country_flag = military_support_for_waifuism_civil_war
+			custom_effect_tooltip = army_support_TT
+		}
+		complete_effect = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_general_loyalty_for_waifuism_civil_war = {
+		name = ensure_general_loyalty_for_waifuism_civil_war.t
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_waifuism_civil_war
+		}
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			any_army_leader = {
+				is_field_marshal = no
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			country_event = {
+				id = decisions.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_marshal_loyalty_for_waifuism_civil_war = {
+		name = ensure_marshal_loyalty_for_waifuism_civil_war.t
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_waifuism_civil_war
+		}
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			any_army_leader = {
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+			any_army_leader = {
+				is_field_marshal = yes
+				NOT = {
+					has_unit_leader_flag = hidden_sympathies_marshal
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			country_event = {
+				id = decisions.2
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	siphon_equipment_stockpiles_for_waifuism_civil_war = {
+		name = siphon_equipment_stockpiles_for_waifuism_civil_war.t
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = military_support_for_waifuism_civil_war
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			has_country_flag = military_support_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		fire_only_once = no
+		cost = 50
+		complete_effect = {
+			add_command_power = -2
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = siphoned_equipment_stockpiles_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	formulate_surprise_attack_plan_for_waifuism_civil_war = {
+		name = formulate_surprise_attack_plan_for_waifuism_civil_war.t
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_waifuism_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_command_power = -2
+			custom_effect_tooltip = formulate_surprise_attack_plan_for_civil_war_tt
+			set_country_flag = formulated_surprise_attack_plan_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ignite_the_waifuism_civil_war_single_state = {
+		icon = generic_ignite_civil_war
+		name = ignite_the_waifuism_civil_war_single_state.t
+		available = {
+			has_stability < 0.5
+			waifuism > 0.5
+		}
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+			check_variable = {
+				num_owned_states = 1
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			set_politics = {
+				ruling_party = waifuism
+				elections_allowed = no
+			}
+			clr_country_flag = preparation_for_waifuism_civil_war
+			clr_country_flag = military_support_for_waifuism_civil_war
+			clr_country_flag = civil_support_for_waifuism_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ignite_the_waifuism_civil_war = {
+		name = ignite_the_waifuism_civil_war.t
+		icon = generic_ignite_civil_war
+		available = {
+			has_stability < 0.5
+		}
+		visible = {
+			has_country_flag = preparation_for_waifuism_civil_war
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+			check_variable = {
+				num_owned_states > 1
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@democratic
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@communism
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@neutrality
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@fascism
+				}
+			}
+			subtract_from_variable = {
+				var = civil_war_size_var
+				value = army_support_var
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = civil_war_size_var
+						value = 0.3
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = 0.3
+				}
+			}
+			start_civil_war = {
+				ruling_party = waifuism
+				ideology = ROOT
+				size = civil_war_size_var
+				keep_unit_leaders_trigger = {
+					has_trait = hidden_sympathies
+				}
+			}
+			clr_country_flag = preparation_for_waifuism_civil_war
+			clr_country_flag = military_support_for_waifuism_civil_war
+			clr_country_flag = civil_support_for_waifuism_civil_war
+			set_country_flag = ideology_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	rebuild_the_nation_waifuism = {
+		name = rebuild_the_nation_waifuism.t
+		icon = generic_construction
+		visible = {
+			has_government = waifuism
+			has_country_flag = won_ideology_civil_war
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 365
+		modifier = {
+			political_power_gain = -1
+			industry_repair_factor = 0.2
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	open_up_political_discourse_waifuism = {
+		name = open_up_political_discourse_waifuism.t
+		icon = generic_political_discourse
+		available = {
+			fascism < 0.9
+			democratic < 0.9
+			communism < 0.9
+			neutrality < 0.9
+			waifuism < 0.9
+		}
+		visible = {
+			has_idea_with_trait = waifuism_demagogue
+			NOT = {
+				has_country_flag = open_up_political_discourse_waifuism
+			}
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		#remove_trigger = {
+		#	has_government = waifuism
+		#}
+		fire_only_once = yes
+		cost = 75
+		complete_effect = {
+			set_country_flag = open_up_political_discourse_waifuism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	discredit_government_waifuism = {
+		name = discredit_government_waifuism.t
+		icon = generic_political_discourse
+		available = {
+			fascism < 0.8
+			democratic < 0.8
+			communism < 0.8
+			neutrality < 0.8
+			waifuism < 0.8
+			#OR = {
+			#	has_idea_with_trait = fascist_demagogue
+			#	has_idea_with_trait = syncretic_revanchist
+			#}
+		}
+		visible = {
+			has_country_flag = open_up_political_discourse_waifuism
+			NOT = {
+				has_government = waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		#remove_trigger = {
+		#	has_government = waifuism
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_stability = -0.01
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hold_the_waifuism_national_referendum = {
+		name = hold_the_waifuism_national_referendum.t
+		icon = generic_political_discourse
+		available = {
+			waifuism > 0.5
+		}
+		visible = {
+			NOT = {
+				has_government = waifuism
+			}
+			OR = {
+				waifuism > 0.6
+				has_country_flag = open_up_political_discourse_waifuism
+			}
+			#check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		#remove_trigger = {
+		#	has_government = waifuism
+		#}
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			country_event = {
+				id = wfl_event.11
+			}
+		}
+		ai_will_do = {
+			base = 210
+			modifier = {
+				waifuism > 0.6
+				add = 10
+			}
+		}
+	}
+}
+
+wfl_campaigning_for_volunteers_category = {
+	wfl_campaigning_for_volunteers_decision = {
+		name = wfl_campaigning_for_volunteers_decision.t
+		icon = decision_category_generic_propaganda
+		fire_only_once = no
+		cost = 50
+		days_re_enable = 30
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_manpower < 100000
+				add = 1
+			}
+			modifier = {
+				has_manpower < 10000
+				add = 5
+			}
+		}
+		complete_effect = {
+			set_temp_variable = {
+				temp_mp = mtth:wfl_volunteers_base
+			}
+			multiply_temp_variable = {
+				temp_mp = num_owned_states
+			}
+			add_manpower = temp_mp
+		}
+	}
+}
+
+wfl_cloning_category = {
+	wfl_cloning_decision = {
+		name = wfl_cloning_decision.t
+		icon = decision_generic_research
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_manpower < 100000
+				add = 1
+			}
+			modifier = {
+				has_manpower < 10000
+				add = 200
+			}
+		}
+		fire_only_once = no
+		cost = 300
+		days_re_enable = 60
+		complete_effect = {
+			add_manpower = mtth:wfl_cloning_power
+		}
+	}
+	wfl_cloning_level_2_decision = {
+		name = wfl_cloning_level_up_decision.t
+		icon = decision_generic_research
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_manpower < 100000
+				add = 1
+			}
+			modifier = {
+				has_manpower < 10000
+				add = 200
+			}
+		}
+		visible = {
+			has_country_flag = wfl_cloning_level_1
+			NOT = {
+				has_country_flag = wfl_cloning_level_2
+			}
+		}
+		fire_only_once = yes
+		cost = 300
+		days_remove = 90
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			set_country_flag = wfl_cloning_level_2
+		}
+	}
+	wfl_cloning_level_3_decision = {
+		name = wfl_cloning_level_up_decision.t
+		icon = decision_generic_research
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_manpower < 100000
+				add = 1
+			}
+			modifier = {
+				has_manpower < 10000
+				add = 200
+			}
+		}
+		visible = {
+			has_country_flag = wfl_cloning_level_2
+			NOT = {
+				has_country_flag = wfl_cloning_level_3
+			}
+		}
+		fire_only_once = yes
+		cost = 300
+		days_remove = 120
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			set_country_flag = wfl_cloning_level_3
+		}
+	}
+	wfl_cloning_level_4_decision = {
+		name = wfl_cloning_level_up_decision.t
+		icon = decision_generic_research
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_manpower < 100000
+				add = 1
+			}
+			modifier = {
+				has_manpower < 10000
+				add = 200
+			}
+		}
+		visible = {
+			has_country_flag = wfl_cloning_level_3
+			NOT = {
+				has_country_flag = wfl_cloning_level_4
+			}
+		}
+		fire_only_once = yes
+		cost = 300
+		days_remove = 150
+		available = {
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		modifier = {
+			civilian_factory_use = 9
+		}
+		remove_effect = {
+			set_country_flag = wfl_cloning_level_4
+		}
+	}
+	wfl_cloning_level_5_decision = {
+		name = wfl_cloning_level_up_decision.t
+		icon = decision_generic_research
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_manpower < 100000
+				add = 1
+			}
+			modifier = {
+				has_manpower < 10000
+				add = 200
+			}
+		}
+		visible = {
+			has_country_flag = wfl_cloning_level_4
+			NOT = {
+				has_country_flag = wfl_cloning_level_5
+			}
+		}
+		fire_only_once = yes
+		cost = 300
+		days_remove = 180
+		available = {
+			num_of_civilian_factories_available_for_projects > 12
+		}
+		modifier = {
+			civilian_factory_use = 12
+		}
+		remove_effect = {
+			set_country_flag = wfl_cloning_level_5
+		}
+	}
+}
+
+wfl_economy_category = {
+	wfl_economy_infrastructure_decision = {
+		name = wfl_economy_infrastructure_decision.t
+		icon = generic_construction
+		fire_only_once = no
+		days_remove = 60
+		cost = 100
+		days_re_enable = 30
+		modifier = {
+			production_speed_infrastructure_factor = 0.3
+			production_speed_naval_base_factor = 0.3
+			production_speed_air_base_factor = 0.3
+		}
+		remove_trigger = {
+			#has_war = yes
+			surrender_progress > 0
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	wfl_economy_industrial_complex_decision = {
+		name = wfl_economy_industrial_complex_decision.t
+		icon = generic_construction
+		fire_only_once = no
+		days_remove = 60
+		cost = 100
+		days_re_enable = 30
+		modifier = {
+			production_speed_industrial_complex_factor = 0.3
+		}
+		remove_trigger = {
+			#has_war = yes
+			surrender_progress > 0
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	wfl_economy_synthetic_refinery_decision = {
+		name = wfl_economy_synthetic_refinery_decision.t
+		icon = generic_construction
+		fire_only_once = no
+		days_remove = 60
+		cost = 100
+		days_re_enable = 30
+		modifier = {
+			production_speed_synthetic_refinery_factor = 0.3
+		}
+		remove_trigger = {
+			#has_war = yes
+			surrender_progress > 0
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	wfl_economy_arms_factory_decision = {
+		name = wfl_economy_arms_factory_decision.t
+		icon = generic_construction
+		fire_only_once = no
+		days_remove = 60
+		cost = 100
+		days_re_enable = 30
+		modifier = {
+			production_speed_arms_factory_factor = 0.3
+		}
+		remove_trigger = {
+			#has_war = yes
+			surrender_progress > 0
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	wfl_economy_dockyard_decision = {
+		name = wfl_economy_dockyard_decision.t
+		icon = generic_construction
+		fire_only_once = no
+		days_remove = 60
+		cost = 100
+		days_re_enable = 30
+		modifier = {
+			production_speed_dockyard_factor = 0.3
+		}
+		remove_trigger = {
+			#has_war = yes
+			surrender_progress > 0
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	wfl_economy_nuclear_reactor_decision = {
+		name = wfl_economy_nuclear_reactor_decision.t
+		icon = generic_construction
+		fire_only_once = no
+		days_remove = 120
+		cost = 200
+		days_re_enable = 30
+		available = {
+			has_tech = nuclear_reactor
+		}
+		modifier = {
+			production_speed_nuclear_reactor_factor = 0.6
+		}
+		remove_trigger = {
+			#has_war = yes
+			surrender_progress > 0
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+}
+
+wfl_faction_category = {
+	wfl_faction_decision_1 = {
+		name = wfl_faction_decision_1.t
+		allowed = {
+			NOT = {
+				original_tag = WFL
+			}
+		}
+		available = {
+		}
+		visible = {
+			FROM = {
+				has_government = waifuism
+				NOT = {
+					is_in_faction_with = WFL
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		fire_only_once = no
+		cost = 50
+		days_re_enable = 30
+		complete_effect = {
+			WFL = {
+				#add_to_faction = FROM
+				country_event = wfl_event.12
+			}
+		}
+	}
+	wfl_faction_decision_2 = {
+		name = wfl_faction_decision_2.t
+		allowed = {
+			original_tag = WFL
+		}
+		available = {
+		}
+		visible = {
+			FROM = {
+				has_government = waifuism
+				NOT = {
+					is_in_faction_with = WFL
+				}
+				exists = yes
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		#target_array = countries
+		target_trigger = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 30
+		complete_effect = {
+			FROM = {
+				#add_to_faction = FROM
+				country_event = wfl_event.13
+			}
+		}
+	}
+	wfl_faction_decision_3 = {
+		name = wfl_faction_decision_3.t
+		allowed = {
+			original_tag = WFL
+		}
+		available = {
+			has_idea = wfl_minpropagand_idea
+		}
+		visible = {
+			FROM = {
+				is_in_faction_with = WFL
+				NOT = {
+					has_government = waifuism
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		target_array = faction_members
+		target_trigger = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 45
+		complete_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = waifuism
+					popularity = 0.05
+				}
+				add_timed_idea = {
+					idea = waifu_influence
+					days = 90
+				}
+			}
+		}
+	}
+	wfl_faction_decision_4 = {
+		name = wfl_faction_decision_4.t
+		allowed = {
+			original_tag = WFL
+		}
+		visible = {
+			FROM = {
+				is_in_faction_with = WFL
+				NOT = {
+					has_idea = waifuland_assistance
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		target_array = faction_members
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_idea = waifuland_assistance
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		#days_re_enable = 45
+		complete_effect = {
+			FROM = {
+				add_ideas = waifuland_assistance
+			}
+		}
+	}
+}
+
+wfl_kosmos_category = {
+	wfl_create_rocket_factory_decision = {
+		icon = generic_construction
+		available = {
+			num_of_civilian_factories_available_for_projects > 14
+		}
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 15
+		}
+		cost = 100
+		days_remove = 120
+		ai_will_do = {
+			factor = 5
+		}
+		remove_effect = {
+			add_ideas = wfl_rocket_factory
+			set_country_flag = wfl_kosmos_create_rocket_factory_flag
+			country_event = {
+				hours = 1
+				id = wfl_kosmos.1
+			}
+		}
+	}
+	wfl_rocket_assembly_decision = {
+		icon = GFX_decision_wfl_kosmos_rocket_icon
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		visible = {
+			has_country_flag = wfl_kosmos_create_rocket_factory_flag
+		}
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 25
+		days_remove = 30
+		#days_re_enable = 8
+		ai_will_do = {
+			base = 1
+			modifier = {
+				NOT = {
+					has_idea = wfl_sputnik_v_kosmose
+				}
+				add = 5
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = wfl_rocket_assembly_decision_tt
+			add_to_variable = {
+				wfl_rocket_count = 1
+			}
+		}
+	}
+	wfl_rocket_launch_decision = {
+		icon = GFX_decision_wfl_rocket_launch_decision
+		available = {
+			rocket_site > 0
+			custom_trigger_tooltip = {
+				tooltip = wfl_rocket_count_tt
+				check_variable = {
+					wfl_rocket_count > 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_sputnik_count_tt
+				check_variable = {
+					wfl_sputnik_count < 40
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wfl_kosmos_create_rocket_factory_flag
+		}
+		fire_only_once = no
+		cost = 50
+		#days_remove = 5
+		days_re_enable = 10
+		ai_will_do = {
+			base = 1
+			modifier = {
+				NOT = {
+					has_idea = wfl_sputnik_v_kosmose
+				}
+				add = 5
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = {
+				wfl_rocket_count = 1
+			}
+			random_list = {
+				80 = {
+					modifier = {
+						factor = 1.15
+						has_stability > 0.6
+					}
+					modifier = {
+						factor = 1.15
+						has_available_idea_with_traits = {
+							idea = wfl_girl_scientist
+							limit = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = wfl_1_sputnik
+							}
+						}
+						set_country_flag = wfl_1_sputnik
+						wfl_sputnik_add = yes
+						add_dynamic_modifier = {
+							modifier = wfl_sputnik
+						}
+						country_event = {
+							hours = 1
+							id = wfl_kosmos.2
+						}
+					}
+					else = {
+						wfl_sputnik_add = yes
+						country_event = {
+							hours = 1
+							id = wfl_kosmos.3
+						}
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.15
+						has_stability < 0.6
+					}
+					country_event = {
+						hours = 1
+						id = wfl_kosmos.4
+					}
+				}
+			}
+		}
+	}
+	wfl_mbr_assembly_decision = {
+		icon = GFX_decision_wfl_kosmos_rocket_icon
+		available = {
+			has_tech = nukes
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		visible = {
+			has_country_flag = wfl_kosmos_create_rocket_factory_flag
+		}
+		cost = 25
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					wfl_mbr_in_the_warehouse < 5
+				}
+				add = 100
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		days_remove = 30
+		remove_effect = {
+			custom_effect_tooltip = wfl_mbr_assembly_decision_tt
+			add_to_variable = {
+				wfl_mbr_in_the_warehouse = 1
+			}
+		}
+	}
+	wfl_mbr_strike_decision = {
+		icon = generic_ignite_civil_war
+		available = {
+			num_of_nukes > 0
+			custom_trigger_tooltip = {
+				tooltip = wfl_mbr_not
+				check_variable = {
+					wfl_mbr_in_the_warehouse > 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_sputnik_not
+				check_variable = {
+					wfl_sputnik_count > 0
+				}
+			}
+		}
+		state_target = yes
+		#target_array = controlled_states
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				CONTROLLER = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		#days_re_enable = 50
+		on_map_mode = map_only
+		complete_effect = {
+			subtract_from_variable = {
+				wfl_mbr_in_the_warehouse = 1
+			}
+			launch_nuke = {
+				#province = 42
+				state = FROM
+				#controller = ROOT
+				use_nuke = yes
+			}
+			custom_effect_tooltip = wfl_nuclear_strike_tt
+			add_named_threat = {
+				threat = 5
+				name = wfl_mbr_strike_decision_tt
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+wfl_perimetr_category = {
+	wfl_add_nuke_decision = {
+		#icon = generic_ignite_civil_war
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			add_nuclear_bombs = 999
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+	wfl_nuke_strike_decision = {
+		icon = generic_ignite_civil_war
+		available = {
+			num_of_nukes > 0
+		}
+		state_target = yes
+		#target_array = controlled_states
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		#days_re_enable = 50
+		on_map_mode = map_and_decisions_view
+		complete_effect = {
+			launch_nuke = {
+				#province = 42
+				state = FROM
+				#controller = ROOT
+				use_nuke = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+wfl_puppets_category = {
+	wfl_create_puppet_decision = {
+		name = wfl_create_puppet_decision.t
+		available = {
+			has_war = no
+			ic_ratio = {
+				tag = FROM
+				ratio > 1.5
+			}
+			strength_ratio = {
+				tag = FROM
+				ratio > 1.5
+			}
+			FROM = {
+				has_war = no
+				has_opinion = {
+					target = ROOT
+					value > 49
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						is_puppet_of = ROOT
+					}
+					is_neighbor_of = ROOT
+				}
+				NOT = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_puppet_of = ROOT
+						is_major = yes
+					}
+				}
+			}
+		}
+		#target_array = neighbors
+		target_trigger = {
+			FROM = {
+				exists = yes
+				OR = {
+					any_neighbor_country = {
+						is_puppet_of = ROOT
+					}
+					is_neighbor_of = ROOT
+				}
+				NOT = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_puppet_of = ROOT
+						is_major = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Anastasia"
+					}
+					has_country_leader = {
+						name = "Anastasia I"
+					}
+				}
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 300
+		#days_re_enable = 180
+		days_remove = 180
+		modifier = {
+			political_power_gain = -1
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			puppet = FROM
+			FROM = {
+				add_ideas = {
+					wfl_waifuland_puppet
+					waifuland_assistance
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							has_idea = ENG_guided_by_britain_raj_2
+						}
+						remove_ideas = ENG_guided_by_britain_raj_2
+					}
+					if = {
+						limit = {
+							has_idea = ENG_guided_by_britain_raj_1
+						}
+						remove_ideas = ENG_guided_by_britain_raj_1
+					}
+					if = {
+						limit = {
+							has_idea = ENG_guided_by_britain_2
+						}
+						remove_ideas = ENG_guided_by_britain_2
+					}
+					if = {
+						limit = {
+							has_idea = ENG_guided_by_britain_1
+						}
+						remove_ideas = ENG_guided_by_britain_1
+					}
+				}
+			}
+			add_named_threat = {
+				threat = 5
+				name = wfl_create_puppet_threat
+			}
+		}
+	}
+}
+
+wfl_overseas_puppets_category = {
+	wfl_create_overseas_puppets_decision = {
+		name = wfl_create_overseas_puppets_decision.t
+		available = {
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = wfl_battle_trigger_tt
+				if = {
+					limit = {
+						check_variable = {
+							num_ships > 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								check_variable = {
+									num_ships > 0
+								}
+							}
+						}
+						set_temp_variable = {
+							temp_fleet_strength = num_ships_with_type@submarine
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength = num_ships_with_type@destroyer
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength = num_ships_with_type@light_cruiser
+						}
+						#heavy
+						set_temp_variable = {
+							temp_var = num_ships_with_type@heavy_cruiser
+						}
+						add_to_temp_variable = {
+							temp_var = num_ships_with_type@battle_cruiser
+						}
+						multiply_temp_variable = {
+							temp_var = 4
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength = temp_var
+						}
+						#super heavy
+						set_temp_variable = {
+							temp_var = num_ships_with_type@battleship
+						}
+						add_to_temp_variable = {
+							temp_var = num_ships_with_type@carrier
+						}
+						multiply_temp_variable = {
+							temp_var = 8
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength = temp_var
+						}
+						#target fleet
+						set_temp_variable = {
+							temp_fleet_strength_terget = FROM.num_ships_with_type@submarine
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength_terget = FROM.num_ships_with_type@destroyer
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength_terget = FROM.num_ships_with_type@light_cruiser
+						}
+						#heavy
+						set_temp_variable = {
+							temp_var = FROM.num_ships_with_type@heavy_cruiser
+						}
+						add_to_temp_variable = {
+							temp_var = FROM.num_ships_with_type@battle_cruiser
+						}
+						multiply_temp_variable = {
+							temp_var = 4
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength_terget = temp_var
+						}
+						#super heavy
+						set_temp_variable = {
+							temp_var = FROM.num_ships_with_type@battleship
+						}
+						add_to_temp_variable = {
+							temp_var = FROM.num_ships_with_type@carrier
+						}
+						multiply_temp_variable = {
+							temp_var = 8
+						}
+						add_to_temp_variable = {
+							temp_fleet_strength_terget = temp_var
+						}
+						divide_temp_variable = {
+							temp_fleet_strength = temp_fleet_strength_terget
+						}
+						check_variable = {
+							var = temp_fleet_strength
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+					else = {
+						always = yes
+					}
+				}
+				else = {
+					always = no
+				}
+			}
+			ic_ratio = {
+				tag = FROM
+				ratio > 2.25
+			}
+			strength_ratio = {
+				tag = FROM
+				ratio > 2.25
+			}
+			FROM = {
+				has_war = no
+				has_opinion = {
+					target = ROOT
+					value > 74
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				exists = yes
+				NOT = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_puppet_of = ROOT
+						is_major = yes
+					}
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				var:capital = {
+					NOT = {
+						OR = {
+							is_on_continent = europe
+							is_on_continent = asia
+							is_on_continent = middle_east
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Anastasia"
+					}
+					has_country_leader = {
+						name = "Anastasia I"
+					}
+				}
+				add = 3
+			}
+		}
+		fire_only_once = no
+		cost = 300
+		#days_re_enable = 180
+		days_remove = 180
+		modifier = {
+			political_power_gain = -1
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			puppet = FROM
+			FROM = {
+				add_ideas = {
+					wfl_waifuland_puppet
+					waifuland_assistance
+				}
+			}
+			add_named_threat = {
+				threat = 5
+				name = wfl_create_puppet_threat
+			}
+		}
+	}
+}

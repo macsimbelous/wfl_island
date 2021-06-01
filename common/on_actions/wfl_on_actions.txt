@@ -1,0 +1,212 @@
+on_actions = {
+	#	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = WFL
+					has_global_flag = wfl_perimetr_flag
+				}
+				set_global_flag = wfl_apocalypse_flag
+				every_country = {
+					add_ideas = wfl_apocalypse_idea
+				}
+				#				every_state = {
+				#					launch_nuke = {
+				#						#province = 42
+				#						state = THIS
+				#						#controller = ROOT
+				#						use_nuke = yes
+				#					}
+				#				}
+				news_event = {
+					id = wfl_news.5
+					days = 0
+				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			WFL = {
+				set_variable = {
+					wfl_core_bonus_to_pp = 0.05
+				}
+				add_dynamic_modifier = {
+					modifier = wfl_core_states_to_pp
+				}
+			}
+			#Лидеры марионеток
+			SOV = {
+				create_country_leader = {
+					name = "Alisa Illinichina Amiella"
+					desc = "Alisa_Illinichina_Amiella_DESC"
+					picture = "Portrait_Alisa_Illinichina_Amiella.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			GER = {
+				create_country_leader = {
+					name = "Prinz Eugen"
+					desc = "Prinz_Eugen_DESC"
+					picture = "Portrait_Prinz_Eugen.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			FRA = {
+				create_country_leader = {
+					name = "Charlotte Dunois"
+					desc = "Charlotte_Dunois_DESC"
+					picture = "Portrait_Charlotte_Dunois.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			USA = {
+				create_country_leader = {
+					name = "Kei"
+					desc = "Kei_DESC"
+					picture = "Portrait_Kei.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			JAP = {
+				create_country_leader = {
+					name = "Miki Hoshii"
+					desc = "Miki_Hoshii_DESC"
+					picture = "Portrait_Miki_Hoshii.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			ITA = {
+				create_country_leader = {
+					name = "Erica Blandelli"
+					desc = "Erica_Blandelli_DESC"
+					picture = "Portrait_Erica_Blandelli.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			ENG = {
+				create_country_leader = {
+					name = "Satellizer el Bridget"
+					desc = "Satellizer_el_Bridget_DESC"
+					picture = "Portrait_Satellizer_el_Bridget.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+			POL = {
+				create_country_leader = {
+					name = "Irina Jelavic"
+					desc = "Irina_Jelavic_DESC"
+					picture = "Portrait_Irina_Jelavic.dds"
+					expire = "1965.1.1"
+					ideology = waifuism_ideology
+					traits = {
+						wfl_dictator
+						wfl_patron_of_the_military_industrial_complex
+					}
+				}
+			}
+		}
+	}
+	on_weekly_WFL = {
+		effect = {
+			#every_owned_state = {
+			#	limit = {
+			#		is_fully_controlled_by = WFL
+			#		compliance > 0.9
+			#		resistance < 0.05
+			#		NOT = {
+			#			is_core_of = WFL
+			#		}
+			#	}
+			#	for_each_loop = {
+			#		array = core_countries
+			#		value = temp_tag
+			#		remove_core_of = temp_var:temp_tag
+			#	}
+			#	add_core_of = WFL
+			#}
+			set_temp_variable = {
+				temp = core_states
+			}
+			multiply_temp_variable = {
+				temp = 0.01
+			}
+			set_variable = {
+				wfl_core_bonus_to_pp = temp
+			}
+		}
+	}
+	#ROOT is subject FROM is overlord
+	on_subject_annexed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = WFL
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						for_each_loop = {
+							array = core_countries
+							value = temp_tag
+							remove_core_of = temp_var:temp_tag
+						}
+						add_core_of = FROM
+					}
+				}
+			}
+		}
+	}
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = WFL
+					}
+					NOT = {
+						has_idea = wfl_waifuland_puppet
+					}
+				}
+				add_ideas = wfl_waifuland_puppet
+			}
+		}
+	}
+}

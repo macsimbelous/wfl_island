@@ -1,0 +1,324 @@
+wfl_government_category = {
+	priority = 11
+	icon = generic_political_actions
+	picture = GFX_wfl_government_category
+	#visible_when_empty = yes
+	allowed = {
+		#always = yes
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_elections_flag
+	}
+}
+wfl_puppets_category = {
+	icon = generic_independence
+    picture = GFX_decision_cat_picture_chi_political_support
+    priority = 10
+	allowed = {
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_cultural_assimilation_flag
+	}
+}
+wfl_overseas_puppets_category = {
+	icon = generic_independence
+    picture = GFX_decision_cat_picture_chi_political_support
+    priority = 10
+	allowed = {
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_cultural_assimilation_flag
+	}
+}
+wfl_cultural_assimilation_category = {
+	priority = 9
+	icon = decision_category_generic_propaganda
+	#picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	allowed = {
+		#always = no
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_cultural_assimilation_flag
+	}
+}
+wfl_purge_category = {
+	priority = 9
+	icon = decision_category_eng_move_to_secure_the_dominions
+	#picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	allowed = {
+		#always = no
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_purge_flag
+	}
+}
+wfl_coring_category = {
+	priority = 9
+	icon = generic_political_actions
+	#picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	allowed = {
+		always = no
+		#original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_cultural_assimilation_flag
+	}
+}
+wfl_urbanisation_category = {
+	priority = 8
+	icon = generic_construction
+	allowed = {
+		#always = yes
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_elections_flag
+	}
+}
+
+wfl_resources_category = {
+	priority = 7
+	icon = generic_prospect_for_resources
+	picture = GFX_wfl_resources_category
+	allowed = {
+		#always = yes
+		original_tag = WFL
+	}
+	visible = {
+		#has_completed_focus = wfl_resources
+		has_tech = excavation1
+	}
+}
+
+wfl_tentakles_decisions = {
+	priority = 2
+	icon = spr_the_inevitable_civil_war
+	picture = GFX_decision_cat_tentakles_decisions
+	allowed = {
+		#always = yes
+		original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+	visible = {
+		has_completed_focus = wfl_tentakles
+	}
+}
+
+wfl_discrediting_decisions = {
+	priority = 9
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_chi_political_support
+	allowed = {
+		#always = yes
+		original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+	visible = {
+		has_country_flag = wfl_KGB_flag
+	}
+}
+
+wfl_declare_war_decisions = {
+	priority = 1
+	icon = decision_category_usa_intervention_mandate
+	picture = GFX_decision_cat_picture_chi_political_support
+	visible = {
+		always = no
+		#is_debug = yes
+	}
+	allowed = {
+		#always = yes
+		original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+}
+
+wfl_concert_decisions = {
+	priority = 6
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_concert_decisions
+	allowed = {
+		#always = yes
+		original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+	visible = {
+		has_completed_focus = wfl_idols_agency
+	}
+}
+
+wfl_infiltration_decisions = {
+	priority = 1
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_chi_political_support
+	allowed = {
+		always = no
+		#original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+	visible = {
+		#has_completed_focus = wfl_infiltration
+	}
+}
+
+wfl_kosmos_category = {
+	picture = GFX_decision_wfl_kosmos_category
+	icon = GFX_decision_wfl_kosmos_category_icon
+	allowed = {
+		original_tag = WFL
+	}
+	visible = {
+		has_tech = advanced_rocket_engines
+	}
+	priority = 9
+	on_map_area = {
+		#		state = ROOT.capital
+		name = wfl_mbr_strike_decision_tt
+		zoom = 656
+		target_root_trigger = {
+			#			has_tech = nukes
+			#			has_tech = advanced_rocket_engines
+		}
+	}
+}
+
+wfl_immigration_category = {
+	priority = 4
+	#icon = generic_economy
+	picture = GFX_wfl_immigration_category
+	allowed = {
+		#always = yes
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_elections_flag
+	}
+}
+
+wfl_propaganda_waifuism_category = {
+	priority = 6
+	icon = decision_category_generic_propaganda
+	picture = GFX_wfl_propaganda_waifuism_category
+	allowed = {
+		always = no
+		#original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+	visible = {
+		#has_completed_focus = wfl_minpropagand
+		#has_tech = radio
+		has_idea = wfl_minpropagand_idea
+	}
+}
+
+waifuism_on_the_rise = {
+	icon = generic_fascism
+	priority = 1
+}
+
+wfl_campaigning_for_volunteers_category = {
+	priority = 4
+	icon = decision_category_generic_propaganda
+	allowed = {
+		original_tag = WFL
+	}
+	visible = {
+		has_manpower < 100000
+	}
+}
+
+wfl_cloning_category = {
+	priority = 5
+	icon = decision_generic_research
+	allowed = {
+		original_tag = WFL
+	}
+	visible = {
+		has_completed_focus = wfl_cloning
+	}
+}
+
+wfl_economy_category = {
+	priority = 7
+	icon = generic_economy
+	picture = GFX_wfl_economy_category
+	allowed = {
+		#always = yes
+		original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_minprom_flag
+	}
+}
+
+wfl_faction_category = {
+	priority = 9
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_chi_political_support
+	allowed = {
+		always = yes
+		#original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+}
+
+wfl_investments_abroad_category = {
+	priority = 8
+	icon = generic_economy
+	picture = GFX_wfl_investments_abroad_category
+	allowed = {
+		always = no
+		#original_tag = WFL
+	}
+	visible = {
+		has_country_flag = wfl_elections_flag
+	}
+}
+
+wfl_debug_category = {
+	priority = 1
+	icon = decision_category_usa_intervention_mandate
+	picture = GFX_decision_cat_picture_chi_political_support
+	visible = {
+		#is_debug = yes
+		always = no
+	}
+	allowed = {
+		#always = yes
+		original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+}
+
+wfl_test_category = {
+	priority = 20
+	icon = decision_category_usa_intervention_mandate
+	picture = GFX_decision_cat_picture_chi_political_support
+	visible_when_empty = yes
+	visible = {
+		#is_debug = yes
+		always = no
+	}
+	allowed = {
+		#always = yes
+		original_tag = WFL
+		#has_dlc = "La Resistance"
+	}
+}
+wfl_perimetr_category = {
+	priority = 1
+	visible = {
+		has_global_flag = wfl_apocalypse_flag
+	}
+}
+wfl_gacha_category = {
+	priority = 1
+	allowed = {
+		original_tag = WFL
+	}
+}

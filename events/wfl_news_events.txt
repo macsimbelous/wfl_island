@@ -1,0 +1,107 @@
+add_namespace = wfl_news
+
+# Marco Polo Bridge I
+news_event = {
+	id = wfl_news.1
+	title = wfl_news.1.t
+	desc = wfl_news.1.d
+	picture = GFX_wfl_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wfl_news.1.a
+
+	}
+}
+news_event = {
+	id = wfl_news.2
+	title = wfl_news.2.t
+	desc = wfl_news.2.d
+	picture = GFX_wfl_news_event_002
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wfl_news.2.a
+
+	}
+}
+news_event = {
+	id = wfl_news.3
+	title = wfl_news.3.t
+	desc = wfl_news.3.d
+	picture = GFX_wfl_news_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wfl_news.3.a
+
+	}
+}
+news_event = {
+	id = wfl_news.4
+	title = wfl_news.4.t
+	desc = wfl_news.4.d
+	picture = GFX_wfl_news_event_004
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wfl_news.4.a
+
+	}
+}
+news_event = {
+	id = wfl_news.5
+	title = wfl_news.5.t
+	desc = wfl_news.5.d
+	picture = GFX_wfl_news_event_005
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wfl_news.5.a
+
+	}
+}
+news_event = {
+	id = wfl_news.6
+	title = wfl_news.6.t
+	desc = wfl_news.6.d
+	picture = GFX_wfl_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wfl_news.6.a
+
+	}
+}
+#kosmos
+#RAKETA PERVAYA!!!!
+news_event = {
+	id = wfl_news.7
+	title = wfl_news.7.t
+	desc = wfl_news.7.d
+	picture = GFX_news_event_doroga_v_kosmos
+	major = yes
+	is_triggered_only = yes
+	fire_for_sender = no
+	option = {
+		name = wfl_news.7.a			
+	}
+}

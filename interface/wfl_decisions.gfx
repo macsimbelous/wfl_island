@@ -1,0 +1,56 @@
+spriteTypes = {	
+	### categories
+	spriteType = {
+		name = "GFX_decision_cat_concert_decisions"
+		texturefile = "gfx/interface/decisions/decision_cat_concert_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_tentakles_decisions"
+		texturefile = "gfx/interface/decisions/decision_cat_tentakles_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_wfl_kosmos_category"
+		texturefile = "gfx/interface/decisions/wfl_kosmos_category.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_immigration_category"
+		texturefile = "gfx/interface/decisions/wfl_immigration_category.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_resources_category"
+		texturefile = "gfx/interface/decisions/wfl_resources_category.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_propaganda_waifuism_category"
+		texturefile = "gfx/interface/decisions/wfl_propaganda_waifuism_category.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_economy_category"
+		texturefile = "gfx/interface/decisions/wfl_economy_category.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_investments_abroad_category"
+		texturefile = "gfx/interface/decisions/wfl_investments_abroad_category.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_government_category"
+		texturefile = "gfx/interface/decisions/wfl_government_category.dds"
+	}
+	#icons
+	spriteType = {
+		name = "GFX_decision_wfl_create_puppet_decision"
+		texturefile = "gfx/interface/decisions/decision_oppression.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_wfl_kosmos_category_icon"
+		texturefile = "gfx/interface/decisions/wfl_kosmos_category_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_wfl_kosmos_rocket_icon"
+		texturefile = "gfx/interface/decisions/wfl_kosmos_rocket_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_wfl_rocket_launch_decision"
+		texturefile = "gfx/interface/decisions/wfl_rocket_launch_decision.dds"
+	}
+}

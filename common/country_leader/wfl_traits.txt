@@ -1,0 +1,244 @@
+leader_traits = {
+	wfl_idol = {
+		random = no
+		stability_factor = 0.2
+		political_power_factor = 0.25
+		army_morale_factor = 0.15
+		ai_call_ally_desire_factor = 10
+	}
+	wfl_patron_of_intelligence = {
+		random = no
+		agency_upgrade_time = -0.3
+		crypto_strength = 3
+		decryption_power = 15
+		operative_slot = 2
+	}
+	wfl_dictator = {
+		random = no
+		stability_factor = 0.15
+		political_power_factor = 0.3
+	}
+	wfl_tsundere = {
+		random = no
+		army_attack_factor = 0.15
+		army_speed_factor = 0.05
+		justify_war_goal_time = -0.5
+		war_support_factor = 0.15
+		ai_focus_aggressive_factor = 1
+	}
+	wfl_patron_of_the_military_industrial_complex = {
+		random = no
+		production_speed_arms_factory_factor = 0.2
+		production_speed_dockyard_factor = 0.2
+		production_speed_infrastructure_factor = 0.2
+	}
+	wfl_patron_of_industry = {
+		random = no
+		production_speed_industrial_complex_factor = 0.2
+		production_speed_synthetic_refinery_factor = 0.2
+		production_speed_infrastructure_factor = 0.2
+	}
+	wfl_android = {
+		random = no
+		stability_factor = 0.25
+		political_power_factor = 0.2
+	}
+	wfl_defender = {
+		random = no
+		army_defence_factor = 0.3
+		army_core_attack_factor = 0.3
+		ai_focus_defense_factor = 1
+	}
+	wfl_patron_of_science = {
+		random = no
+		research_speed_factor = 0.15
+	}
+	wfl_superweapon = {
+		random = no
+		production_speed_rocket_site_factor = 0.3
+		production_speed_radar_station_factor = 0.3
+		production_speed_nuclear_reactor_factor = 0.3
+	}
+	wfl_empress = {
+		random = no
+		political_power_factor = 0.25
+		stability_factor = 0.1
+	}
+	wfl_nuclear_mazoku = {
+		random = no
+		#production_speed_rocket_site_factor = 0.2
+		production_speed_nuclear_reactor_factor = 0.3
+		nuclear_production_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_girl_scientist = {
+		random = no
+		#production_speed_rocket_site_factor = 0.2
+		#production_speed_nuclear_reactor_factor = 0.2
+		research_speed_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_popular_figurehead = {
+		#sprite = 13
+		stability_factor = 0.3
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_silent_workhorse = {
+		random = no
+		#sprite = 13
+		political_power_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_intelligence_princess = {
+		random = no
+		#sprite = 15
+		operative_slot = 2
+		agency_upgrade_time = -0.3
+		decryption_power_factor = 0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_propaganda_expert = {
+		#sprite = 13
+		war_support_factor = 0.3
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_first_lady = {
+		random = no
+		#sprite = 12
+		war_support_factor = 0.15
+		stability_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_naval_base_engineer = {
+		#sprite = 10
+		random = no
+		production_speed_naval_base_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_infrastructure_developer = {
+		random = no
+		production_speed_infrastructure_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_captain_of_industry = {
+		#sprite = 10
+		random = no
+		production_speed_industrial_complex_factor = 0.3
+		production_speed_synthetic_refinery_factor = 0.3
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_government = communism
+			}
+			modifier = {
+				add = 100
+				has_government = democratic
+			}
+			modifier = {
+				add = 100
+				has_government = neutrality
+			}
+		}
+	}
+	wfl_war_industrialist = {
+		#sprite = 10
+		random = no
+		production_speed_arms_factory_factor = 0.3
+		production_speed_dockyard_factor = 0.3
+		production_speed_fuel_silo_factor = 0.3
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_government = communism
+			}
+			modifier = {
+				add = 100
+				has_government = fascism
+			}
+		}
+	}
+	wfl_submarine_manufacturer = {
+		random = no
+		equipment_bonus = {
+			submarine = {
+				sub_visibility = -0.25
+				surface_visibility = -0.2
+				naval_speed = 0.2
+				build_cost_ic = -0.5
+				naval_range = 0.2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_carrier_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				armor_value = 0.5
+				max_strength = 0.2
+				naval_speed = 0.2
+				build_cost_ic = -0.5
+				naval_range = 0.2
+				surface_visibility = -0.2
+				carrier_size = 0.2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	wfl_battlefleet_designer = {
+		random = no
+		equipment_bonus = {
+			capital_ship = {
+				armor_value = 0.25
+				hg_attack = 0.25
+				surface_visibility = -0.2
+				naval_speed = 0.2
+				naval_range = 0.25
+				build_cost_ic = -0.5
+			}
+			screen_ship = {
+				armor_value = 0.25
+				torpedo_attack = 0.25
+				sub_detection = 0.25
+				surface_visibility = -0.2
+				naval_speed = 0.2
+				naval_range = 0.25
+				build_cost_ic = -0.5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	waifuism_demagogue = {
+		random = no
+		sprite = 13
+		waifuism_drift = 0.1
+	}
+}

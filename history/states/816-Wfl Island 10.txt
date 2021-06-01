@@ -1,0 +1,27 @@
+
+state={
+	id=816
+	name="STATE_816"
+
+	history={
+		owner = WFL
+
+		add_core_of = WFL
+		buildings = {
+			infrastructure = 6
+industrial_complex = 3
+			arms_factory = 1
+			air_base = 2
+			dockyard = 2
+		}
+
+
+	}
+
+	provinces={
+		13279 13280 13281 13282 13283 13284
+	}
+	manpower=4280723
+	buildings_max_level_factor=1.000
+	state_category=city
+}

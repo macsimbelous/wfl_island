@@ -1,0 +1,169 @@
+﻿###########################
+# kosmos Events
+###########################
+add_namespace = wfl_kosmos
+country_event = {
+	id = wfl_kosmos.1
+	title = wfl_kosmos.1.t
+	desc = wfl_kosmos.1.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = wfl_kosmos.1.a
+		set_country_flag = wfl_kosmos_the_drawings_are_ready_flag
+	}
+}
+country_event = {
+	id = wfl_kosmos.2
+	title = wfl_kosmos.2.t
+	desc = wfl_kosmos.2.d
+	picture = GFX_report_event_kosmos_2
+	is_triggered_only = yes
+	option = {
+		name = wfl_kosmos.2.a
+		custom_effect_tooltip = wfl_kosmos.2.a.tt
+		add_stability = 0.25
+		every_other_country = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = pervyi_v_kosmose_10
+			}
+		}
+		every_other_country = {
+			limit = {
+				num_of_factories > 25
+			}
+			add_stability = -0.1
+		}
+		hidden_effect = {
+			news_event = {
+				hours = 3
+				id = wfl_news.7
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_kosmos.3
+	title = wfl_kosmos.3.t
+	desc = wfl_kosmos.3.d
+	picture = GFX_report_event_kosmos_3
+	is_triggered_only = yes
+	option = {
+		name = wfl_kosmos.3.a
+		add_stability = 0.02
+		hidden_effect = {
+			news_event = {
+				hours = 3
+				id = wfl_news.7
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_kosmos.4
+	title = wfl_kosmos.4.t
+	desc = wfl_kosmos.4.d
+	picture = GFX_report_event_airplane_crash
+	is_triggered_only = yes
+	option = {
+		name = wfl_kosmos.4.a
+		#custom_effect_tooltip = kosmos.6.a.tt
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = wfl_kosmos.5
+	title = wfl_kosmos.5.t
+	desc = wfl_kosmos.5.d
+	#picture = GFX_report_event_airplane_crash
+	#is_triggered_only = yes
+	trigger = {
+		#tag = WFL
+		original_tag = WFL
+		check_variable = {
+			wfl_sputnik_count > 0
+		}
+	}
+	mean_time_to_happen = {
+		days = 1000
+		modifier = {
+			factor = 0.6
+			check_variable = {
+				wfl_sputnik_count > 10
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				wfl_sputnik_count > 20
+			}
+		}
+		modifier = {
+			factor = 0.6
+			check_variable = {
+				wfl_sputnik_count > 30
+			}
+		}
+	}
+	option = {
+		name = wfl_kosmos.5.a
+		add_political_power = -50
+		random_list = {
+			80 = {
+				modifier = {
+					factor = 1.15
+					has_stability > 0.8
+				}
+				modifier = {
+					factor = 1.15
+					has_available_idea_with_traits = {
+						idea = wfl_girl_scientist
+						limit = 1
+					}
+				}
+				wfl_sputnik_remove = yes
+				country_event = {
+					hours = 12
+					id = wfl_kosmos.6
+				}
+			}
+			20 = {
+				modifier = {
+					factor = 1.15
+					has_stability < 0.6
+				}
+				country_event = {
+					hours = 12
+					id = wfl_kosmos.7
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = wfl_kosmos.5.b
+	}
+}
+country_event = {
+	id = wfl_kosmos.6
+	title = wfl_kosmos.6.t
+	desc = wfl_kosmos.6.d
+	#picture = GFX_report_event_airplane_crash
+	is_triggered_only = yes
+	option = {
+		name = wfl_kosmos.6.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = wfl_kosmos.7
+	title = wfl_kosmos.7.t
+	desc = wfl_kosmos.7.d
+	#picture = GFX_report_event_airplane_crash
+	is_triggered_only = yes
+	option = {
+		name = wfl_kosmos.7.a
+	}
+}
+

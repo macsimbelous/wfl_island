@@ -1,0 +1,1327 @@
+ideas = {
+	country = {
+		wfl_traps_in_army = {
+			allowed = {
+				original_tag = WFL
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		wfl_futanary_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.25
+			}
+		}
+		wfl_demon_influence = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = general_staff
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+				army_infantry_attack_factor = 0.15
+				army_artillery_attack_factor = 0.15
+			}
+		}
+		wfl_angel_influence = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = general_staff
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+				army_morale_factor = 0.2
+				army_infantry_defence_factor = 0.1
+				army_artillery_defence_factor = 0.1
+			}
+		}
+		wfl_mecha_girl_influence = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = general_staff
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.15
+			}
+		}
+		wfl_tantacle_attack = {
+			allowed = {
+				always = no
+			}
+			picture = generic_purge
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.7
+				army_morale_factor = -0.2
+			}
+		}
+		wfl_mintrans_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = generic_build_infrastructure
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		wfl_stavka_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = idea_saf_soviet_advisers
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				army_attack_factor = 0.15
+				army_speed_factor = 0.2
+				army_org_factor = 0.3
+				army_org_regain = 0.3
+				army_morale_factor = 0.25
+				#war_support_factor = 0.15
+				max_command_power = 250
+				command_power_gain = 20
+				planning_speed = 0.15
+			}
+		}
+		wfl_minoboron_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = idea_saf_soviet_advisers
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.1
+				#army_defence_factor = 0.05
+				#army_attack_factor = 0.05
+				#army_speed_factor = 0.15
+				#army_org_factor = 0.3
+				#army_org_regain = 0.3
+				war_support_factor = 0.15
+				#max_command_power = 150
+				#command_power_gain = 10
+				conscription = 0.05
+				attrition = -0.15
+				experience_gain_army_factor = 0.25
+				experience_gain_air_factor = 0.25
+				experience_gain_navy_factor = 0.25
+				training_time_army_factor = -0.2
+				send_volunteer_divisions_required = -0.5
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+			}
+			research_bonus = {
+				land_doctrine = 0.3
+				air_doctrine = 0.3
+				naval_doctrine = 0.3
+			}
+		}
+		wfl_incompetent_officers = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_chi_incompetent_officers
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+				army_speed_factor = -0.15
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+		wfl_hentai_banned_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.05
+				stability_factor = -0.05
+			}
+		}
+		wfl_hentai_allow_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_intel_bonus
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.01
+				stability_factor = 0.05
+			}
+		}
+		wfl_cloning_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				monthly_population = 1.0
+			}
+		}
+		wfl_tax_on_childlessness_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.15
+				stability_factor = -0.05
+			}
+		}
+		wfl_idols_agency_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		wfl_apocalypse_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = air_war_plans_division_focus
+			removal_cost = -1
+			modifier = {
+				stability_factor = -2
+				monthly_population = -10
+				command_power_gain = -100
+				army_defence_factor = -1
+				#production_speed_arms_factory_factor = -10.0
+				conscription = -1
+				army_morale_factor = -1
+				political_power_factor = -1
+				production_speed_buildings_factor = -10
+				#production_speed_dockyard_factor = -10.0
+				nuclear_production_factor = 1
+				production_factory_max_efficiency_factor = -1
+			}
+		}
+		wfl_spy_princesses_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_spy_political
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				operative_slot = 2
+			}
+		}
+		wfl_KGB_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_spy_political
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				operative_slot = 2
+				crypto_strength = 3
+				decryption_power = 15
+				foreign_subversive_activites = -0.75
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+				resistance_damage_to_garrison = -0.25
+			}
+		}
+		wfl_sputnik_v_kosmose = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.3
+				decryption_factor = 0.3
+				encryption_factor = 0.3
+				recon_factor = 0.3
+				research_speed_factor = 0.1
+			}
+		}
+		wfl_minprom_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = idea_generic_industrial_concern_2
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				#production_speed_arms_factory_factor = 0.2
+				#production_speed_dockyard_factor = 0.2
+				consumer_goods_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.25
+				conversion_cost_mil_to_civ_factor = -0.25
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+				global_building_slots_factor = 0.2
+			}
+		}
+		wfl_minpropagand_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = idea_usa_magic
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				war_stability_factor = 0.1
+				justify_war_goal_time = -0.25
+				army_morale_factor = 0.15
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		wfl_colonial_office = {
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				custom_modifier_tooltip = wfl_subject_autonomy_mod_tt
+				hidden_modifier = { subjects_autonomy_gain = -0.25 }
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		wfl_minscience_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_research_bonus
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.1
+				#political_power_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		wfl_nii_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = generic_research_bonus
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
+		wfl_immigration_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+		waifu_education = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = waifuism
+			}
+			removal_cost = -1
+			picture = generic_communism_drift_bonus
+			modifier = {
+				waifuism_drift = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+		fascism_discrediting = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = spr_the_popular_front
+			modifier = {
+				fascism_drift = -0.1
+				stability_factor = -0.3
+			}
+		}
+		communism_discrediting = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = spr_the_popular_front
+			modifier = {
+				communism_drift = -0.1
+				stability_factor = -0.3
+			}
+		}
+		democratic_discrediting = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = spr_the_popular_front
+			modifier = {
+				democratic_drift = -0.1
+				stability_factor = -0.3
+			}
+		}
+		neutrality_discrediting = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = spr_the_popular_front
+			modifier = {
+				neutrality_drift = -0.1
+				stability_factor = -0.3
+			}
+		}
+		waifu_influence = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#random = yes
+			picture = idea_jap_supremacy_of_will
+			modifier = {
+				waifuism_drift = 0.1
+				#stability_factor = -0.3
+			}
+		}
+		wfl_super_factory = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 1
+				industrial_capacity_dockyard = 1
+			}
+		}
+		wfl_rocket_factory = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_rocket_site_factor = 0.5
+				repair_speed_rocket_site_factor = 0.5
+			}
+		}
+		waifuland_assistance = {
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.15
+				waifuism_drift = 0.1
+			}
+		}
+		wfl_waifuland_puppet = {
+			available = {
+				is_puppet = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				autonomy_gain = -0.5
+				#waifuism_drift = 0.01
+				autonomy_manpower_share = 0.5
+			}
+		}
+		wfl_test_idea = {
+			allowed = {
+				original_tag = WFL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				
+			}
+		}
+	}
+	political_advisor = {
+		wfl_neko = {
+			allowed = {
+				original_tag = WFL
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = {
+				wfl_popular_figurehead
+			}
+		}
+		wfl_megumin = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_secret_weapons
+			}
+			research_bonus = {
+				nuclear = 0.15
+			}
+			traits = {
+				wfl_nuclear_mazoku
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_eruza_guranhirute = {
+			allowed = {
+				original_tag = WFL
+			}
+			traits = {
+				princess_of_terror
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_ayame_himuro = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minscience
+			}
+			#research_speed_factor = 0.03
+			traits = {
+				wfl_girl_scientist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_mare_bello_fiore = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minprom
+			}
+			traits = {
+				wfl_captain_of_industry
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_albedo = {
+			allowed = {
+				original_tag = WFL
+			}
+			traits = {
+				wfl_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		wfl_ange_le_carre = {
+			allowed = {
+				original_tag = WFL
+			}
+			traits = {
+				wfl_intelligence_princess
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_intelligence_agency = yes
+				#has_completed_focus = wfl_KGB
+			}
+		}
+		wfl_head_int = {
+			allowed = {
+				original_tag = WFL
+			}
+			traits = {
+				head_of_intelligence
+			}
+			ai_will_do = {
+				factor = -1
+			}
+			available = {
+				always = no
+			}
+			visible = {
+				always = no
+			}
+		}
+		wfl_office_lady = {
+			allowed = {
+				original_tag = WFL
+			}
+			traits = {
+				fortification_engineer
+			}
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		wfl_mikumo_guynemer = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minpropagand
+			}
+			traits = {
+				wfl_propaganda_expert
+			}
+			ai_will_do = {
+				factor = -1
+			}
+		}
+		#заглушка
+		wfl_com_ref = {
+			allowed = {
+				original_tag = WFL
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				communist_revolutionary
+			}
+			ai_will_do = {
+				factor = -1
+			}
+		}
+		#заглушка
+		wfl_dem_ref = {
+			allowed = {
+				original_tag = WFL
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				democratic_reformer
+			}
+		}
+		#заглушка
+		wfl_fas_demgog = {
+			allowed = {
+				original_tag = WFL
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				fascist_demagogue
+			}
+			ai_will_do = {
+				factor = -1
+			}
+		}
+		wfl_lucy_yamagami = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minprom
+			}
+			traits = {
+				wfl_war_industrialist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_minami_nitta = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_government = democratic
+				has_country_leader = {
+					name = "Anastasia"
+				}
+			}
+			traits = {
+				wfl_first_lady
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_marblehead = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minprom
+			}
+			traits = {
+				wfl_naval_base_engineer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_aoi_sakurai = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_mintrans
+			}
+			traits = {
+				wfl_infrastructure_developer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_waifuism_demagogue = {
+			picture  = GFX_idea_wfl_neko
+			allowed = {
+				NOT = { original_tag = WFL }
+				NOT = {
+					has_available_idea_with_traits = { idea = waifuism_demagogue limit = 1 }
+				}
+			}
+			traits = { waifuism_demagogue }
+			on_add = {
+				#country_event = political.7
+			}
+			do_effect = {
+				NOT = {
+					has_government = waifuism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	theorist = {
+		wfl_velvet_crowe = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			research_bonus = {
+				land_doctrine = 0.15
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+			traits = {
+				blitzkrieg_theorist
+			}
+		}
+		wfl_akeno_misaki = {
+			ledger = navy
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+		wfl_sovetskaya_rossiya = {
+			ledger = navy
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			research_bonus = {
+				cat_fleet_in_being = 0.15
+			}
+			traits = {
+				grand_fleet_proponent
+			}
+		}
+		wfl_arisa_mitaka = {
+			ledger = air
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			research_bonus = {
+				cat_battlefield_support = 0.15
+			}
+			traits = {
+				close_air_support_proponent
+			}
+		}
+		wfl_eagle = {
+			ledger = air
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			research_bonus = {
+				air_doctrine = 0.1
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+		wfl_i_401 = {
+			ledger = navy
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			research_bonus = {
+				cat_trade_interdiction = 0.2
+			}
+			traits = {
+				submarine_specialist
+			}
+		}
+	}
+	army_chief = {
+		wfl_darkness = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_chief_defensive_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_mosin_nagant = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_chief_drill_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_matoi_ryuko = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_chief_offensive_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+		wfl_mirage_farina_jenius = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				air_chief_ground_support_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_sanya_v_litvyak = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				air_chief_all_weather_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_camilla = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			traits = {
+				air_chief_night_operations_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	navy_chief = {
+		wfl_yamato_navy_chief = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				navy_chief_decisive_battle_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_atago_al_navy_chief = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				navy_chief_commerce_raiding_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_prinz_eugen = {
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			traits = {
+				navy_chief_maneuver_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	high_command = {
+		wfl_asuna_high_command = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_infantry_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_stalin_girl = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			traits = {
+				army_artillery_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_klara_high_command = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_armored_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_rokosovskii_girl_high_command = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_regrouping_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_patton_girl_high_command = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_logistics_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_angelise_ikaruga_misurugi = {
+			ledger = air
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				air_close_air_support_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_juana_del_moral = {
+			ledger = air
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				air_tactical_bombing_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_celia_cumani_aintree = {
+			ledger = army
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minoboron
+			}
+			cost = 150
+			traits = {
+				army_cavalry_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	tank_manufacturer = {
+		designer = yes
+		wfl_obt_arsenal = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_main_battle_tank
+				OR = {
+					has_tech = advanced_heavy_tank
+					has_tech = advanced_medium_tank
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			research_bonus = {
+				armor = 0.3
+			}
+			cost = 150
+			traits = {
+				tank_manufacturer
+			}
+			equipment_bonus = {
+				modern_armor = {
+					build_cost_ic = -0.3
+					ap_attack = 0.2
+					hard_attack = 0.2
+				}
+				#modern_tank_equipment_1 = {
+				#	build_cost_ic = -0.2
+				#	ap_attack = 0.2
+				#	hard_attack = 0.5
+				#}
+			}
+		}
+		wfl_fast_tank_design_bureau = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = WFL
+			}
+			research_bonus = {
+				armor = 0.3
+			}
+			cost = 150
+			traits = {
+				fast_tank_manufacturer
+			}
+		}
+		wfl_medium_tank_astrov_design_bureau = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = WFL
+			}
+			research_bonus = {
+				armor = 0.3
+			}
+			cost = 150
+			traits = {
+				medium_tank_manufacturer
+			}
+		}
+		wfl_heavy_tank_design_bureau = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = WFL
+			}
+			research_bonus = {
+				armor = 0.3
+			}
+			cost = 150
+			traits = {
+				heavy_tank_manufacturer
+			}
+		}
+		#заглушка
+		wfl_generic_tank_manufacturer = {
+			allowed = {
+				original_tag = WFL
+			}
+			visible = {
+				always = no
+			}
+			ai_will_do = {
+				factor = -1
+			}
+			traits = {
+				tank_manufacturer
+			}
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+		wfl_submarine_company = {
+			#picture = idea_generic_naval_manufacturer_1
+			allowed = {
+				original_tag = WFL
+			}
+			research_bonus = {
+				naval_equipment = 0.3
+			}
+			cost = 150
+			traits = {
+				wfl_submarine_manufacturer
+			}
+			modifier = {
+			}
+		}
+		wfl_carrier_company = {
+			#picture = idea_generic_navy_carrier_bonus
+			allowed = {
+				original_tag = WFL
+			}
+			research_bonus = {
+				naval_equipment = 0.3
+			}
+			cost = 150
+			traits = {
+				wfl_carrier_manufacturer
+			}
+			modifier = {
+			}
+		}
+		wfl_battlefleet_company = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = WFL
+			}
+			research_bonus = {
+				naval_equipment = 0.3
+			}
+			cost = 150
+			traits = {
+				wfl_battlefleet_designer
+			}
+			modifier = {
+			}
+		}
+		#заглушка
+		wfl_generic_naval_manufacturer = {
+			allowed = {
+				original_tag = WFL
+			}
+			visible = {
+				always = no
+			}
+			ai_will_do = {
+				factor = -1
+			}
+			traits = {
+				naval_manufacturer
+			}
+		}
+	}
+}

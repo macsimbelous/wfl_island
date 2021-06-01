@@ -1,0 +1,15 @@
+opinion_modifiers = {
+	pervyi_v_kosmose_10 = { value = 10 }
+}
+opinion_modifiers = {
+	wfl_purge_opinion = { value = -50 }
+}
+opinion_modifiers = {
+	wfl_sov_frend_opinion = { value = 50 }
+}
+opinion_modifiers = {
+	wfl_usa_frend_opinion = { value = 50 }
+}
+opinion_modifiers = {
+	wfl_idols_tour_opinion = { value = 10 }
+}

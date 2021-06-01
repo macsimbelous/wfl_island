@@ -1,0 +1,300 @@
+###########################
+# Republic of Anime Events
+###########################
+add_namespace = wfl_event
+country_event = {
+	id = wfl_event.1
+	title = wfl_event.1.t
+	desc = wfl_event.1.d
+	picture = GFX_wfl_event1
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		create_country_leader = {
+			name = "Asuka"
+			desc = "POLITICS_ASUKA_DESC"
+			picture = "Portrait_Asuka_lider.dds"
+			expire = "1965.1.1"
+			ideology = waifuism_ideology
+			traits = {
+				wfl_tsundere
+				wfl_dictator
+				wfl_patron_of_the_military_industrial_complex
+			}
+		}
+	}
+	option = {
+		name = wfl_event.1.b
+		ai_chance = {
+			factor = 75
+		}
+		create_country_leader = {
+			name = "Anastasia"
+			desc = "POLITICS_ANASTASIA_DESC"
+			picture = "ROA_Anastasia_lider_liberalism.tga"
+			expire = "1965.1.1"
+			ideology = waifuism_ideology
+			traits = {
+				wfl_idol
+				wfl_patron_of_intelligence
+			}
+		}
+	}
+	option = {
+		name = wfl_event.1.c
+		ai_chance = {
+			factor = 75
+		}
+		create_country_leader = {
+			name = "Erza"
+			desc = "POLITICS_ERZA_DESC"
+			picture = "ROA_Erza_lider_stalinism.tga"
+			expire = "1965.1.1"
+			ideology = waifuism_ideology
+			traits = {
+				wfl_dictator
+				wfl_patron_of_industry
+				warrior_code
+			}
+		}
+	}
+	option = {
+		name = wfl_event.1.e
+		ai_chance = {
+			factor = 75
+		}
+		create_country_leader = {
+			name = "KOS-MOS"
+			desc = "POLITICS_KOS-MOS_DESC"
+			picture = "ROA_KOS-MOS_lider_despotism.tga"
+			expire = "1965.1.1"
+			ideology = waifuism_ideology
+			traits = {
+				wfl_android
+				wfl_defender
+				wfl_patron_of_science
+				wfl_superweapon
+			}
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.2
+	title = wfl_event.2.t
+	desc = wfl_event.2.d
+	picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.2.a
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.3
+	title = wfl_event.3.t
+	desc = wfl_event.3.d
+	picture = GFX_wfl_event3
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.3.a
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.4
+	title = wfl_event.4.t
+	desc = wfl_event.4.d
+	picture = GFX_wfl_event4
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.4.a
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.5
+	title = wfl_event.5.t
+	desc = wfl_event.5.d
+	picture = GFX_wfl_event5
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.5.a
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.6
+	title = wfl_event.6.t
+	desc = wfl_event.6.d
+	picture = GFX_wfl_event5
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.6.a
+		ai_chance = {
+			factor = 75
+		}
+		#add_ideas = ROA_apocalypse_idea
+	}
+}
+
+country_event = {
+	id = wfl_event.7
+	title = wfl_event.7.t
+	desc = wfl_event.7.d
+	picture = GFX_wfl_event7
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.7.a
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.8
+	title = wfl_event.8.t
+	desc = wfl_event.8.d
+	picture = GFX_wfl_event8
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.8.a
+		ai_chance = {
+			factor = 75
+		}
+		add_ideas = wfl_hentai_banned_idea
+	}
+	option = {
+		name = wfl_event.8.b
+		ai_chance = {
+			factor = 75
+		}
+		add_ideas = wfl_hentai_allow_idea
+	}
+}
+
+country_event = {
+	id = wfl_event.9
+	title = wfl_event.9.t
+	desc = wfl_event.9.d
+	picture = GFX_wfl_event9
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.9.a
+		ai_chance = {
+			factor = 75
+		}
+		add_ideas = wfl_futanary_idea
+	}
+	option = {
+		name = wfl_event.9.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = wfl_event.10
+	title = wfl_event.10.t
+	desc = wfl_event.10.d
+	picture = GFX_wfl_event10
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.10.a
+		ai_chance = {
+			factor = 75
+		}
+		#add_ideas = wfl_futanary_idea
+	}
+}
+
+country_event = {
+	id = wfl_event.11
+	title = wfl_event.11.t
+	desc = wfl_event.11.d
+	picture = GFX_report_event_fascist_gathering
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.11.c
+		set_politics = {
+			ruling_party = waifuism
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = wfl_event.12
+	title = wfl_event.12.t
+	desc = wfl_event.12.d
+	picture = GFX_wfl_event12
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.12.c
+		ai_chance = {
+			factor = 75
+		}
+		FROM = {
+			IF = {
+				LIMIT = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+		}
+		add_to_faction = FROM
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = wfl_event.12.e
+	}
+}
+
+country_event = {
+	id = wfl_event.13
+	title = wfl_event.13.t
+	desc = wfl_event.13.d
+	picture = GFX_wfl_event13
+	is_triggered_only = yes
+	option = {
+		name = wfl_event.13.c
+		ai_chance = {
+			factor = 75
+		}
+		IF = {
+			LIMIT = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = wfl_event.13.e
+	}
+}

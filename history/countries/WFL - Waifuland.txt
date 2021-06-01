@@ -1,0 +1,1725 @@
+capital = 812
+set_research_slots = 6
+oob = "WFL_1936"
+set_naval_oob = "WFL_1936_Naval"
+set_stability = 0.3
+set_war_support = 0.5
+set_convoys = 800
+
+create_faction = WaifuPower
+set_rule = {
+	can_use_kamikaze_pilots = yes
+	can_create_factions = yes
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	#infantry_at = 1
+	#infantry_at2 = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	CAS1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	electronic_mechanical_engineering = 1
+		radio = 1
+	radio_detection = 1
+	basic_machine_tools = 1
+	#####
+			basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_secondary_battery = 1
+		basic_fire_control_system = 1
+}
+
+add_ideas = {
+	#limited_exports
+	#free_trade
+	closed_economy
+	#civilian_economy
+	partial_economic_mobilisation
+	volunteer_only
+	#limited_conscription
+	#wfl_incompetent_officers
+	ideological_fanaticism_focus
+	political_commissars_focus
+}
+
+set_politics = {
+	ruling_party = waifuism	#Рулевая партия
+	last_election = "1936.1.1"	#Последние выборы 
+	election_frequency = 48	#Через сколько проводят выборы
+	elections_allowed = no	#Есть ли выборы
+}
+
+set_popularities = {
+	democratic = 0	##Демократия
+	neutrality = 0	##Нейтралитет
+	communism = 0	##Коммунизм
+	fascism = 0	##Фашизм
+	waifuism = 100
+}
+
+create_country_leader = {
+	name = "Пустой трон"
+	desc = "POLITICS_TRON_DESC"
+	picture = "Portrait_tron.dds"
+	expire = "1965.1.1"
+	ideology = waifuism_ideology
+	traits = {
+		
+	}
+}
+#267 = {	add_claim_by = WFL }
+#declare_war_on = {
+#	target = AFG
+#	type = take_claimed_state
+#}
+#marshal
+create_field_marshal = {
+	name = "Asuka"
+	picture = "Portrait_Asuka.dds"
+	traits = {
+		panzer_leader
+		aggressive_assaulter
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_field_marshal = {
+	name = "Anastasia"
+	picture = "ROA_Anastasia_general.dds"
+	traits = {
+		logistics_wizard
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+}
+create_field_marshal = {
+	name = "Erza"
+	picture = "ROA_Erza_general.tga"
+	traits = {
+		expert_delegator
+		war_hero
+		fast_planner
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 4
+}
+create_field_marshal = {
+	name = "KOS-MOS"
+	picture = "ROA_KOS-MOS_general.tga"
+	traits = {
+		defensive_doctrine
+		bearer_of_artillery
+		unyielding_defender
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_field_marshal = {
+	name = "Lightning"
+	picture = "ROA_Lightning_general.tga"
+	traits = {
+		commando
+		offensive_doctrine
+		war_hero
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7004
+}
+#generals
+create_corps_commander = {
+	name = "Asuna"
+	picture = "Portrait_Asuna_Yuuki.dds"
+	traits = {
+		war_hero
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	#id = 7005
+}
+create_corps_commander = {
+	name = "Mash Kyrielight"
+	picture = "ROA_Mash_Kyrielight_general.dds"
+	traits = {
+		defensive_doctrine
+		unyielding_defender
+	}
+	skill = 6
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 6
+	#id = 7010
+}
+
+create_corps_commander = {
+	name = "Ishtar"
+	picture = "ROA_Ishtar_general.dds"
+	traits = {
+		trickster
+		expert_delegator
+		commando
+		offensive_doctrine
+		organisational_leader
+		inspirational_leader
+		aggressive_assaulter
+	}
+	skill = 7
+	attack_skill = 8
+	defense_skill = 7
+	planning_skill = 7
+	logistics_skill = 7
+	#id = 7011
+}
+
+create_corps_commander = {
+	name = "Maple"
+	picture = "ROA_Maple_general.dds"
+	traits = {
+		trickster
+		winter_specialist
+		organizer
+		skilled_staffer
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 4
+	#id = 7012
+}
+
+create_corps_commander = {
+	name = "Yoko Littner"
+	picture = "ROA_Yoko_Littner_general.dds"
+	traits = {
+		organizer
+		fast_planner
+		panzer_leader
+		panzer_expert
+	}
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+	#id = 7013
+}
+
+create_corps_commander = {
+	name = "Kallen Stadtfeld"
+	picture = "ROA_Kallen_Stadtfeld_general.dds"
+	traits = {
+		panzer_leader
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 5
+	#id = 7014
+}
+
+create_corps_commander = {
+	name = "Saki Rukino"
+	picture = "ROA_Saki_Rukino_general.dds"
+	traits = {
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7015
+}
+
+create_corps_commander = {
+	name = "Iris Heart"
+	picture = "ROA_Iris_Heart_general.dds"
+	traits = {
+		commando
+		infantry_leader
+		infantry_expert
+		skilled_staffer
+		trickster
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7016
+}
+
+create_corps_commander = {
+	name = "Kurumi Tokisaki"
+	picture = "ROA_Kurumi_Tokisaki_general.dds"
+	traits = {
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 1
+	#id = 7017
+}
+
+create_corps_commander = {
+	name = "Sanya V. Litvyak"
+	picture = "ROA_Sanya_V_Litvyak_general.dds"
+	traits = {
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7018
+}
+
+create_corps_commander = {
+	name = "Isuzu Sento"
+	picture = "ROA_Isuzu_Sento_general.dds"
+	traits = {
+		commando
+		infantry_leader
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7019
+}
+
+create_corps_commander = {
+	name = "Astaroth"
+	picture = "ROA_Astaroth_general.tga"
+	traits = {
+		infantry_leader
+	}
+	skill = 1
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 1
+	#id = 7020
+}
+
+create_corps_commander = {
+	name = "Laharl"
+	picture = "ROA_Laharl_girl_general.tga"
+	traits = {
+		infantry_leader
+		skilled_staffer
+	}
+	skill = 1
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7022
+}
+
+create_corps_commander = {
+	name = "Volemia"
+	picture = "ROA_Volemia_general.dds"
+	traits = {
+		infantry_leader
+	}
+	skill = 1
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7023
+}
+
+create_corps_commander = {
+	name = "Camilla"
+	picture = "ROA_Camilla_general.dds"
+	traits = {
+		skilled_staffer
+		cavalry_leader
+		cavalry_expert
+	}
+	skill = 1
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7024
+}
+
+create_corps_commander = {
+	name = "Shamiko"
+	picture = "ROA_Shamiko_general.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 6
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+	#id = 7028
+}
+create_corps_commander = {
+	name = "Sinon"
+	picture = "ROA_Sinon_general.dds"
+	traits = {
+		war_hero
+		skilled_staffer
+		infantry_leader
+		infantry_expert
+		trait_mountaineer
+		trait_engineer
+		adaptable
+	}
+	skill = 9
+	attack_skill = 9
+	defense_skill = 8
+	planning_skill = 9
+	logistics_skill = 8
+	#id = 7029
+}
+
+create_corps_commander = {
+	name = "Hana"
+	picture = "ROA_Hana_general.dds"
+	traits = {
+		panzer_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7030
+}
+
+create_corps_commander = {
+	name = "Hatsune Miku"
+	picture = "ROA_Hatsune_Miku_general.dds"
+	traits = {
+		panzer_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7031
+}
+
+create_corps_commander = {
+	name = "Desco"
+	picture = "ROA_Desco_general.dds"
+	traits = {
+		panzer_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7032
+}
+
+create_corps_commander = {
+	name = "Saint Martha"
+	picture = "ROA_Saint_Martha_general.dds"
+	traits = {
+		panzer_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7033
+}
+
+create_corps_commander = {
+	name = "Kaname Chidori"
+	picture = "ROA_Kaname_Chidori_general.dds"
+	traits = {
+		commando
+		infantry_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7034
+}
+
+create_corps_commander = {
+	name = "Astolfo"
+	picture = "ROA_Astolfo_general.dds"
+	traits = {
+		cavalry_leader
+		cavalry_expert
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7035
+}
+
+create_corps_commander = {
+	name = "Tiamat"
+	picture = "ROA_Tiamat_general.dds"
+	traits = {
+		skilled_staffer
+		expert_delegator
+	}
+	skill = 9
+	attack_skill = 9
+	defense_skill = 9
+	planning_skill = 9
+	logistics_skill = 9
+	#id = 7036
+}
+
+create_corps_commander = {
+	name = "Satanichia McDowell Kurumizawa"
+	picture = "ROA_Satanichia_McDowell_Kurumizawa_general.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7037
+}
+
+create_corps_commander = {
+	name = "Yoshiko Tsushima"
+	picture = "ROA_Yoshiko_Tsushima_general.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7038
+}
+
+create_corps_commander = {
+	name = "Vignette April Tsukinose"
+	picture = "ROA_Vignette_April_Tsukinose_general.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7039
+}
+
+create_corps_commander = {
+	name = "Ranko Kanzaki"
+	picture = "ROA_Ranko_Kanzaki_general.dds"
+	traits = {	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	#id = 7040
+}
+create_corps_commander = {
+	name = "Mamako Oosuki"
+	picture = "Portrait_Mamako_Oosuki.dds"
+	traits = {
+		infantry_expert
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Milla Maxwell"
+	picture = "Portrait_Milla_Maxwell.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		infantry_expert
+	}
+}
+create_corps_commander = {
+	name = "Elma"
+	picture = "Portrait_Elma.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		armor_officer panzer_leader
+	}
+}
+create_corps_commander = {
+	name = "Ako Tamaki"
+	picture = "Portrait_Ako_Tamaki.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Belldandy"
+	picture = "Portrait_Belldandy.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Celica"
+	picture = "Portrait_Celica.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Corrin"
+	picture = "Portrait_Corrin.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Cryska Barchenowa"
+	picture = "Portrait_Cryska_Barchenowa.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Fiora"
+	picture = "Portrait_Fiora.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Haruhi Suzumiya"
+	picture = "Portrait_Haruhi_Suzumiya.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Igawa Asagi"
+	picture = "Portrait_Igawa_Asagi.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Kiana Kaslana"
+	picture = "Portrait_Kiana_Kaslana.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Konoko"
+	picture = "Portrait_Konoko.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Lina Inverse"
+	picture = "Portrait_Lina_Inverse.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Lucy"
+	picture = "Portrait_Lucy.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Makina Hoshimura"
+	picture = "Portrait_Makina_Hoshimura.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Nanoha Takamachi"
+	picture = "Portrait_Nanoha_Takamachi.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Neptune"
+	picture = "Portrait_Neptune.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Ryuuko Matoi"
+	picture = "Portrait_Ryuuko_Matoi.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		aggressive_assaulter
+	}
+}
+create_corps_commander = {
+	name = "Satellizer el Bridget"
+	picture = "Portrait_Satellizer_el_Bridget.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Saya Kisaragi"
+	picture = "Portrait_Saya_Kisaragi.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Siluca Meletes"
+	picture = "Portrait_Siluca_Meletes.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Souji Mitsuka"
+	picture = "Portrait_Souji_Mitsuka.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Velvet Crowe"
+	picture = "Portrait_Velvet_Crowe.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Yuno Gasai"
+	picture = "Portrait_Yuno_Gasai.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Oni"
+	picture = "Portrait_Zero_Two.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Byleth Eisner"
+	picture = "Portrait_Byleth_Eisner.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		
+	}
+}
+create_corps_commander = {
+	name = "Fiora Mechon"
+	picture = "Portrait_Fiora_Mechon.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		panzer_leader
+	}
+}
+create_corps_commander = {
+	name = "Pyra"
+	picture = "Portrait_Pyra.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		infantry_leader
+	}
+}
+create_corps_commander = {
+	name = "Mythra"
+	picture = "Portrait_Mythra.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		panzer_leader
+	}
+}
+create_corps_commander = {
+	name = "Pneuma"
+	picture = "Portrait_Pneuma.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		panzer_leader
+	}
+}
+create_corps_commander = {
+	name = "Eula"
+	picture = "Portrait_Eula.dds"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = {
+		infantry_leader commando
+	}
+}
+
+#Admirals
+create_navy_leader = {
+	name = "Yamato"
+	#id = 7100
+	picture = "ROA_Yamato_Kancol_admiral2.tga"
+	traits = {
+		navy_career_officer
+		bold
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Atago"
+	#id = 7101
+	picture = "ROA_Atago_Azur_Lane_admiral.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Avrora"
+	#id = 7102
+	picture = "ROA_Avrora_Azur_Lane_admiral.tga"
+	traits = {
+		bold
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Belfast"
+	#id = 7103
+	picture = "Portrait_Belfast.dds"
+	traits = {
+		navy_career_officer
+		bold
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Marblehead"
+	#id = 7104
+	picture = "ROA_Marblehead_Azur_Lane_admiral.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Saint Louis"
+	#id = 7105
+	picture = "ROA_Saint_Louis_Azur_Lane_admiral.tga"
+	traits = {
+		navy_career_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Takao Azur Lane"
+	#id = 7106
+	picture = "ROA_Takao_Azur_Lane_admiral.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Takao ARP"
+	#id = 7107
+	picture = "ROA_Takao_ARP_admiral.tga"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Tosa"
+	#id = 7108
+	picture = "ROA_Tosa_Azur_Lane_admiral.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Yamato WG"
+	#id = 7109
+	picture = "ROA_Yamato_WG_admiral.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Sovetskaya Rossiya"
+	#id = 7110
+	picture = "ROA_Sovetskaya_Rossiya_admiral.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Shima Tateishi"
+	#id = 7111
+	picture = "ROA_Shima_Tateishi_admiral.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Akeno Misaki"
+	#id = 7112
+	picture = "ROA_Akeno_Misaki_admiral.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "I-410"
+	#id = 7113
+	picture = "ROA_I-410_admiral.dds"
+	traits = {
+		torpedo_expert
+		silent_hunter
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Beidou"
+	#id = 7113
+	picture = "Portrait_Beidou.dds"
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+	traits = {
+		
+	}
+}
+
+#Agents
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Rosaria"
+		GFX = GFX_WFL_Rosaria
+		traits = {
+			operative_infiltrator
+			operative_demolition_expert
+			operative_commando
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Reina Prowler"
+		GFX = GFX_ROA_Reina_Prowler_agent
+		traits = {
+			operative_infiltrator
+			operative_safe_cracker
+			operative_demolition_expert
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Sheryl Nome"
+		GFX = GFX_ROA_Sheryl_Nome_agent
+		traits = {
+			operative_seducer
+			operative_natural_orator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Ange le Carré"
+		GFX = GFX_ROA_Ange_le_Carre_agent
+		traits = {
+			operative_commando
+			operative_demolition_expert
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Saki Mizushima"
+		GFX = GFX_ROA_Saki_Mizushima_agent
+		traits = {
+			operative_natural_orator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Ryou Akizuki"
+		GFX = GFX_ROA_Ryou_Akizuki_agent
+		traits = {
+			operative_seducer
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Makoto Kikuchi"
+		GFX = GFX_ROA_Makoto_Kikuchi_agent
+		traits = {
+			operative_commando
+			operative_demolition_expert
+			operative_safe_cracker
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Rias Gremory"
+		GFX = GFX_ROA_Rias_Gremory_agent
+		traits = {
+			operative_seducer
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Tomoko Kuroki"
+		GFX = GFX_Tomoko_Kuroki
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Aika Sumeragi"
+		GFX = GFX_Aika_Sumeragi
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Hitomi Tsukishiro"
+		GFX = GFX_Hitomi_Tsukishiro
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Aoba Suzukaze"
+		GFX = GFX_Aoba_Suzukaze
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+	}
+	create_operative_leader = {
+		name = "Ayame Himuro"
+		GFX = GFX_Ayame_Himuro
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+		traits = {
+			operative_linguist operative_safe_cracker
+		}
+	}
+	create_operative_leader = {
+		name = "Shiki"
+		GFX = GFX_Shiki
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = {
+			WFL
+		}
+		traits = {
+			operative_linguist operative_seducer
+		}
+	}
+}
+	### Variants ###
+	# Submarines #
+	create_equipment_variant = {
+		name = "O/P/R Class"
+		type = ship_hull_submarine_1
+		name_group = ENG_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "S Class"
+		type = ship_hull_submarine_1
+		name_group = ENG_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "A/B/C/D Class"
+		type = ship_hull_light_1
+		name_group = ENG_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "E/F/G/H Class"
+		type = ship_hull_light_2
+		name_group = ENG_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "V/W Class"
+		type = ship_hull_light_1
+		name_group = ENG_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "S Class"
+		type = ship_hull_light_1
+		name_group = ENG_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "C-Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Danae Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Emerald Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Leander Class"
+		type = ship_hull_cruiser_2
+		name_group = ENG_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_light_medium_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "Adventure Class"						# cruiser minelayer
+		type = ship_hull_cruiser_1
+		name_group = ENG_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			mid_2_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	create_equipment_variant = {
+			name = "Town Class"
+			type = ship_hull_cruiser_2
+			name_group = ENG_CL_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				front_1_custom_slot = ship_anti_air_2
+				mid_1_custom_slot = ship_torpedo_1
+				mid_2_custom_slot = ship_secondaries_2
+				rear_1_custom_slot = ship_light_medium_battery_2
+			}
+		}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "County Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "York Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Hawkins Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# Battlecruisers #
+	create_equipment_variant = {
+		name = "Renown Class"
+		type = ship_hull_heavy_1
+		name_group = ENG_BC_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bc_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# Battlecruisers #
+	create_equipment_variant = {
+		name = "Admiral Class"
+		type = ship_hull_heavy_1
+		name_group = ENG_BC_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bc_2
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+
+	create_equipment_variant = {
+		name = "G3 Design"
+		type = ship_hull_heavy_1
+		name_group = ENG_BC_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bc_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Battleships #
+	create_equipment_variant = {
+		name = "Nelson Class"
+		type = ship_hull_heavy_1
+		name_group = ENG_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Queen Elizabeth Class"
+		type = ship_hull_heavy_1
+		name_group = ENG_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Revenge Class"
+		type = ship_hull_heavy_1
+		name_group = ENG_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+		obsolete = yes
+	}

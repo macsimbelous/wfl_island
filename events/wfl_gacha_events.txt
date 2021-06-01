@@ -1,0 +1,348 @@
+add_namespace = wfl_gacha_event
+
+country_event = {
+	id = wfl_gacha_event.1
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 100
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.2
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		if = {
+			limit = {
+				has_tech = advanced_infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 10000
+			}
+		}
+		else_if = {
+			limit = { has_tech = improved_infantry_weapons }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 10000
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.3
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		if = {
+			limit = {
+				has_tech = advanced_infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 100000
+			}
+		}
+		else_if = {
+			limit = { has_tech = improved_infantry_weapons }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 100000
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 100000
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.4
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		if = {
+			limit = {
+				has_tech = advanced_infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 1000000
+			}
+		}
+		else_if = {
+			limit = { has_tech = improved_infantry_weapons }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 1000000
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000000
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.5
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 1000
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.6
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 10000
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.7
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		if = {
+			limit = {
+				has_tech = artillery4
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_3
+				amount = 1000
+			}
+		}
+		else_if = {
+			limit = { has_tech = artillery1 }
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 1000
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1000
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.8
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		if = {
+			limit = {
+				has_tech = artillery4
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_3
+				amount = 10000
+			}
+		}
+		else_if = {
+			limit = { has_tech = artillery1 }
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 10000
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 10000
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.9
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		if = {
+			limit = {
+				has_tech = artillery4
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_3
+				amount = 100000
+			}
+		}
+		else_if = {
+			limit = { has_tech = artillery1 }
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 100000
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 100000
+			}
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.10
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 1000
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.11
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 10000
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.12
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 100000
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.13
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = light_tank_equipment_1
+			amount = 10000
+		}
+	}
+}
+country_event = {
+	id = wfl_gacha_event.14
+	title = wfl_gacha_event.1.t
+	desc = wfl_gacha_event.1.d
+	#picture = GFX_wfl_event2
+	is_triggered_only = yes
+	option = {
+		name = wfl_gacha_event.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_1
+			amount = 1000
+		}
+	}
+}

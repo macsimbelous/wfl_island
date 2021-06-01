@@ -1,0 +1,61 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wfl_event1"
+		texturefile = "gfx/event_pictures/wfl_event1.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event2"
+		texturefile = "gfx/event_pictures/wfl_event2.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event3"
+		texturefile = "gfx/event_pictures/wfl_event3.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event4"
+		texturefile = "gfx/event_pictures/wfl_event4.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event5"
+		texturefile = "gfx/event_pictures/wfl_event5.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event6"
+		texturefile = "gfx/event_pictures/wfl_event1.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event7"
+		texturefile = "gfx/event_pictures/wfl_event7.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event8"
+		texturefile = "gfx/event_pictures/wfl_event8.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event9"
+		texturefile = "gfx/event_pictures/wfl_event9.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event10"
+		texturefile = "gfx/event_pictures/wfl_event10.dds"
+	}
+
+	spriteType = {
+		name = "GFX_wfl_event12"
+		texturefile = "gfx/event_pictures/wfl_event12.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_event13"
+		texturefile = "gfx/event_pictures/wfl_event12.dds"
+	}
+	#kosmos
+	spriteType = {
+		name = "GFX_report_event_kosmos_2"
+		texturefile = "gfx/event_pictures/report_event_kosmos_2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_kosmos_3"
+		texturefile = "gfx/event_pictures/report_event_kosmos_3.dds"
+	}
+	
+}

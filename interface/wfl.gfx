@@ -1,0 +1,232 @@
+spriteTypes = {
+        #Ideas
+	spriteType = {
+                name = "GFX_idea_wfl_megumin"
+                texturefile = "gfx/interface/ideas/idea_wfl_megumin.dds"
+	}
+	spriteType = {
+                name = "GFX_idea_wfl_darkness"
+                texturefile = "gfx/interface/ideas/idea_wfl_darkness.dds"
+	}
+	spriteType = {
+                name = "GFX_idea_wfl_eruza_guranhirute"
+                texturefile = "gfx/interface/ideas/idea_wfl_eruza_guranhirute.dds"
+	}
+	spriteType = {
+                name = "GFX_idea_wfl_ayame_himuro"
+                texturefile = "gfx/interface/ideas/idea_wfl_ayame_himuro.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_mare_bello_fiore"
+                texturefile = "gfx/interface/ideas/idea_wfl_mare_bello_fiore.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_albedo"
+                texturefile = "gfx/interface/ideas/idea_wfl_albedo.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_velvet_crowe"
+                texturefile = "gfx/interface/ideas/idea_wfl_velvet_crowe.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_matoi_ryuko"
+                texturefile = "gfx/interface/ideas/idea_wfl_matoi_ryuko.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_ange_le_carre"
+                texturefile = "gfx/interface/ideas/idea_wfl_ange_le_carre.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_neko"
+                texturefile = "gfx/interface/ideas/idea_wfl_neko.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_office_lady"
+                texturefile = "gfx/interface/ideas/idea_wfl_office_lady.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_mikumo_guynemer"
+                texturefile = "gfx/interface/ideas/idea_wfl_mikumo_guynemer.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_stalin_girl"
+                texturefile = "gfx/interface/ideas/idea_wfl_stalin.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_prinz_eugen"
+                texturefile = "gfx/interface/ideas/idea_wfl_prinz_eugen.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_mirage_farina_jenius"
+                texturefile = "gfx/interface/ideas/idea_wfl_mirage_farina_jenius.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_mosin_nagant"
+                texturefile = "gfx/interface/ideas/idea_wfl_mosin_nagant.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_sanya_v_litvyak"
+                texturefile = "gfx/interface/ideas/idea_wfl_sanya_v_litvyak.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_yamato_navy_chief"
+                texturefile = "gfx/interface/ideas/idea_wfl_yamato.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_atago_al_navy_chief"
+                texturefile = "gfx/interface/ideas/idea_wfl_atago_al.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_asuna_high_command"
+                texturefile = "gfx/interface/ideas/idea_wfl_asuna.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_klara_high_command"
+                texturefile = "gfx/interface/ideas/idea_wfl_klara.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_rokosovskii_girl_high_command"
+                texturefile = "gfx/interface/ideas/idea_wfl_rokosovskii.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_patton_girl_high_command"
+                texturefile = "gfx/interface/ideas/idea_wfl_patton.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_angelise_ikaruga_misurugi"
+                texturefile = "gfx/interface/ideas/idea_wfl_angelise_ikaruga_misurugi.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_i_401"
+                texturefile = "gfx/interface/ideas/idea_wfl_i_401.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_eagle"
+                texturefile = "gfx/interface/ideas/idea_wfl_eagle.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_arisa_mitaka"
+                texturefile = "gfx/interface/ideas/idea_wfl_arisa_mitaka.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_sovetskaya_rossiya"
+                texturefile = "gfx/interface/ideas/idea_wfl_sovetskaya_rossiya.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_akeno_misaki"
+                texturefile = "gfx/interface/ideas/idea_wfl_akeno_misaki.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_lucy_yamagami"
+                texturefile = "gfx/interface/ideas/idea_wfl_lucy_yamagami.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_camilla"
+                texturefile = "gfx/interface/ideas/idea_wfl_camilla.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_minami_nitta"
+                texturefile = "gfx/interface/ideas/idea_wfl_minami_nitta.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_marblehead"
+                texturefile = "gfx/interface/ideas/idea_wfl_marblehead.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_aoi_sakurai"
+                texturefile = "gfx/interface/ideas/idea_wfl_aoi_sakurai.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_incompetent_officers"
+                texturefile = "gfx/interface/ideas/idea_chi_incompetent_officers.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_minpropagand_idea"
+                texturefile = "gfx/interface/ideas/idea_usa_magic.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_minprom_idea"
+                texturefile = "gfx/interface/ideas/idea_generic_industrial_concern_2.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_minscience_idea"
+                texturefile = "gfx/interface/ideas/generic_research_bonus.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_nii_idea"
+                texturefile = "gfx/interface/ideas/generic_research_bonus.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_mintrans_idea"
+                texturefile = "gfx/interface/ideas/idea_generic_build_infrastructure.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_stavka_idea"
+                texturefile = "gfx/interface/ideas/idea_saf_soviet_advisers.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_minoboron_idea"
+                texturefile = "gfx/interface/ideas/idea_saf_soviet_advisers.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_immigration_idea"
+                texturefile = "gfx/interface/ideas/idea_generic_flexible_foreign_policy2.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_celia_cumani_aintree"
+                texturefile = "gfx/interface/ideas/idea_wfl_celia_cumani_aintree.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_carrier_company"
+                texturefile = "gfx/interface/ideas/idea_generic_navy_carrier_bonus.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_submarine_company"
+                texturefile = "gfx/interface/ideas/idea_generic_naval_manufacturer_1.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_juana_del_moral"
+                texturefile = "gfx/interface/ideas/idea_wfl_juana_del_moral.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_super_factory"
+                texturefile = "gfx/interface/ideas/idea_man_five_year_plan_industry.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_rocket_factory"
+                texturefile = "gfx/interface/ideas/idea_generic_electronics_concern_3.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_sputnik_v_kosmose"
+                texturefile = "gfx/interface/ideas/idea_generic_electronics_concern_1.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_core_states_to_pp"
+                texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_waifu_influence"
+                texturefile = "gfx/interface/ideas/idea_jap_supremacy_of_will.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_sputnik"
+                texturefile = "gfx/interface/ideas/idea_generic_flexible_foreign_policy2.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_waifuland_assistance"
+                texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil2.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_waifuland_puppet"
+                texturefile = "gfx/interface/ideas/idea_ast_classify_aliens.dds"
+        }
+        spriteType = {
+                name = "GFX_idea_wfl_colonial_office"
+                texturefile = "gfx/interface/ideas/idea_por_colonial_assimilation.dds"
+        }
+        #parti
+        spriteType = {
+		name = "GFX_ideology_waifuism_group"
+		texturefile = "gfx/interface/ideologies/waifuism_group.dds"
+	}
+}

@@ -1,0 +1,273 @@
+wfl_coring_state = {
+	for_each_loop = {
+		array = core_countries
+		value = temp_tag
+		remove_core_of = temp_var:temp_tag
+	}
+	add_core_of = ROOT
+}
+
+wfl_up_resources_state = {
+	set_temp_variable = {
+		mult_res = 1
+	}
+	if = {
+		limit = {
+			has_state_flag = wfl_up_resources_1
+		}
+		add_to_temp_variable = {
+			mult_res = 1
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = wfl_up_resources_2
+		}
+		add_to_temp_variable = {
+			mult_res = 1
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = wfl_up_resources_3
+		}
+		add_to_temp_variable = {
+			mult_res = 1
+		}
+	}
+	set_temp_variable = {
+		base_res = 8
+	}
+	multiply_temp_variable = {
+		base_res = mult_res
+	}
+	if = {
+		limit = {
+			steel > 0
+		}
+		add_resource = {
+			type = steel
+			amount = var:base_res
+		}
+	}
+	if = {
+		limit = {
+			oil > 0
+		}
+		add_resource = {
+			type = oil
+			amount = var:base_res
+		}
+	}
+	if = {
+		limit = {
+			aluminium > 0
+		}
+		add_resource = {
+			type = aluminium
+			amount = var:base_res
+		}
+	}
+	if = {
+		limit = {
+			tungsten > 0
+		}
+		add_resource = {
+			type = tungsten
+			amount = var:base_res
+		}
+	}
+	if = {
+		limit = {
+			chromium > 0
+		}
+		add_resource = {
+			type = chromium
+			amount = var:base_res
+		}
+	}
+}
+wfl_sputnik_change = {
+	set_variable = {
+		wfk_sputnik_decryption_factor = 0.02
+	}
+	multiply_variable = {
+		wfk_sputnik_decryption_factor = wfl_sputnik_count
+	}
+	set_variable = {
+		wfk_sputnik_encryption_factor = 0.02
+	}
+	multiply_variable = {
+		wfk_sputnik_encryption_factor = wfl_sputnik_count
+	}
+	set_variable = {
+		wfk_sputnik_recon_factor = 0.02
+	}
+	multiply_variable = {
+		wfk_sputnik_recon_factor = wfl_sputnik_count
+	}
+	set_variable = {
+		wfk_sputnik_research_speed_factor = 0.02
+	}
+	multiply_variable = {
+		wfk_sputnik_research_speed_factor = wfl_sputnik_count
+	}
+}
+wfl_sputnik_add = {
+	add_to_variable = {
+		wfl_sputnik_count = 1
+	}
+	add_to_variable = {
+		wfk_sputnik_decryption_factor = 0.02
+	}
+	add_to_variable = {
+		wfk_sputnik_encryption_factor = 0.02
+	}
+	add_to_variable = {
+		wfk_sputnik_recon_factor = 0.02
+	}
+	add_to_variable = {
+		wfk_sputnik_research_speed_factor = 0.02
+	}
+}
+wfl_sputnik_remove = {
+	subtract_from_variable = {
+		wfl_sputnik_count = 1
+	}
+	subtract_from_variable = {
+		wfk_sputnik_decryption_factor = 0.02
+	}
+	subtract_from_variable = {
+		wfk_sputnik_encryption_factor = 0.02
+	}
+	subtract_from_variable = {
+		wfk_sputnik_recon_factor = 0.02
+	}
+	subtract_from_variable = {
+		wfk_sputnik_research_speed_factor = 0.02
+	}
+}
+
+wfl_up_resources_state3 = {
+	if = {
+		limit = {
+			steel > 0
+		}
+		add_resource = {
+			type = steel
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			oil > 0
+		}
+		add_resource = {
+			type = oil
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			aluminium > 0
+		}
+		add_resource = {
+			type = aluminium
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			tungsten > 0
+		}
+		add_resource = {
+			type = tungsten
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			chromium > 0
+		}
+		add_resource = {
+			type = chromium
+			amount = 8
+		}
+	}
+	#if = {
+	#	limit = {
+	#		rubber > 0
+	#	}
+	#	add_resource = {
+	#		type = rubber
+	#		amount = 8
+	#	}
+	#}
+}
+wfl_up_resources_state2 = {
+	if = {
+		limit = {
+			steel > 0
+		}
+		
+		set_temp_variable = {
+			temp_inf_multipler = infrastructure_level
+		}
+		divide_temp_variable = {
+			temp_inf_multipler = 10
+		}
+		add_to_temp_variable = {
+			temp_inf_multipler = 1
+		}
+		set_temp_variable = {
+			temp_steel = resource@steel
+		}
+		divide_temp_variable = {
+			temp_steel = temp_inf_multipler
+		}
+		multiply_temp_variable = {
+			temp_steel = 1.2
+		}
+		round_temp_variable = temp_steel
+		add_resource = {
+			type = steel
+			amount = var:temp_steel
+		}
+	}
+	if = {
+		limit = {
+			oil > 0
+		}
+		add_resource = {
+			type = oil
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			aluminium > 0
+		}
+		add_resource = {
+			type = aluminium
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			tungsten > 0
+		}
+		add_resource = {
+			type = tungsten
+			amount = 8
+		}
+	}
+	if = {
+		limit = {
+			chromium > 0
+		}
+		add_resource = {
+			type = chromium
+			amount = 8
+		}
+	}
+}

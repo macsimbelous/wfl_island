@@ -1,0 +1,35 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wfl_news_event_001"
+		texturefile = "gfx/event_pictures/wfl_event1.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_news_event_002"
+		texturefile = "gfx/event_pictures/wfl_news_event_002.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_news_event_003"
+		texturefile = "gfx/event_pictures/wfl_news_event_003.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_news_event_004"
+		texturefile = "gfx/event_pictures/wfl_news_event_004.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_news_event_005"
+		texturefile = "gfx/event_pictures/wfl_news_event_005.dds"
+	}
+	spriteType = {
+		name = "GFX_wfl_news_event_006"
+		texturefile = "gfx/event_pictures/wfl_news_event_006.dds"
+	}
+	#kosmos
+	spriteType = {
+		name = "GFX_news_event_doroga_v_kosmos"
+		texturefile = "gfx/event_pictures/news_event_doroga_v_kosmos.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_doroga_v_kosmos_2"
+		texturefile = "gfx/event_pictures/news_event_doroga_v_kosmos_2.dds"
+	}
+}

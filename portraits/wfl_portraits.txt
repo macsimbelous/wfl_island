@@ -1,0 +1,295 @@
+continent = {
+	name = europe
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_01.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_02.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_03.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_04.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_05.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_06.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_07.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_08.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_09.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_10.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Waifu_Generic_11.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = north_america
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_01.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_02.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_03.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_04.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_05.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_06.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_07.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_08.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_09.dds"
+				"gfx/leaders/North America/Portrait_North_America_Waifu_Generic_10.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = south_america
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_01.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_02.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_03.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_04.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_05.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_06.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_07.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_08.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_09.dds"
+				"gfx/leaders/South America/Portrait_South_America_Waifu_Generic_10.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = australia
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_01.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_02.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_03.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_04.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_05.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_06.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_07.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_08.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_09.dds"
+				"gfx/leaders/Australia/Portrait_Australia_Waifu_Generic_10.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = africa
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_01.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_02.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_03.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_04.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_05.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_06.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_07.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_08.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_09.dds"
+				"gfx/leaders/Africa/Portrait_Africa_Waifu_Generic_10.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = asia
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_01.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_02.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_03.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_04.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_05.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_06.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_07.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_08.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_09.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_10.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Waifu_Generic_11.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = middle_east
+	political = {
+		waifuism = {
+			male = {
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_01.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_02.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_03.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_04.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_05.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_06.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_07.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_08.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_09.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_10.dds"
+				"gfx/leaders/Middle East/Portrait_Middle_East_Waifu_Generic_11.dds"
+			}
+		}
+	}
+}
+
+WFL = {
+	army = {
+		male = {
+			"gfx/leaders/WFL/Portrait_generic_land_01.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_02.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_03.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_04.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_05.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_06.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_07.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_08.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_09.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_10.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_11.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_12.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_13.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_14.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_15.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_16.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_17.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_18.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_19.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_20.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_21.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_22.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_23.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_24.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_25.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_26.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_27.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_28.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_29.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_30.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_31.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_32.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_33.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_34.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_35.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_36.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_37.dds"
+			"gfx/leaders/WFL/Portrait_generic_land_38.dds"
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/WFL/Portrait_generic_naval_01.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_02.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_03.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_04.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_05.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_06.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_07.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_08.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_09.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_10.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_11.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_12.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_13.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_14.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_15.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_16.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_17.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_18.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_19.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_20.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_21.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_22.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_23.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_24.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_25.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_26.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_27.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_28.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_29.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_30.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_31.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_32.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_33.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_34.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_35.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_36.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_37.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_38.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_39.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_40.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_41.dds"
+			"gfx/leaders/WFL/Portrait_generic_naval_42.dds"
+		}
+	}
+	political = {
+		communism = {
+			male = {
+				"gfx/leaders/WFL/ROA_Erza_lider_stalinism.tga"
+			}
+		}
+		democratic = {
+			male = {
+				"gfx/leaders/WFL/ROA_Anastasia_lider_liberalism.tga"
+			}
+		}
+		fascism = {
+			male = {
+				"gfx/leaders/WFL/Portrait_Asuka_lider.dds"
+			}
+		}
+		neutrality = {
+			male = {
+				"gfx/leaders/WFL/ROA_KOS-MOS_lider_despotism.tga"
+			}
+		}
+	}
+	operative = {
+		female = {
+			"gfx/leaders/WFL/Portrait_female_generic_operative_01.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_02.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_03.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_04.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_05.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_06.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_07.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_08.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_09.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_10.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_11.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_12.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_13.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_14.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_15.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_16.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_17.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_18.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_19.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_20.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_21.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_22.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_23.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_24.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_25.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_26.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_27.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_28.dds"
+			"gfx/leaders/WFL/Portrait_female_generic_operative_29.dds"
+		}
+		male = {
+			"gfx/leaders/WFL/Portrait_male_generic_operative_01.dds"
+			"gfx/leaders/WFL/Portrait_male_generic_operative_02.dds"
+			"gfx/leaders/WFL/Portrait_male_generic_operative_03.dds"
+			"gfx/leaders/WFL/Portrait_male_generic_operative_04.dds"
+			"gfx/leaders/WFL/Portrait_male_generic_operative_05.dds"
+		}
+	}
+}

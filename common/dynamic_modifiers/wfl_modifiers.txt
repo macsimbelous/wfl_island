@@ -1,0 +1,13 @@
+wfl_core_states_to_pp = {
+	icon = GFX_idea_wfl_core_states_to_pp
+	enable = { always = yes }
+	political_power_gain = wfl_core_bonus_to_pp
+}
+wfl_sputnik = {
+	icon = GFX_idea_wfl_sputnik
+	enable = { always = yes }
+	decryption_factor = wfk_sputnik_decryption_factor
+	encryption_factor = wfk_sputnik_encryption_factor
+	recon_factor = wfk_sputnik_recon_factor
+	research_speed_factor = wfk_sputnik_research_speed_factor
+}

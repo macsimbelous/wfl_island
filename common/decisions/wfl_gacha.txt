@@ -1,0 +1,65 @@
+wfl_gacha_category = {
+	wfl_gacha_decision = {
+		name = wfl_gacha_decision.t
+		#icon = generic_ignite_civil_war
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 7
+		complete_effect = {
+			custom_effect_tooltip = wfl_gacha_tt
+			hidden_effect = {
+				random_list = {
+					71 = {
+						country_event = wfl_gacha_event.1
+					}
+					5 = {
+						country_event = wfl_gacha_event.2
+					}
+					2 = {
+						country_event = wfl_gacha_event.3
+					}
+					1 = {
+						country_event = wfl_gacha_event.4
+					}
+					2 = {
+						country_event = wfl_gacha_event.5
+					}
+					1 = {
+						country_event = wfl_gacha_event.6
+					}
+					5 = {
+						country_event = wfl_gacha_event.7
+					}
+					2 = {
+						country_event = wfl_gacha_event.8
+					}
+					1 = {
+						country_event = wfl_gacha_event.9
+					}
+					5 = {
+						country_event = wfl_gacha_event.10
+					}
+					2 = {
+						country_event = wfl_gacha_event.11 
+					}
+					1 = {
+						country_event = wfl_gacha_event.12
+					}
+					1 = {
+						country_event = wfl_gacha_event.13
+					}
+					1 = {
+						country_event = wfl_gacha_event.14
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_political_power > 1000
+				add = 5
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+spriteTypes = {
+        #Agents
+        spriteType = {
+                name = "GFX_WFL_Rosaria"
+                texturefile = "gfx/leaders/WFL/Portrait_Rosaria.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Reina_Prowler_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Reina_Prowler.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Sheryl_Nome_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Sheryl_Nome.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Ange_le_Carre_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Ange_le_Carre.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Saki_Mizushima_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Saki_Mizushima.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Ryou_Akizuki_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Ryou_Akizuki.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Makoto_Kikuchi_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Makoto_Kikuchi.dds"
+        }
+        spriteType = {
+                name = "GFX_ROA_Rias_Gremory_agent"
+                texturefile = "gfx/leaders/WFL/Portrait_Rias_Gremory.dds"
+        }
+        spriteType = {
+                name = "GFX_Tomoko_Kuroki"
+                texturefile = "gfx/leaders/WFL/Portrait_Tomoko_Kuroki.dds"
+        }
+        spriteType = {
+                name = "GFX_Aika_Sumeragi"
+                texturefile = "gfx/leaders/WFL/Portrait_Aika_Sumeragi.dds"
+        }
+        spriteType = {
+                name = "GFX_Hitomi_Tsukishiro"
+                texturefile = "gfx/leaders/WFL/Portrait_Hitomi_Tsukishiro.dds"
+        }
+        spriteType = {
+                name = "GFX_Aoba_Suzukaze"
+                texturefile = "gfx/leaders/WFL/Portrait_Aoba_Suzukaze.dds"
+        }
+        spriteType = {
+                name = "GFX_Ayame_Himuro"
+                texturefile = "gfx/leaders/WFL/Portrait_Ayame_Himuro.dds"
+        }
+        spriteType = {
+                name = "GFX_Shiki"
+                texturefile = "gfx/leaders/WFL/Portrait_Shiki.dds"
+        }
+}
