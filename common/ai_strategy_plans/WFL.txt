@@ -1,0 +1,132 @@
+Waifuland_historical = {
+	name = "Waifuland historical plan"
+	desc = "Essentially historical behaviour for Waifuland"
+	allowed = {
+		original_tag = WFL
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		NOT = {
+			has_government = fascism
+		}
+	}
+	ai_national_focuses = {
+		wfl_political_effort
+		wfl_collectivist_ethos
+		wfl_nationalism_focus
+		wfl_militarism
+		wfl_military_youth
+		wfl_paramilitarism
+		wfl_ideological_fanaticism
+		wfl_war_economy
+		wfl_ire_war
+		wfl_eng_war
+		wfl_create_waifu_power
+		wfl_nii
+	}
+	research = {
+		infantry_weapons = 50
+		infantry_tech = 15
+		artillery = 8
+		support_tech = 6.5
+	}
+	ideas = {
+		hjalmar_schacht = 10
+	}
+	traits = {
+		captain_of_industry = 5
+	}
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+	focus_factors = {
+		GER_rhineland = 1
+	}
+}
+
+WFL_minor_allies = {
+	#used to make minor European nations like Axis more
+	name = "Minor Waifuland Allies"
+	allowed = {
+		OR = {
+			original_tag = ROM
+			original_tag = HUN
+			original_tag = BUL
+			original_tag = YUG
+			original_tag = ITA
+			original_tag = CZE
+			original_tag = DEN
+			original_tag = NOR
+			original_tag = SWE
+			original_tag = FIN
+			original_tag = SPR
+			original_tag = POR
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+			original_tag = POL
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+			original_tag = CRO
+			original_tag = SLO
+		}
+	}
+	enable = {
+		OR = {
+			has_government = fascism
+			fascism > 0.5
+		}
+		is_in_faction = no
+		WFL = {
+			has_government = fascism
+		}
+		OR = {
+			original_tag = ROM
+			original_tag = HUN
+			original_tag = BUL
+			original_tag = YUG
+			original_tag = ITA
+			original_tag = CZE
+			original_tag = DEN
+			original_tag = NOR
+			original_tag = SWE
+			original_tag = FIN
+			original_tag = SPR
+			original_tag = POR
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+			original_tag = POL
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+			original_tag = CRO
+			original_tag = SLO
+		}
+	}
+	abort = {
+		WFL = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -500
+	}
+}
