@@ -7,11 +7,7 @@ Waifuland_historical = {
 	enable = {
 		is_historical_focus_on = yes
 	}
-	abort = {
-		NOT = {
-			has_government = fascism
-		}
-	}
+
 	ai_national_focuses = {
 		wfl_political_effort
 		wfl_collectivist_ethos
