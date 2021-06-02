@@ -15,6 +15,7 @@ Waifuland_historical = {
 		wfl_militarism
 		wfl_military_youth
 		wfl_paramilitarism
+		wfl_new_government
 		wfl_ideological_fanaticism
 		wfl_war_economy
 		wfl_ire_war

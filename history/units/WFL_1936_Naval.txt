@@ -1,9 +1,7 @@
 ﻿units = {
-	##### NAVAL UNITS #####
-	### HOME COMMAND ###
 	fleet = {
-		name = "Home Command"			
-		naval_base = 13264 # Scapa Flow
+		name = "Grand Waifu Fleet"			
+		naval_base = 13264
 		task_force = {
 			name = "Home Fleet"
 			location = 13264 # Scapa Flow
