@@ -70,8 +70,8 @@ set_technology = {
 }
 
 add_ideas = {
-	limited_exports
-	#free_trade
+	#limited_exports
+	free_trade
 	#closed_economy
 	civilian_economy
 	#partial_economic_mobilisation

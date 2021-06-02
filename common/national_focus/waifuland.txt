@@ -37,7 +37,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		#relative_position_id = wfl_persia_war
-		x = 28
+		x = 32
 		y = 0
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -856,9 +856,9 @@ focus_tree = {
 	focus = {
 		id = wfl_nii
 		icon = GFX_focus_research
-		cost = 20
+		cost = 10
 		#relative_position_id = wfl_persia_war
-		x = 33
+		x = 25
 		y = 0
 		ai_will_do = {
 			factor = 100
@@ -1855,7 +1855,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		mutually_exclusive = {
-			focus = wfl_create_waifu_power
+			focus = wfl_ger_frend
 		}
 		available = {
 			is_in_faction = no

@@ -13,7 +13,7 @@ bookmarks = {
 
 			ideas = {
 				#closed_economy
-				limited_exports
+				free_trade
 				#partial_economic_mobilisation
 				civilian_economy
 				#ideological_fanaticism_focus
