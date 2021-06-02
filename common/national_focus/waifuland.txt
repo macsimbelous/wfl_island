@@ -156,213 +156,6 @@ focus_tree = {
 			set_country_flag = wfl_cultural_assimilation_flag
 		}
 	}
-	focus = {
-		id = wfl_usa_frend
-		icon = GFX_focus_chi_mission_to_the_us
-		cost = 10
-		prerequisite = {
-			focus = wfl_cultural_assimilation
-		}
-		relative_position_id = wfl_cultural_assimilation
-		x = -4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-
-		available_if_capitulated = yes
-		available = {
-			has_government = communism
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			add_opinion_modifier = {
-				target = USA
-				modifier = wfl_usa_frend_opinion
-			}
-			USA = {
-				add_timed_idea = {
-					idea = communist_influence
-					days = 720
-				}
-				add_opinion_modifier = {
-					target = WFL
-					modifier = wfl_usa_frend_opinion
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_investments_in_usa_dockyard
-		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 20
-		prerequisite = {
-			focus = wfl_usa_frend
-		}
-		relative_position_id = wfl_usa_frend
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			USA = {
-				every_owned_state = {
-					limit = {
-						is_coastal = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.075
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = wfl_usa_naval_bonus
-		icon = GFX_focus_generic_navy_battleship2
-		cost = 10
-		prerequisite = {
-			focus = wfl_investments_in_usa_dockyard
-		}
-		relative_position_id = wfl_investments_in_usa_dockyard
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			USA = {
-				navy_experience = 50
-				add_tech_bonus = {
-					name = naval_doctrine
-					bonus = 1
-					#ahead_reduction = 2
-					uses = 1
-					category = naval_doctrine
-				}
-				add_tech_bonus = {
-					name = naval_equipment_research
-					bonus = 1
-					#ahead_reduction = 2
-					uses = 3
-					category = naval_equipment
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.05
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_usa_nuclear_effort
-		icon = GFX_focus_wonderweapons
-		cost = 20
-		prerequisite = {
-			focus = wfl_usa_naval_bonus
-		}
-		relative_position_id = wfl_usa_naval_bonus
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			USA = {
-				add_tech_bonus = {
-					name = nuclear_bonus
-					bonus = 2
-					uses = 1
-					ahead_reduction = 2
-					category = nuclear
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.15
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_waifu_revolution_in_usa
-		icon = GFX_goal_anti_comintern_pact
-		cost = 10
-		prerequisite = {
-			focus = wfl_usa_nuclear_effort
-		}
-		relative_position_id = wfl_usa_nuclear_effort
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		available = {
-			USA = {
-				OR = {
-					AND = {
-						has_war = no
-						communism > 0.3
-					}
-					communism > 0.6
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			USA = {
-				set_politics = {
-					ruling_party = communism
-				}
-				add_ideas = waifuland_assistance
-				IF = {
-					LIMIT = {
-						is_in_faction = yes
-					}
-					IF = {
-						LIMIT = {
-							is_faction_leader = yes
-						}
-						dismantle_faction = yes
-						ELSE = {
-							leave_faction = yes
-						}
-					}
-					#leave_faction = yes
-					#dismantle_faction = yes
-				}
-			}
-			add_to_faction = USA
-		}
-	}
 
 	focus = {
 		id = wfl_civ_factory
@@ -743,27 +536,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wfl_traps_in_army
-		icon = GFX_focus_generic_manpower
-		cost = 5
-		prerequisite = {
-			focus = wfl_cultural_assimilation
-		}
-		relative_position_id = wfl_cultural_assimilation
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 2
-		}
-		completion_reward = {
-			add_ideas = wfl_traps_in_army
-		}
-	}
+
 
 	focus = {
 		id = wfl_special_forces
@@ -1217,69 +990,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = wfl_idols_agency
-		icon = GFX_focus_generic_treaty
-		cost = 10
-		prerequisite = {
-			focus = wfl_cultural_assimilation
-		}
-		relative_position_id = wfl_cultural_assimilation
-		x = 3
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		available = {
-			has_war = no
-			has_idea = wfl_minpropagand_idea
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 2
-		}
-		completion_reward = {
-			country_event = wfl_event.10
-			add_ideas = wfl_idols_agency_idea
-			custom_effect_tooltip = wfl_idols_agency_tt
-		}
-	}
-	focus = {
-		id = wfl_world_tour
-		icon = GFX_goal_generic_propaganda
-		cost = 20
-		prerequisite = {
-			focus = wfl_idols_agency
-		}
-		relative_position_id = wfl_idols_agency
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		available_if_capitulated = yes
-		available = {
-			has_war = no
-		}
-		ai_will_do = {
-			factor = 2
-		}
-		completion_reward = {
-			#country_event = wfl_event.10
-			every_other_country = {
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
-				add_opinion_modifier = {
-					target = WFL
-					modifier = small_increase
-				}
-			}
-			custom_effect_tooltip = wfl_world_tour_tt
-			set_country_flag = wfl_world_tour_flag
-		}
-	}
+
 	focus = {
 		id = wfl_nii
 		icon = GFX_focus_research
@@ -1605,7 +1316,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 		}
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = wfl_collectivist_ethos
 		cost = 5
@@ -1662,7 +1373,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = wfl_collectivist_ethos
 		cost = 5
@@ -1990,6 +1701,27 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_traps_in_army
+		icon = GFX_focus_generic_manpower
+		cost = 5
+		prerequisite = {
+			focus = wfl_volunteer_corps
+		}
+		relative_position_id = wfl_volunteer_corps
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = wfl_traps_in_army
+		}
+	}
+	focus = {
 		id = wfl_paramilitarism
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
@@ -2213,6 +1945,36 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_ger_war
+		icon = GFX_focus_attack_germany
+		cost = 5
+		prerequisite = {
+			focus = wfl_eng_war
+		}
+		relative_position_id = wfl_eng_war
+		x = 3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+			NOT = {
+				is_in_faction_with = GER
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = wfl_indoctrination_focus
 		icon = GFX_goal_generic_propaganda
 		prerequisite = {
@@ -2288,37 +2050,272 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
-		id = wfl_ger_war
-		icon = GFX_focus_attack_germany
-		cost = 5
+		id = wfl_usa_frend
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10
 		prerequisite = {
 			focus = wfl_foreign_expeditions
 		}
 		relative_position_id = wfl_foreign_expeditions
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = USA
+				modifier = wfl_usa_frend_opinion
+			}
+			USA = {
+				add_timed_idea = {
+					idea = communist_influence
+					days = 720
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_usa_frend_opinion
+				}
+			}
+		}
+	}
+	focus = {
+		id = wfl_investments_in_usa_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 20
+		prerequisite = {
+			focus = wfl_usa_frend
+		}
+		relative_position_id = wfl_usa_frend
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			USA = {
+				every_owned_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = wfl_usa_naval_bonus
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 10
+		prerequisite = {
+			focus = wfl_investments_in_usa_dockyard
+		}
+		relative_position_id = wfl_investments_in_usa_dockyard
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			USA = {
+				navy_experience = 50
+				add_tech_bonus = {
+					name = naval_doctrine
+					bonus = 1
+					#ahead_reduction = 2
+					uses = 1
+					category = naval_doctrine
+				}
+				add_tech_bonus = {
+					name = naval_equipment_research
+					bonus = 1
+					#ahead_reduction = 2
+					uses = 3
+					category = naval_equipment
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+	}
+	focus = {
+		id = wfl_usa_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 20
+		prerequisite = {
+			focus = wfl_usa_naval_bonus
+		}
+		relative_position_id = wfl_usa_naval_bonus
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			USA = {
+				add_tech_bonus = {
+					name = nuclear_bonus
+					bonus = 2
+					uses = 1
+					ahead_reduction = 2
+					category = nuclear
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_waifu_revolution_in_usa
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = wfl_usa_nuclear_effort
+		}
+		relative_position_id = wfl_usa_nuclear_effort
 		x = 0
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		#available_if_capitulated = no
 		available = {
-			has_war = no
-			SOV = {
+			USA = {
 				OR = {
-					is_puppet_of = WFL
-					exists = no
+					AND = {
+						has_war = no
+						communism > 0.3
+					}
+					communism > 0.6
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
-			create_wargoal = {
-				target = GER
-				type = puppet_wargoal_focus
+			USA = {
+				set_politics = {
+					ruling_party = communism
+				}
+				add_ideas = waifuland_assistance
+				IF = {
+					LIMIT = {
+						is_in_faction = yes
+					}
+					IF = {
+						LIMIT = {
+							is_faction_leader = yes
+						}
+						dismantle_faction = yes
+						ELSE = {
+							leave_faction = yes
+						}
+					}
+					#leave_faction = yes
+					#dismantle_faction = yes
+				}
 			}
+			add_to_faction = USA
+		}
+	}
+	focus = {
+		id = wfl_idols_agency
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = wfl_foreign_expeditions
+		}
+		relative_position_id = wfl_foreign_expeditions
+		x = 4
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+			has_idea = wfl_minpropagand_idea
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			country_event = wfl_event.10
+			add_ideas = wfl_idols_agency_idea
+			custom_effect_tooltip = wfl_idols_agency_tt
+		}
+	}
+	focus = {
+		id = wfl_world_tour
+		icon = GFX_goal_generic_propaganda
+		cost = 20
+		prerequisite = {
+			focus = wfl_idols_agency
+		}
+		relative_position_id = wfl_idols_agency
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		available = {
+			has_war = no
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 2
+		}
+		completion_reward = {
+			#country_event = wfl_event.10
+			every_other_country = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = small_increase
+				}
+			}
+			custom_effect_tooltip = wfl_world_tour_tt
+			set_country_flag = wfl_world_tour_flag
 		}
 	}
 	focus = {
@@ -2367,7 +2364,7 @@ focus_tree = {
 			focus = wfl_paramilitarism
 			focus = wfl_political_commissars
 		}
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = wfl_paramilitarism
 		cost = 5
