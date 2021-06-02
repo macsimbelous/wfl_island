@@ -437,12 +437,202 @@ units = {
 	}
 	division = {
 		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu 20"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
 		division_template = "Mountaineers Waifu"
 		start_experience_factor = 0.3
 	}
 	division = {
 		location = 13261
 		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Mountaineers Waifu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu light tank"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu light tank"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu light tank"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 13261
+		division_template = "Waifu light tank"
 		start_experience_factor = 0.3
 	}
 	division = {
