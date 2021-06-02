@@ -139,6 +139,9 @@ wfl_juana_del_moral:0 "Фана дель Мораль"
 wfl_juana_del_moral_desc:0 "Несмотря на то, что родилась в богатой дворянской семье, весьма вежлива и сострадательна."
 wfl_angelise_ikaruga_misurugi:0 "Анжелиз Икаруга Мисуруги"
 wfl_angelise_ikaruga_misurugi_desc:0 "Первая принцесса империи Мисуруги, представительница дворянской семьи, управляющей страной. Оказавшись нормой — девушкой, невосприимчивой к мане, была лишена титула и сослана на отдалённый остров."
+wfl_democratic_reformer:0 "Игл"
+wfl_communist_revolutionary:0 "Советская Россия"
+wfl_fascist_demagogue:0 "Принц Ойген"
 
 #traits
 wfl_idol:0 "Идол"

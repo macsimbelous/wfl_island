@@ -750,7 +750,36 @@ ideas = {
 				factor = 1
 			}
 		}
-
+		wfl_democratic_reformer = {
+			picture = wfl_eagle
+			allowed = {
+				original_tag = WFL
+			}
+			traits = { democratic_reformer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_communist_revolutionary = {
+			picture = wfl_sovetskaya_rossiya
+			allowed = {
+				original_tag = WFL
+			}
+			traits = { communist_revolutionary }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		wfl_fascist_demagogue = {
+			picture = wfl_prinz_eugen
+			allowed = {
+				original_tag = WFL
+			}
+			traits = { fascist_demagogue }
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	theorist = {
 		wfl_velvet_crowe = {
