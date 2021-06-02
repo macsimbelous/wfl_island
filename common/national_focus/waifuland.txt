@@ -103,9 +103,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		mutually_exclusive = {
-			focus = wfl_purge
-		}
+
 		available_if_capitulated = yes
 		available = {
 			has_war = no
@@ -171,9 +169,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		mutually_exclusive = {
-			focus = wfl_sov_frend
-		}
+
 		available_if_capitulated = yes
 		available = {
 			has_government = communism
@@ -367,418 +363,7 @@ focus_tree = {
 			add_to_faction = USA
 		}
 	}
-	focus = {
-		id = wfl_sov_frend
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		cost = 10
-		prerequisite = {
-			focus = wfl_cultural_assimilation
-		}
-		relative_position_id = wfl_cultural_assimilation
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		mutually_exclusive = {
-			focus = wfl_usa_frend
-		}
-		available_if_capitulated = yes
-		available = {
-			has_government = democratic
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			add_opinion_modifier = {
-				target = SOV
-				modifier = wfl_sov_frend_opinion
-			}
-			SOV = {
-				add_timed_idea = {
-					idea = democratic_influence
-					days = 720
-				}
-				add_opinion_modifier = {
-					target = WFL
-					modifier = wfl_sov_frend_opinion
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_railway_in_mid_asia
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
-		prerequisite = {
-			focus = wfl_sov_frend
-		}
-		relative_position_id = wfl_sov_frend
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		available = {
-		}
-		completion_reward = {
-			SOV = {
-				584 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					urbanize_state = yes
-				}
-				585 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					urbanize_state = yes
-				}
-				587 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					urbanize_state = yes
-				}
-				406 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					urbanize_state = yes
-				}
-				407 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					urbanize_state = yes
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = wfl_trans_sib_upgrade
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 20
-		prerequisite = {
-			focus = wfl_railway_in_mid_asia
-		}
-		relative_position_id = wfl_railway_in_mid_asia
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		available = {
-		}
-		completion_reward = {
-			SOV = {
-				573 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				572 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				403 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				571 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				570 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				569 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				568 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				567 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				566 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				564 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				563 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				561 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				657 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				409 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				408 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = wfl_arms_factory_to_sov
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
-		prerequisite = {
-			focus = wfl_trans_sib_upgrade
-		}
-		relative_position_id = wfl_trans_sib_upgrade
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		available = {
-			SOV = {
-				has_war = yes
-			}
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			SOV = {
-				add_tech_bonus = {
-					name = industrial_bonus
-					bonus = 1
-					uses = 1
-					category = industry
-				}
-				651 = {
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = arms_factory
-						level = 5
-						instant_build = yes
-					}
-				}
-				399 = {
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = arms_factory
-						level = 5
-						instant_build = yes
-					}
-				}
-				251 = {
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = arms_factory
-						level = 5
-						instant_build = yes
-					}
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.15
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_civ_factory_to_sov
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
-		prerequisite = {
-			focus = wfl_trans_sib_upgrade
-		}
-		relative_position_id = wfl_trans_sib_upgrade
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			SOV = {
-				add_tech_bonus = {
-					name = industrial_bonus
-					bonus = 1
-					uses = 1
-					category = industry
-				}
-				584 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
-					}
-				}
-				585 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
-					}
-				}
-				587 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
-					}
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_waifu_revolution_in_sov
-		icon = GFX_goal_anti_comintern_pact
-		cost = 10
-		prerequisite = {
-			focus = wfl_arms_factory_to_sov
-			focus = wfl_civ_factory_to_sov
-		}
-		relative_position_id = wfl_arms_factory_to_sov
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		available = {
-			SOV = {
-				OR = {
-					AND = {
-						has_war = no
-						democratic > 0.3
-					}
-					democratic > 0.6
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			SOV = {
-				set_politics = {
-					ruling_party = democratic
-				}
-				add_ideas = waifuland_assistance
-				IF = {
-					LIMIT = {
-						is_in_faction = yes
-					}
-					IF = {
-						LIMIT = {
-							is_faction_leader = yes
-						}
-						dismantle_faction = yes
-						ELSE = {
-							leave_faction = yes
-						}
-					}
-					#leave_faction = yes
-					#dismantle_faction = yes
-				}
-			}
-			add_to_faction = SOV
-		}
-	}
+
 	focus = {
 		id = wfl_civ_factory
 		icon = GFX_goal_generic_construct_civ_factory
@@ -996,126 +581,105 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = wfl_purge
-		icon = GFX_focus_hun_assassinate_horthy
-		cost = 5
-		cancelable = no
+		id = wfl_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
 		prerequisite = {
-			focus = wfl_persia_war
+			focus = wfl_slot_bonus
 		}
-		relative_position_id = wfl_persia_war
-		x = 4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		mutually_exclusive = {
-			focus = wfl_cultural_assimilation
-		}
-		available_if_capitulated = yes
-		available = {
-			has_war = no
-		}
-		ai_will_do = {
-			base = 10
-			modifier = {
-				has_country_leader = {
-					name = "Asuka"
-				}
-				add = 10
-			}
-		}
-		completion_reward = {
-			set_country_flag = wfl_purge_flag
-			hidden_effect = {
-				IF = {
-					LIMIT = {
-						is_ai = yes
-					}
-					IF = {
-						LIMIT = {
-							AFG = {
-								is_puppet_of = ROOT
-							}
-						}
-						annex_country = {
-							target = AFG
-						}
-					}
-					IF = {
-						LIMIT = {
-							PER = {
-								is_puppet_of = ROOT
-							}
-						}
-						annex_country = {
-							target = PER
-						}
-					}
-				}
-			}
-			every_owned_state = {
-				#add_manpower = -100000
-				wfl_coring_state = yes
-			}
-			IRQ = {
-				create_faction = anti_waifu_pact
-				add_to_faction = SAU
-				add_to_faction = OMA
-				add_to_faction = YEM
-			}
-			every_other_country = {
-				limit = {
-					exists = yes
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = wfl_purge_opinion
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_war_economy
-		icon = GFX_focus_generic_tank_production
-		cost = 5
-		prerequisite = {
-			focus = wfl_purge
-		}
-		relative_position_id = wfl_purge
-		x = 0
+		relative_position_id = wfl_slot_bonus
+		x = -1
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						NOT = {
-							has_idea = war_economy
-						}
-						NOT = {
-							has_idea = tot_economic_mobilisation
-						}
-					}
-				}
-				add_ideas = war_economy
+		available_if_capitulated = yes
+		available = {
+			any_owned_state = {
+				is_coastal = yes
 			}
+		}
+		completion_reward = {
 			every_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = dockyard
 					level = 1
 					instant_build = yes
 				}
 			}
 		}
 	}
+	focus = {
+		id = wfl_create_rocket_base
+		icon = GFX_focus_rocketry
+		cost = 20
+		prerequisite = {
+			focus = wfl_slot_bonus
+		}
+		relative_position_id = wfl_slot_bonus
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		available = {
+			has_tech = experimental_rockets
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				category = rocketry
+			}
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rocket_site
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = wfl_super_factory_focus
+		icon = GFX_focus_generic_industry_3
+		cost = 20
+		prerequisite = {
+			focus = wfl_slot_bonus
+		}
+		relative_position_id = wfl_slot_bonus
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		available_if_capitulated = yes
+		available = {
+			has_completed_focus = wfl_nii
+		}
+		completion_reward = {
+			add_ideas = wfl_super_factory
+		}
+	}
+
+
 	focus = {
 		id = wfl_infantry_equipment_bonus
 		icon = GFX_goal_generic_small_arms
@@ -1178,333 +742,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = wfl_sov_war
-		icon = GFX_focus_attack_soviet
-		cost = 5
-		prerequisite = {
-			focus = wfl_war_economy
-		}
-		relative_position_id = wfl_war_economy
-		x = 2
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		completion_reward = {
-			add_state_claim = 584
-			add_state_claim = 405
-			add_state_claim = 732
-			add_state_claim = 586
-			add_state_claim = 589
-			add_state_claim = 404
-			add_state_claim = 585
-			add_state_claim = 402
-			add_state_claim = 587
-			add_state_claim = 406
-			add_state_claim = 407
-			add_state_claim = 236
-			add_state_claim = 237
-			add_state_claim = 238
-			add_state_claim = 234
-			add_state_claim = 235
-			add_state_claim = 232
-			add_state_claim = 233
-			add_state_claim = 231
-			add_state_claim = 230
-			add_state_claim = 229
-			add_state_claim = 137
-			create_wargoal = {
-				target = SOV
-				type = puppet_wargoal_focus
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_mobile_warfare
-		icon = GFX_goal_generic_army_doctrines
-		cost = 10
-		prerequisite = {
-			focus = wfl_sov_war
-		}
-		relative_position_id = wfl_sov_war
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		available = {
-			has_tech = tech_maintenance_company
-			has_tech = tech_logistics_company
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = land_doctrine
-				bonus = 1
-				#ahead_reduction = 2
-				uses = 2
-				category = cat_mobile_warfare
-			}
-			division_template = {
-				name = "Waifu motorized"
-				regiments = {
-					motorized = {
-						x = 0
-						y = 0
-					}
-					motorized = {
-						x = 1
-						y = 0
-					}
-					motorized = {
-						x = 0
-						y = 1
-					}
-					motorized = {
-						x = 1
-						y = 1
-					}
-					motorized = {
-						x = 0
-						y = 2
-					}
-					motorized = {
-						x = 1
-						y = 2
-					}
-					motorized = {
-						x = 0
-						y = 3
-					}
-					motorized = {
-						x = 1
-						y = 3
-					}
-					motorized = {
-						x = 0
-						y = 4
-					}
-					motorized = {
-						x = 1
-						y = 4
-					}
-				}
-				support = {
-					artillery = {
-						x = 0
-						y = 0
-					}
-					engineer = {
-						x = 0
-						y = 1
-					}
-					mot_recon = {
-						x = 0
-						y = 2
-					}
-					logistics_company = {
-						x = 0
-						y = 3
-					}
-					maintenance_company = {
-						x = 0
-						y = 4
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_ger_war
-		icon = GFX_focus_attack_germany
-		cost = 5
-		prerequisite = {
-			focus = wfl_mobile_warfare
-		}
-		relative_position_id = wfl_mobile_warfare
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-			SOV = {
-				OR = {
-					is_puppet_of = WFL
-					exists = no
-				}
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				target = GER
-				type = puppet_wargoal_focus
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_iraq_war
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		prerequisite = {
-			focus = wfl_war_economy
-		}
-		relative_position_id = wfl_war_economy
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		completion_reward = {
-			add_state_claim = 676
-			add_state_claim = 675
-			add_state_claim = 291
-			create_wargoal = {
-				target = IRQ
-				type = annex_everything
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-	}
-	focus = {
-		id = wfl_tur_war
-		icon = GFX_focus_generic_attack_turkey
-		cost = 10
-		prerequisite = {
-			focus = wfl_iraq_war
-		}
-		relative_position_id = wfl_iraq_war
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		bypass = {
-			TUR = {
-				is_ally_with = WFL
-			}
-		}
-		completion_reward = {
-			add_state_claim = 797
-			add_state_claim = 341
-			add_state_claim = 340
-			add_state_claim = 339
-			add_state_claim = 342
-			add_state_claim = 343
-			add_state_claim = 347
-			add_state_claim = 49
-			add_state_claim = 798
-			add_state_claim = 346
-			add_state_claim = 345
-			add_state_claim = 356
-			add_state_claim = 348
-			add_state_claim = 344
-			add_state_claim = 355
-			add_state_claim = 349
-			add_state_claim = 350
-			add_state_claim = 354
-			add_state_claim = 353
-			add_state_claim = 352
-			add_state_claim = 800
-			create_wargoal = {
-				target = TUR
-				type = annex_everything
-			}
-		}
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	focus = {
-		id = wfl_gre_war
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		prerequisite = {
-			focus = wfl_tur_war
-		}
-		relative_position_id = wfl_tur_war
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		completion_reward = {
-			GRE = {
-				every_owned_state = {
-					add_claim_by = WFL
-				}
-			}
-			create_wargoal = {
-				target = GRE
-				type = annex_everything
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-	}
-	focus = {
-		id = wfl_bul_war
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		prerequisite = {
-			focus = wfl_tur_war
-		}
-		relative_position_id = wfl_tur_war
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		completion_reward = {
-			BUL = {
-				every_owned_state = {
-					add_claim_by = WFL
-				}
-			}
-			create_wargoal = {
-				target = BUL
-				type = annex_everything
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-	}
+
 	focus = {
 		id = wfl_traps_in_army
 		icon = GFX_focus_generic_manpower
@@ -1526,41 +764,7 @@ focus_tree = {
 			add_ideas = wfl_traps_in_army
 		}
 	}
-	focus = {
-		id = wfl_ind_war
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		prerequisite = {
-			focus = wfl_war_economy
-		}
-		relative_position_id = wfl_war_economy
-		x = 4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-			PAK = {
-				OR = {
-					exists = no
-					is_puppet_of = WFL
-					is_in_faction_with = WFL
-				}
-			}
-		}
-		completion_reward = {
-			#add_state_claim = 441
-			create_wargoal = {
-				target = RAJ
-				type = puppet_wargoal_focus
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
 	focus = {
 		id = wfl_special_forces
 		icon = GFX_goal_generic_special_forces
@@ -1732,124 +936,9 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = wfl_dockyard
-		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10
-		prerequisite = {
-			focus = wfl_war_economy
-		}
-		relative_position_id = wfl_war_economy
-		x = -4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-			}
-		}
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_coast_defense
-		icon = GFX_focus_generic_coastal_fort
-		cost = 10
-		prerequisite = {
-			focus = wfl_dockyard
-		}
-		relative_position_id = wfl_dockyard
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-			}
-		}
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_eng_war
-		icon = GFX_focus_attack_britain
-		cost = 5
-		prerequisite = {
-			focus = wfl_coast_defense
-		}
-		relative_position_id = wfl_coast_defense
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		completion_reward = {
-			add_state_claim = 656
-			add_state_claim = 765
-			add_state_claim = 658
-			add_state_claim = 659
-			add_state_claim = 455
-			add_state_claim = 454
-			add_state_claim = 453
-			create_wargoal = {
-				target = ENG
-				type = puppet_wargoal_focus
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
+
+
 	focus = {
 		id = wfl_naval_bonus
 		icon = GFX_focus_generic_navy_battleship2
@@ -2349,84 +1438,8 @@ focus_tree = {
 			factor = 1
 		}
 	}
-	focus = {
-		id = wfl_create_rocket_base
-		icon = GFX_focus_rocketry
-		cost = 20
-		prerequisite = {
-			focus = wfl_eng_war
-		}
-		relative_position_id = wfl_eng_war
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		available = {
-			has_tech = experimental_rockets
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				bonus = 2
-				ahead_reduction = 2
-				uses = 1
-				category = rocketry
-			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = rocket_site
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
-	focus = {
-		id = wfl_usa_war
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		prerequisite = {
-			focus = wfl_create_rocket_base
-		}
-		relative_position_id = wfl_create_rocket_base
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		#available_if_capitulated = no
-		available = {
-			has_war = no
-		}
-		bypass = {
-			OR = {
-				NOT = {
-					country_exists = USA
-				}
-				USA = {
-					is_puppet_of = WFL
-				}
-				USA = {
-					is_in_faction_with = WFL
-				}
-			}
-		}
-		completion_reward = {
-			create_wargoal = {
-				target = USA
-				type = puppet_wargoal_focus
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
+
 	focus = {
 		id = wfl_nuclear_effort
 		icon = GFX_focus_wonderweapons
@@ -2518,33 +1531,13 @@ focus_tree = {
 			factor = 3
 		}
 	}
-	focus = {
-		id = wfl_super_factory_focus
-		icon = GFX_focus_generic_industry_3
-		cost = 20
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = 4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		ai_will_do = {
-			factor = 3
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = wfl_super_factory
-		}
-	}
+
 	focus = {
 		id = wfl_political_effort
 		icon = GFX_goal_generic_demand_territory
-		x = 12
-		y = 7
-		cost = 10
+		x = 16
+		y = 8
+		cost = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2569,10 +1562,10 @@ focus_tree = {
 				has_government = neutrality
 			}
 		}
-		x = -1
+		x = -4
 		y = 1
 		relative_position_id = wfl_political_effort
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2615,7 +1608,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = wfl_collectivist_ethos
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2669,10 +1662,10 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = wfl_collectivist_ethos
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2718,10 +1711,10 @@ focus_tree = {
 				has_government = neutrality
 			}
 		}
-		x = 1
+		x = 4
 		y = 1
 		relative_position_id = wfl_political_effort
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2758,7 +1751,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_nationalism_focus
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2786,7 +1779,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_internationalism_focus
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2811,10 +1804,10 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = wfl_interventionism_focus
 		}
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = wfl_liberty_ethos
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2850,7 +1843,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = wfl_liberty_ethos
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2884,7 +1877,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_militarism
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2920,7 +1913,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_neutrality_focus
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_INDUSTRY
@@ -2928,6 +1921,54 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = deterrence
+		}
+	}
+	focus = {
+		id = wfl_coast_defense
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		prerequisite = {
+			focus = wfl_deterrence
+		}
+		relative_position_id = wfl_deterrence
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2939,7 +1980,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_interventionism_focus
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2957,13 +1998,218 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_military_youth
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = paramilitarism_focus
+		}
+	}
+	focus = {
+		id = wfl_ire_war
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = wfl_paramilitarism
+		}
+		prerequisite = {
+			focus = wfl_ideological_fanaticism
+		}
+		relative_position_id = wfl_paramilitarism
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			IRE = {
+				every_owned_state = {
+					add_claim_by = WFL
+				}
+			}
+			create_wargoal = {
+				target = IRE
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	focus = {
+		id = wfl_eng_war
+		icon = GFX_focus_attack_britain
+		cost = 5
+		prerequisite = {
+			focus = wfl_ire_war
+		}
+		relative_position_id = wfl_ire_war
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			add_state_claim = 687
+			add_state_claim = 119
+			add_state_claim = 331
+			add_state_claim = 332
+			create_wargoal = {
+				target = ENG
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_usa_war
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = wfl_eng_war
+		}
+		relative_position_id = wfl_eng_war
+		x = -3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = USA
+				}
+				USA = {
+					is_puppet_of = WFL
+				}
+				USA = {
+					is_in_faction_with = WFL
+				}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = USA
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_bra_war
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = wfl_eng_war
+		}
+		relative_position_id = wfl_eng_war
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+			controls_state = 687
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = BRA
+				}
+				BRA = {
+					is_puppet_of = WFL
+				}
+				BRA = {
+					is_in_faction_with = WFL
+				}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = BRA
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_mobile_warfare
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = wfl_eng_war
+		}
+		relative_position_id = wfl_eng_war
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		available = {
+			has_tech = tech_maintenance_company
+			has_tech = tech_logistics_company
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doctrine
+				bonus = 1
+				#ahead_reduction = 2
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = wfl_sov_war
+		icon = GFX_focus_attack_soviet
+		cost = 5
+		prerequisite = {
+			focus = wfl_mobile_warfare
+		}
+		relative_position_id = wfl_mobile_warfare
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = SOV
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -2975,7 +2221,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_political_correctness
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2994,7 +2240,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_volunteer_corps
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -3008,7 +2254,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = {
 			focus = wfl_foreign_expeditions
-			focus = wfl_deterrence
+			focus = wfl_coast_defense
 		}
 		available = {
 			OR = {
@@ -3020,7 +2266,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = wfl_foreign_expeditions
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -3043,6 +2289,39 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_ger_war
+		icon = GFX_focus_attack_germany
+		cost = 5
+		prerequisite = {
+			focus = wfl_foreign_expeditions
+		}
+		relative_position_id = wfl_foreign_expeditions
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		#available_if_capitulated = no
+		available = {
+			has_war = no
+			SOV = {
+				OR = {
+					is_puppet_of = WFL
+					exists = no
+				}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = wfl_political_commissars
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
@@ -3053,7 +2332,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wfl_indoctrination_focus
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -3088,15 +2367,16 @@ focus_tree = {
 			focus = wfl_paramilitarism
 			focus = wfl_political_commissars
 		}
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = wfl_paramilitarism
-		cost = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			set_country_flag = wfl_purge_flag
 			add_ideas = ideological_fanaticism_focus
 			set_rule = {
 				can_create_factions = yes
@@ -3110,11 +2390,421 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_sov_frend
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10
+		prerequisite = {
+			focus = wfl_political_commissars
+		}
+		prerequisite = {
+			focus = wfl_ideological_fanaticism
+		}
+		relative_position_id = wfl_political_commissars
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		available_if_capitulated = yes
+		available = {
+			is_in_faction_with = SOV
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = wfl_sov_frend_opinion
+			}
+			SOV = {
+				add_ideas = waifuland_assistance
+				add_opinion_modifier = {
+					target = WFL
+					modifier = wfl_sov_frend_opinion
+				}
+				add_to_faction = WFL
+			}
+		}
+	}
+	focus = {
+		id = wfl_railway_in_mid_asia
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = wfl_sov_frend
+		}
+		relative_position_id = wfl_sov_frend
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		available = {
+		}
+		completion_reward = {
+			SOV = {
+				584 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+					urbanize_state = yes
+				}
+				585 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+					urbanize_state = yes
+				}
+				587 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+					urbanize_state = yes
+				}
+				406 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+					urbanize_state = yes
+				}
+				407 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+					urbanize_state = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = wfl_trans_sib_upgrade
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 20
+		prerequisite = {
+			focus = wfl_railway_in_mid_asia
+		}
+		relative_position_id = wfl_railway_in_mid_asia
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		available = {
+		}
+		completion_reward = {
+			SOV = {
+				573 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				572 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				403 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				571 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				570 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				569 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				568 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				567 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				566 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				564 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				563 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				561 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				657 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				409 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				408 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = wfl_arms_factory_to_sov
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = wfl_trans_sib_upgrade
+		}
+		relative_position_id = wfl_trans_sib_upgrade
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		available = {
+			SOV = {
+				has_war = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			SOV = {
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1
+					uses = 1
+					category = industry
+				}
+				651 = {
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+					}
+				}
+				399 = {
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+					}
+				}
+				251 = {
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = wfl_civ_factory_to_sov
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = wfl_trans_sib_upgrade
+		}
+		relative_position_id = wfl_trans_sib_upgrade
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			SOV = {
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1
+					uses = 1
+					category = industry
+				}
+				584 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				585 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				587 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = wfl_waifu_revolution_in_sov
+		icon = GFX_goal_anti_comintern_pact
+		cost = 1
+		prerequisite = {
+			focus = wfl_arms_factory_to_sov
+			focus = wfl_civ_factory_to_sov
+		}
+		relative_position_id = wfl_arms_factory_to_sov
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war = no
+			is_faction_leader = yes
+			SOV = {
+				has_war = no
+				is_in_faction_with = WFL
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			puppet = SOV
+		}
+	}
+	focus = {
+		id = wfl_war_economy
+		icon = GFX_focus_generic_tank_production
+		cost = 5
+		prerequisite = {
+			focus = wfl_ideological_fanaticism
+		}
+		relative_position_id = wfl_ideological_fanaticism
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							has_idea = war_economy
+						}
+						NOT = {
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+				add_ideas = war_economy
+			}
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = wfl_technology_sharing
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = {
-			focus = wfl_ideological_fanaticism
-			focus = wfl_why_we_fight
+			focus = wfl_nii
 		}
 		available = {
 			has_war = yes
@@ -3127,9 +2817,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = 2
+		x = 4
 		y = 1
-		relative_position_id = wfl_ideological_fanaticism
+		relative_position_id = wfl_nii
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
