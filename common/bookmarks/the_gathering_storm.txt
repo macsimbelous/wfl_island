@@ -20,8 +20,8 @@ bookmarks = {
 				volunteer_only
 			}
 			focuses = {
-				wfl_elections
 				wfl_political_effort
+				wfl_civ_factory
 				wfl_nii
 			}
 		}
