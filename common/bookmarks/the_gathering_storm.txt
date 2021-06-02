@@ -9,21 +9,20 @@ bookmarks = {
 		
 		"WFL"={
 			history = "WFL_GATHERING_STORM_DESC"
-			ideology = waifuism
+			ideology = neutrality
 
 			ideas = {
-				#wfl_incompetent_officers
-				#wfl_Slice_of_Life
-				#wfl_Is_Flat_Justice
-				closed_economy
-				partial_economic_mobilisation
-				ideological_fanaticism_focus
+				#closed_economy
+				limited_exports
+				#partial_economic_mobilisation
+				civilian_economy
+				#ideological_fanaticism_focus
+				volunteer_only
 			}
 			focuses = {
 				wfl_elections
-				#ROA_anime_fanatism
-				wfl_persia_war
-				wfl_war_economy
+				wfl_political_effort
+				wfl_nii
 			}
 		}
 		"USA"={

@@ -236,9 +236,5 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	waifuism_demagogue = {
-		random = no
-		sprite = 13
-		waifuism_drift = 0.1
-	}
+
 }

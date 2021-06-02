@@ -1025,7 +1025,7 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_love_laika_is_busy_flag
 			random_other_country = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 30
 				}
 				add_opinion_modifier = {
@@ -1110,7 +1110,7 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_muse_is_busy_flag
 			random_other_country = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 30
 				}
 				add_opinion_modifier = {
@@ -1195,7 +1195,7 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_aqours_is_busy_flag
 			random_other_country = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 30
 				}
 				add_opinion_modifier = {
@@ -1280,7 +1280,7 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_765_production_is_busy_flag
 			random_other_country = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 30
 				}
 				add_opinion_modifier = {
@@ -1365,7 +1365,7 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_ranko_kanzaki_is_busy_flag
 			random_other_country = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 30
 				}
 				add_opinion_modifier = {
@@ -1449,10 +1449,10 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_tour_run_flag
 			clr_country_flag = wfl_kaede_takagaki_is_busy_flag
 			random_other_country = {
-				add_timed_idea = {
-					idea = waifu_influence
-					days = 30
-				}
+				#add_timed_idea = {
+				#	idea = waifu_influence
+				#	days = 30
+				#}
 				add_opinion_modifier = {
 					target = WFL
 					modifier = wfl_idols_tour_opinion
@@ -1535,7 +1535,7 @@ wfl_concert_decisions = {
 			clr_country_flag = wfl_sheryl_nome_is_busy_flag
 			random_other_country = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 30
 				}
 				add_opinion_modifier = {

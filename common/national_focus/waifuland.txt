@@ -175,6 +175,9 @@ focus_tree = {
 			focus = wfl_sov_frend
 		}
 		available_if_capitulated = yes
+		available = {
+			has_government = communism
+		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -223,7 +226,7 @@ focus_tree = {
 					}
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = communism
 					popularity = 0.075
 				}
 			}
@@ -272,7 +275,7 @@ focus_tree = {
 					category = naval_equipment
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = communism
 					popularity = 0.05
 				}
 			}
@@ -302,7 +305,7 @@ focus_tree = {
 					category = nuclear
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = communism
 					popularity = 0.15
 				}
 			}
@@ -329,9 +332,9 @@ focus_tree = {
 				OR = {
 					AND = {
 						has_war = no
-						waifuism > 0.3
+						communism > 0.3
 					}
-					waifuism > 0.6
+					communism > 0.6
 				}
 			}
 		}
@@ -341,7 +344,7 @@ focus_tree = {
 		completion_reward = {
 			USA = {
 				set_politics = {
-					ruling_party = waifuism
+					ruling_party = communism
 				}
 				add_ideas = waifuland_assistance
 				IF = {
@@ -381,6 +384,9 @@ focus_tree = {
 			focus = wfl_usa_frend
 		}
 		available_if_capitulated = yes
+		available = {
+			has_government = democratic
+		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -460,7 +466,7 @@ focus_tree = {
 					urbanize_state = yes
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = democratic
 					popularity = 0.05
 				}
 			}
@@ -593,7 +599,7 @@ focus_tree = {
 					}
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = democratic
 					popularity = 0.05
 				}
 			}
@@ -657,7 +663,7 @@ focus_tree = {
 					}
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = democratic
 					popularity = 0.15
 				}
 			}
@@ -713,7 +719,7 @@ focus_tree = {
 					}
 				}
 				add_popularity = {
-					ideology = waifuism
+					ideology = democratic
 					popularity = 0.05
 				}
 			}
@@ -738,9 +744,9 @@ focus_tree = {
 				OR = {
 					AND = {
 						has_war = no
-						waifuism > 0.3
+						democratic > 0.3
 					}
-					waifuism > 0.6
+					democratic > 0.6
 				}
 			}
 		}
@@ -750,7 +756,7 @@ focus_tree = {
 		completion_reward = {
 			SOV = {
 				set_politics = {
-					ruling_party = waifuism
+					ruling_party = democratic
 				}
 				add_ideas = waifuland_assistance
 				IF = {
@@ -2194,8 +2200,12 @@ focus_tree = {
 			#country_event = wfl_event.10
 			every_other_country = {
 				add_popularity = {
-					ideology = waifuism
+					ideology = democratic
 					popularity = 0.05
+				}
+				add_opinion_modifier = {
+					target = WFL
+					modifier = small_increase
 				}
 			}
 			custom_effect_tooltip = wfl_world_tour_tt
@@ -2550,4 +2560,635 @@ focus_tree = {
 			add_ideas = wfl_super_factory
 		}
 	}
+	focus = {
+		id = wfl_political_effort
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = wfl_collectivist_ethos
+		icon = GFX_goal_generic_national_unity		#icon = GFX_goal_tripartite_pact
+		prerequisite = {
+			focus = wfl_political_effort
+		}
+		mutually_exclusive = {
+			focus = wfl_liberty_ethos
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+				has_government = neutrality
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = wfl_political_effort
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_government = neutrality
+					}
+					has_idea = neutrality_idea
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = collectivist_ethos_focus
+				days = 1095
+			}
+		}
+	}
+	focus = {
+		id = wfl_nationalism_focus
+		icon = GFX_goal_support_fascism		#icon = GFX_goal_tripartite_pact
+		prerequisite = {
+			focus = wfl_collectivist_ethos
+		}
+		mutually_exclusive = {
+			focus = wfl_internationalism_focus
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = wfl_collectivist_ethos
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	focus = {
+		id = wfl_internationalism_focus
+		icon = GFX_goal_support_communism		#icon = GFX_goal_tripartite_pact
+		prerequisite = {
+			focus = wfl_collectivist_ethos
+		}
+		mutually_exclusive = {
+			focus = wfl_nationalism_focus
+		}
+		available = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				has_government = communism
+				else = {
+					OR = {
+						has_government = communism
+						has_government = neutrality
+					}
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_collectivist_ethos
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}
+	focus = {
+		id = wfl_liberty_ethos
+		icon = GFX_goal_support_democracy
+		prerequisite = {
+			focus = wfl_political_effort
+		}
+		mutually_exclusive = {
+			focus = wfl_collectivist_ethos
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = wfl_political_effort
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+	focus = {
+		id = wfl_militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = wfl_nationalism_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_nationalism_focus
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = {
+				can_send_volunteers = yes
+			}
+		}
+	}
+	focus = {
+		id = wfl_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = {
+			focus = wfl_internationalism_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_internationalism_focus
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+	focus = {
+		id = wfl_neutrality_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {
+			focus = wfl_liberty_ethos
+		}
+		mutually_exclusive = {
+			focus = wfl_interventionism_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_liberty_ethos
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = AUS
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = neutrality_idea
+					}
+				}
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = wfl_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = wfl_liberty_ethos
+		}
+		mutually_exclusive = {
+			focus = wfl_neutrality_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = wfl_liberty_ethos
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = neutrality_idea
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
+			set_rule = {
+				can_send_volunteers = yes
+			}
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = wfl_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = wfl_militarism
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_militarism
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = military_youth_focus
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+	focus = {
+		id = wfl_deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = {
+			focus = wfl_neutrality_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_neutrality_focus
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	focus = {
+		id = wfl_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {
+			focus = wfl_interventionism_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_interventionism_focus
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+	focus = {
+		id = wfl_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = {
+			focus = wfl_military_youth
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_military_youth
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+	focus = {
+		id = wfl_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = {
+			focus = wfl_political_correctness
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_political_correctness
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = wfl_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = wfl_volunteer_corps
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_volunteer_corps
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+	focus = {
+		id = wfl_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = {
+			focus = wfl_foreign_expeditions
+			focus = wfl_deterrence
+		}
+		available = {
+			OR = {
+				threat > 0.75
+				has_defensive_war = yes
+			}
+		}
+		continue_if_invalid = yes
+		x = -2
+		y = 1
+		relative_position_id = wfl_foreign_expeditions
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = neutrality_idea
+						}
+					}
+					set_rule = {
+						can_create_factions = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = wfl_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {
+			focus = wfl_indoctrination_focus
+		}
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_indoctrination_focus
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = wfl_ideological_fanaticism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = wfl_paramilitarism
+			focus = wfl_political_commissars
+		}
+		x = 1
+		y = 1
+		relative_position_id = wfl_paramilitarism
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+			set_rule = {
+				can_create_factions = yes
+			}
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+	focus = {
+		id = wfl_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = {
+			focus = wfl_ideological_fanaticism
+			focus = wfl_why_we_fight
+		}
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = wfl_ideological_fanaticism
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots < 3
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_research_slots > 2
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1
+					uses = 1
+					category = industry
+				}
+				add_tech_bonus = {
+					name = infantry_artillery_bonus					#@#
+					bonus = 1
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+			}
+		}
+	}
 }
+
