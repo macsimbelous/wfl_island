@@ -234,7 +234,7 @@ country_event = {
 	option = {
 		name = wfl_event.11.c
 		set_politics = {
-			ruling_party = waifuism
+			ruling_party = fascism
 			elections_allowed = no
 		}
 		add_stability = -0.05

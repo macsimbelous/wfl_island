@@ -15,15 +15,7 @@ WFL_neutrality:0 "Вайфуляндия"
 WFL_neutrality_DEF:0 "Вайфуляндия"
 WFL_neutrality_ADJ:0 "Вайфуляндия"
 
-WFL_waifuism:0 "Вайфуляндия"
-WFL_waifuism_DEF:0 "Вайфуляндия"
-WFL_waifuism_ADJ:0 "Вайфу."
-
 #Empire
-WFL_EOW_waifuism:0 "Великая Вайфуляндия"
-WFL_EOW_waifuism_DEF:0 "Великая Вайфуляндия"
-WFL_EOW_waifuism_ADJ:0 "Вайфу."
-
 WFL_EOW_communism:0 "Советская Вайфуляндия"
 WFL_EOW_communism_DEF:0 "Советская Вайфуляндия"
 WFL_EOW_communism_ADJ:0 "Советская Вайфуляндия"
@@ -40,9 +32,26 @@ WFL_EOW_neutrality:0 "Вайфуляндия"
 WFL_EOW_neutrality_DEF:0 "Вайфуляндия"
 WFL_EOW_neutrality_ADJ:0 "Вайфуляндия"
 
+#States
+STRATEGICREGION_211:0 "Вайфулэнд"
+SUPPLYAREA_359:0 "Вайфулэнд"
+STATE_807:0 "Яндере"
+STATE_808:0 "Цундере"
+STATE_809:0 "Мехаград"
+STATE_810:0 "Ояши"
+STATE_811:0 "Девочки волшебницы"
+STATE_812:0 "Вайфуград"
+STATE_813:0 "Попаданци"
+STATE_814:0 "Хентайград"
+STATE_815:0 "Горячии источники"
+STATE_816:0 "Пляж"
 
+#victory points
+VICTORY_POINTS_13261:0 "Вайфуград"
 
-WFL_GATHERING_STORM_DESC:0 "10 тысяч лет прошло с тех пор как великий катаклизм уничтожил цивилизацую вайфу, пришло время побудитись от сна и показать нынишней цивилизации где раки зимуют."
+WFL_GATHERING_STORM_DESC:0 ""
+
+WaifuPower:0 "Могучие Вайфу"
 
 KGB:0 "КГБ"
 
@@ -210,25 +219,6 @@ wfl_obt_arsenal:0 "Разработчик Основно боевого танк
 wfl_fast_tank_design_bureau:0 "Разработчик лёгких танков"
 wfl_medium_tank_astrov_design_bureau:0 "Разработчик средних танков"
 wfl_heavy_tank_design_bureau:0 "Разработчик тяжолых танков"
-
-#Ideologies
-FACTION_NAME_WAIFUISM_1:0 "Вайфу сила!"
-FACTION_NAME_WAIFUISM_2:0 "Вайфу превыше всего!"
-FACTION_NAME_WAIFUISM_3:0 "Вайфу 1"
-FACTION_NAME_WAIFUISM_4:0 "Вайфу 2"
-FACTION_NAME_WAIFUISM_5:0 "Вайфу 3"
-#parties
-waifuism:0 "Вайфуизм"
-waifuism_noun:0 "Вайфуизм"
-waifuism_ideology:0 "Вайфуизм"
-waifuism_ideology_noun:0 "Вайфуизм"
-waifuism_ideology_desc:0 "Идеология превосходства Вайфу"
-waifuism_drift:0 "Изменение популярности Вайфуизма"
-WaifuPower:0 "Могучие Вайфу"
-
-#victory points
-VICTORY_POINTS_2078:0 "Вайфуград"
-STATE_415:0 "Вайфулэнд"
 
 #ToolTip
 wfl_infiltration_tt:0 "Будет открыт доступ к решениям на создание претензий"

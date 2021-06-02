@@ -1,27 +1,24 @@
-
 state={
 	id=811
 	name="STATE_811"
-
-	history={
-		owner = WFL
-
-		add_core_of = WFL
-		buildings = {
-			infrastructure = 6
-industrial_complex = 3
-			arms_factory = 1
-			air_base = 2
-			dockyard = 2
-		}
-
-
-	}
-
-	provinces={
-		13255 13256 13257 13258 13259 13260
-	}
 	manpower=4280723
 	buildings_max_level_factor=1.000
 	state_category=city
+	history={
+		owner = WFL
+		add_core_of = WFL
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 6
+			#dockyard = 2
+		}
+		victory_points = {
+			13259 10 
+		}
+	}
+	provinces={
+		13255 13256 13257 13258 13259 13260
+	}
 }

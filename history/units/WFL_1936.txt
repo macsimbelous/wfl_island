@@ -84,7 +84,6 @@ division_template = {
 		}
 	}
 }
-
 division_template = {
 	name = "Mountaineers Waifu"
 	regiments = {
@@ -195,6 +194,27 @@ division_template = {
 		}
 		maintenance_company = {
 			x = 0
+			y = 1
+		}
+	}
+}
+division_template = {
+	name = "Waifu coast"
+	regiments = {
+		infantry = {
+			x = 0
+			y = 0
+		}
+		infantry = {
+			x = 1
+			y = 0
+		}
+		infantry = {
+			x = 0
+			y = 1
+		}
+		infantry = {
+			x = 1
 			y = 1
 		}
 	}

@@ -1,29 +1,30 @@
-
 state={
 	id=807
 	name="STATE_807"
-manpower = 4637140
+	manpower = 4637140
 	state_category=city
 	history={
 		owner = WFL
-
 		add_core_of = WFL
 		buildings = {
-			infrastructure = 8
+			infrastructure = 6
 			industrial_complex = 3
-			arms_factory = 1
+			#arms_factory = 1
 			#air_base = 2
 			dockyard = 2
-
+			13239 = {
+				naval_base = 1
+				#coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			13239 10 
 		}
 
-
 	}
-
 	provinces={
 		13236 13237 13238 13239 13240
 	}
-
 	buildings_max_level_factor=1.000
 
 }

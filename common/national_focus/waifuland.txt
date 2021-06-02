@@ -188,7 +188,7 @@ focus_tree = {
 			}
 			USA = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = communist_influence
 					days = 720
 				}
 				add_opinion_modifier = {
@@ -397,7 +397,7 @@ focus_tree = {
 			}
 			SOV = {
 				add_timed_idea = {
-					idea = waifu_influence
+					idea = democratic_influence
 					days = 720
 				}
 				add_opinion_modifier = {
@@ -1888,28 +1888,7 @@ focus_tree = {
 				uses = 3
 				category = naval_equipment
 			}
-			custom_effect_tooltip = wfl_template_waifu_coast_tt
-			division_template = {
-				name = "Waifu coast"
-				regiments = {
-					infantry = {
-						x = 0
-						y = 0
-					}
-					infantry = {
-						x = 1
-						y = 0
-					}
-					infantry = {
-						x = 0
-						y = 1
-					}
-					infantry = {
-						x = 1
-						y = 1
-					}
-				}
-			}
+
 		}
 	}
 	focus = {
