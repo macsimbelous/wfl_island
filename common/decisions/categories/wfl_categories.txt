@@ -8,7 +8,7 @@ wfl_government_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_elections_flag
+		#has_country_flag = wfl_elections_flag
 	}
 }
 wfl_puppets_category = {
@@ -77,7 +77,7 @@ wfl_urbanisation_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_elections_flag
+		#has_country_flag = wfl_elections_flag
 	}
 }
 
@@ -196,7 +196,7 @@ wfl_immigration_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_elections_flag
+		#has_country_flag = wfl_elections_flag
 	}
 }
 
@@ -276,7 +276,7 @@ wfl_investments_abroad_category = {
 		#original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_elections_flag
+		#has_country_flag = wfl_elections_flag
 	}
 }
 

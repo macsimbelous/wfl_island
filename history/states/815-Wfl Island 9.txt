@@ -23,6 +23,9 @@ state={
 			10
 		}
 	}
+	resources={
+		aluminium = 9
+	}
 	provinces={
 		13275 13276 13277 13278
 	}

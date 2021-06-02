@@ -99,6 +99,7 @@ wfl_government_category = {
 		}
 		remove_effect = {
 			add_ideas = wfl_minscience_idea
+			add_research_slot = 1
 		}
 	}
 	wfl_create_KGB_decision = {

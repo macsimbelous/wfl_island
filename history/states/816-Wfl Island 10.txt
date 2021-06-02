@@ -19,6 +19,9 @@ state={
 			10
 		}
 	}
+	resources={
+		rubber = 15
+	}
 	provinces={
 		13279 13280 13281 13282 13283 13284
 	}

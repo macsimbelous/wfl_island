@@ -1,5 +1,5 @@
 capital = 812
-set_research_slots = 6
+set_research_slots = 4
 oob = "WFL_1936"
 set_naval_oob = "WFL_1936_Naval"
 set_stability = 0.3
