@@ -136,7 +136,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			has_tech = synth_oil_experiments
-			controls_state = 411
 		}
 		ai_will_do = {
 			factor = 3
