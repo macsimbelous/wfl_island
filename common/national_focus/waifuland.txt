@@ -84,7 +84,7 @@ focus_tree = {
 			every_owned_state = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -111,7 +111,7 @@ focus_tree = {
 			every_owned_state = {
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -283,7 +283,7 @@ focus_tree = {
 	focus = {
 		id = wfl_create_rocket_base
 		icon = GFX_focus_rocketry
-		cost = 20
+		cost = 10
 		prerequisite = {
 			focus = wfl_slot_bonus
 		}
@@ -293,9 +293,8 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		available_if_capitulated = yes
 		available = {
-			has_tech = experimental_rockets
+			has_tech = advanced_rocket_engines
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -309,7 +308,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = rocket_site
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -941,7 +940,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		available_if_capitulated = yes
+		available = {
+			has_government = fascism
+		}
 		completion_reward = {
 			add_political_power = 300
 			WFL = {
@@ -1531,6 +1532,44 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+	}
+	focus = {
+		id = wfl_kosmos_effort
+		icon = GFX_focus_rocketry
+		cost = 10
+		prerequisite = {
+			focus = wfl_coast_defense
+		}
+		relative_position_id = wfl_coast_defense
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_completed_focus = wfl_nii
+			has_tech = experimental_rockets
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				category = rocketry
+			}
+			809 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rocket_site
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {

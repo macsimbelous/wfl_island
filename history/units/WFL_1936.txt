@@ -144,6 +144,65 @@ division_template = {
 	}
 }
 division_template = {
+	name = "Marines Waifu"
+	regiments = {
+		marine = {
+			x = 0
+			y = 0
+		}
+		marine = {
+			x = 1
+			y = 0
+		}
+		marine = {
+			x = 0
+			y = 1
+		}
+		marine = {
+			x = 1
+			y = 1
+		}
+		marine = {
+			x = 0
+			y = 2
+		}
+		marine = {
+			x = 1
+			y = 2
+		}
+		marine = {
+			x = 0
+			y = 3
+		}
+		marine = {
+			x = 1
+			y = 3
+		}
+		marine = {
+			x = 0
+			y = 4
+		}
+		marine = {
+			x = 1
+			y = 4
+		}
+	}
+	support = {
+		artillery = {
+			x = 0
+			y = 0
+		}
+		engineer = {
+			x = 0
+			y = 1
+		}
+		recon = {
+			x = 0
+			y = 2
+		}
+	}
+}
+division_template = {
 	name = "Waifu light tank"
 	regiments = {
 		light_armor = {
@@ -645,32 +704,22 @@ units = {
 	}
 	division = {
 		location = 13261
-		division_template = "Mountaineers Waifu"
+		division_template = "Marines Waifu"
 		start_experience_factor = 0.3
 	}
 	division = {
 		location = 13261
-		division_template = "Mountaineers Waifu"
+		division_template = "Marines Waifu"
 		start_experience_factor = 0.3
 	}
 	division = {
 		location = 13261
-		division_template = "Mountaineers Waifu"
+		division_template = "Marines Waifu"
 		start_experience_factor = 0.3
 	}
 	division = {
 		location = 13261
-		division_template = "Mountaineers Waifu"
-		start_experience_factor = 0.3
-	}
-	division = {
-		location = 13261
-		division_template = "Mountaineers Waifu"
-		start_experience_factor = 0.3
-	}
-	division = {
-		location = 13261
-		division_template = "Mountaineers Waifu"
+		division_template = "Marines Waifu"
 		start_experience_factor = 0.3
 	}
 	division = {
