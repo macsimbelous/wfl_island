@@ -14,7 +14,7 @@ state={
 
 		add_core_of = WFL
 		buildings = {
-			infrastructure = 8
+			infrastructure = 6
 			industrial_complex = 6
 			arms_factory = 1
 			#air_base = 2
