@@ -19,7 +19,10 @@ wfl_puppets_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_cultural_assimilation_flag
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+		}
 	}
 }
 wfl_overseas_puppets_category = {
@@ -30,7 +33,10 @@ wfl_overseas_puppets_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_cultural_assimilation_flag
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+		}
 	}
 }
 wfl_cultural_assimilation_category = {
@@ -42,7 +48,10 @@ wfl_cultural_assimilation_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_cultural_assimilation_flag
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+		}
 	}
 }
 wfl_purge_category = {
@@ -54,7 +63,10 @@ wfl_purge_category = {
 		original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_purge_flag
+		OR = {
+			has_government = fascism
+			has_government = communism
+		}
 	}
 }
 wfl_coring_category = {
@@ -66,7 +78,7 @@ wfl_coring_category = {
 		#original_tag = WFL
 	}
 	visible = {
-		has_country_flag = wfl_cultural_assimilation_flag
+		#has_country_flag = wfl_cultural_assimilation_flag
 	}
 }
 wfl_urbanisation_category = {

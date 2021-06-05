@@ -109,6 +109,7 @@ create_country_leader = {
 		wfl_android
 		wfl_defender
 		wfl_patron_of_science
+		wfl_patron_of_industry
 		wfl_superweapon
 	}
 }
@@ -120,7 +121,7 @@ create_country_leader = {
 	ideology = stalinism
 	traits = {
 		wfl_dictator
-		wfl_patron_of_industry
+		wfl_revolutionary
 		warrior_code
 	}
 }
@@ -133,6 +134,7 @@ create_country_leader = {
 	traits = {
 		wfl_idol
 		wfl_patron_of_intelligence
+		wfl_patron_of_industry
 	}
 }
 create_country_leader = {
