@@ -1220,26 +1220,18 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = wfl_nationalism_focus
 		}
-		available = {
-			if = {
-				limit = {
-					original_tag = CHI
-				}
-				has_government = communism
-				else = {
-					OR = {
-						has_government = communism
-						has_government = neutrality
-					}
-				}
-			}
-		}
 		x = 3
 		y = 1
 		relative_position_id = wfl_collectivist_ethos
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = neutrality
+			}
 		}
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -1265,6 +1257,10 @@ focus_tree = {
 			add_timed_idea = {
 				idea = internationalism
 				days = 720
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
 			}
 		}
 	}
@@ -1369,6 +1365,10 @@ focus_tree = {
 			}
 			add_political_power = 200
 			add_ideas = idea_political_correctness
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -1405,6 +1405,10 @@ focus_tree = {
 				add_ideas = neutrality_idea
 			}
 			add_political_power = 150
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 		}
 	}
 	focus = {
@@ -1443,6 +1447,10 @@ focus_tree = {
 				can_send_volunteers = yes
 			}
 			add_political_power = 150
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -1484,6 +1492,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = deterrence
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 		}
 	}
 	focus = {
@@ -1531,6 +1543,10 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
 			}
 		}
 	}
@@ -1588,6 +1604,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = volunteer_corps_focus
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -1609,6 +1629,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = wfl_traps_in_army
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
 		}
 	}
 	focus = {
@@ -1972,6 +1996,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = indoctrination_focus
 			add_political_power = 150
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -1990,6 +2018,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = foreign_expeditions_focus
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -2337,23 +2369,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = political_commissars_focus
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.2
-				}
-			}
-			if = {
-				limit = {
-					has_government = communism
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.2
-				}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
 			}
 			add_political_power = 200
 		}
@@ -2406,6 +2424,29 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_revolution
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = {
+			focus = wfl_political_commissars
+		}
+		x = 0
+		y = 1
+		relative_position_id = wfl_political_commissars
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available_if_capitulated = yes
+		available = {
+			communism > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+	}
+	focus = {
 		id = wfl_sov_frend
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 10
@@ -2423,7 +2464,7 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		available = {
-			is_in_faction_with = SOV
+			has_government = communism
 		}
 		ai_will_do = {
 			factor = 5
