@@ -147,6 +147,8 @@ leader_traits = {
 	wfl_infrastructure_developer = {
 		random = no
 		production_speed_infrastructure_factor = 0.3
+		production_speed_naval_base_factor = 0.3
+		production_speed_air_base_factor = 0.3
 		ai_will_do = {
 			factor = 1
 		}
