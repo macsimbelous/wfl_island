@@ -33,48 +33,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = wfl_civ_factory
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
-		#relative_position_id = wfl_persia_war
-		x = 32
-		y = 0
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available = {
-			has_war = no
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1
-				uses = 1
-				category = industry
-			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
 		id = wfl_railway_develop
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		prerequisite = {
-			focus = wfl_civ_factory
+			focus = wfl_foreign_expeditions
 		}
-		relative_position_id = wfl_civ_factory
-		x = -1
+		relative_position_id = wfl_foreign_expeditions
+		x = 6
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -121,50 +87,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = wfl_coal_liquification
-		icon = GFX_focus_generic_rubber
-		cost = 10
-		prerequisite = {
-			focus = wfl_civ_factory
-		}
-		relative_position_id = wfl_civ_factory
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		available = {
-			has_tech = synth_oil_experiments
-		}
-		ai_will_do = {
-			factor = 3
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = synth_resources
-				bonus = 1
-				uses = 1
-				category = synth_resources
-			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
 		id = wfl_fuel_silo_focus
 		icon = GFX_goal_generic_oil_refinery
 		cost = 10
 		prerequisite = {
-			focus = wfl_coal_liquification
+			focus = wfl_upgrade_railway
 		}
-		relative_position_id = wfl_coal_liquification
+		relative_position_id = wfl_upgrade_railway
 		x = 0
 		y = 1
 		search_filters = {
@@ -191,18 +120,17 @@ focus_tree = {
 			}
 		}
 	}
+
+
 	focus = {
 		id = wfl_industrial_tech
 		icon = GFX_focus_generic_industry_3
 		cost = 10
 		prerequisite = {
-			focus = wfl_upgrade_railway
+			focus = wfl_nii
 		}
-		prerequisite = {
-			focus = wfl_fuel_silo_focus
-		}
-		relative_position_id = wfl_upgrade_railway
-		x = 1
+		relative_position_id = wfl_nii
+		x = -4
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -326,7 +254,7 @@ focus_tree = {
 		}
 		relative_position_id = wfl_slot_bonus
 		x = 0
-		y = 2
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -855,9 +783,12 @@ focus_tree = {
 		id = wfl_nii
 		icon = GFX_focus_research
 		cost = 10
-		#relative_position_id = wfl_persia_war
-		x = 25
-		y = 0
+		prerequisite = {
+			focus = wfl_coast_defense
+		}
+		relative_position_id = wfl_coast_defense
+		x = 0
+		y = 1
 		ai_will_do = {
 			factor = 100
 		}
@@ -940,9 +871,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		available = {
-			has_government = fascism
-		}
 		completion_reward = {
 			add_political_power = 300
 			WFL = {
@@ -955,42 +883,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = wfl_secret_weapons
-		icon = GFX_goal_generic_secret_weapon
-		cost = 10
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = 2
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = secret_bonus
-				bonus = 2
-				uses = 1
-				#category = electronics
-				category = nuclear
-				category = rocketry
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
 		id = wfl_rocket_effort
 		icon = GFX_focus_rocketry
 		cost = 5
 		prerequisite = {
-			focus = wfl_secret_weapons
+			focus = wfl_nii
 		}
-		relative_position_id = wfl_secret_weapons
-		x = -1
+		relative_position_id = wfl_nii
+		x = 0
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -1014,10 +914,10 @@ focus_tree = {
 		icon = GFX_focus_wonderweapons
 		cost = 5
 		prerequisite = {
-			focus = wfl_secret_weapons
+			focus = wfl_nii
 		}
-		relative_position_id = wfl_secret_weapons
-		x = 1
+		relative_position_id = wfl_nii
+		x = 2
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -1027,9 +927,46 @@ focus_tree = {
 			add_tech_bonus = {
 				name = nuclear_bonus
 				bonus = 2
+				uses = 2
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_nuclear_effort_2
+		icon = GFX_focus_wonderweapons
+		cost = 10
+		prerequisite = {
+			focus = wfl_nuclear_effort
+		}
+		relative_position_id = wfl_nuclear_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = nuclear_reactor
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 2
 				uses = 1
 				ahead_reduction = 2
 				category = nuclear
+			}
+			809 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -1041,13 +978,19 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		cost = 52
 		prerequisite = {
-			focus = wfl_nuclear_effort
+			focus = wfl_nuclear_effort_2
 		}
 		prerequisite = {
-			focus = wfl_rocket_effort
+			focus = wfl_kosmos_effort
 		}
-		relative_position_id = wfl_nuclear_effort
-		x = -1
+		prerequisite = {
+			focus = wfl_radio_effort
+		}
+		prerequisite = {
+			focus = wfl_computing_effort
+		}
+		relative_position_id = wfl_nuclear_effort_2
+		x = 1
 		y = 1
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -1070,13 +1013,41 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_computing_effort
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = wfl_electronics_effort
+		}
+		relative_position_id = wfl_electronics_effort
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_completed_focus = wfl_nii
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 2
+				uses = 1
+				category = computing_tech
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = wfl_mecha_musume
 		icon = GFX_goal_generic_army_tanks
 		cost = 10
 		prerequisite = {
-			focus = wfl_nii
+			focus = wfl_computing_effort
 		}
-		relative_position_id = wfl_nii
+		relative_position_id = wfl_computing_effort
 		x = 0
 		y = 1
 		search_filters = {
@@ -1094,6 +1065,137 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = modern_tank_equipment
 				amount = 1000
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = wfl_electronics_effort
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = wfl_nii
+		}
+		relative_position_id = wfl_nii
+		x = 5
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_completed_focus = wfl_nii
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 2
+				uses = 2
+				category = electronics
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_radio_effort
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = wfl_electronics_effort
+		}
+		relative_position_id = wfl_electronics_effort
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = radio_detection
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 2
+				uses = 1
+				category = radar_tech
+			}
+			811 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_kosmos_effort
+		icon = GFX_focus_rocketry
+		cost = 10
+		prerequisite = {
+			focus = wfl_rocket_effort
+		}
+		relative_position_id = wfl_rocket_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = experimental_rockets
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				category = rocketry
+			}
+			809 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rocket_site
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_create_rocket_base
+		icon = GFX_focus_rocketry
+		cost = 20
+		prerequisite = {
+			focus = wfl_kosmos_effort
+		}
+		relative_position_id = wfl_kosmos_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_tech = advanced_rocket_engines
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = rocket_site
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -1279,7 +1381,7 @@ focus_tree = {
 				has_government = neutrality
 			}
 		}
-		x = 4
+		x = 9
 		y = 1
 		relative_position_id = wfl_political_effort
 		cost = 5
@@ -1380,7 +1482,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = wfl_interventionism_focus
 		}
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = wfl_liberty_ethos
 		cost = 5
@@ -1420,7 +1522,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = wfl_neutrality_focus
 		}
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = wfl_liberty_ethos
 		cost = 5
@@ -1550,44 +1652,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = wfl_kosmos_effort
-		icon = GFX_focus_rocketry
-		cost = 10
-		prerequisite = {
-			focus = wfl_coast_defense
-		}
-		relative_position_id = wfl_coast_defense
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_completed_focus = wfl_nii
-			has_tech = experimental_rockets
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				bonus = 2
-				ahead_reduction = 2
-				uses = 1
-				category = rocketry
-			}
-			809 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = rocket_site
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
 	focus = {
 		id = wfl_volunteer_corps
 		icon = GFX_goal_generic_allies_build_infantry
@@ -2038,7 +2103,7 @@ focus_tree = {
 			}
 		}
 		continue_if_invalid = yes
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = wfl_foreign_expeditions
 		cost = 5
@@ -2451,14 +2516,14 @@ focus_tree = {
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 10
 		prerequisite = {
-			focus = wfl_political_commissars
+			focus = wfl_revolution
 		}
 		prerequisite = {
 			focus = wfl_ideological_fanaticism
 		}
-		relative_position_id = wfl_political_commissars
+		relative_position_id = wfl_revolution
 		x = 0
-		y = 2
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2875,10 +2940,46 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = wfl_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		prerequisite = {
+			focus = wfl_eng_frend
+		}
+		relative_position_id = wfl_eng_frend
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = wfl_technology_sharing
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = {
-			focus = wfl_nii
+			focus = wfl_dockyard
 		}
 		available = {
 			has_war = yes
@@ -2891,9 +2992,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = 4
+		x = 0
 		y = 1
-		relative_position_id = wfl_nii
+		relative_position_id = wfl_dockyard
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
