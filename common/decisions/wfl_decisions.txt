@@ -1583,133 +1583,27 @@ wfl_immigration_category = {
 }
 
 wfl_resources_category = {
-	wfl_find_resources_decision = {
-		name = wfl_find_resources_decision.t
-		icon = generic_construction
-		cost = 50
-		days_remove = 30
-		on_map_mode = map_and_decisions_view
-		state_target = yes
-		target_array = owned_controlled_states
-		fire_only_once = yes
-		available = {
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		modifier = {
-			civilian_factory_use = 1
-		}
-		visible = {
-			#has_tech = excavation1
-			#excavation5
-		}
-		target_trigger = {
-			FROM = {
-				#NOT = {
-				#	has_state_flag = wfl_find_resources
-				#}
-				NOT = {
-					steel > 0
-					oil > 0
-					aluminium > 0
-					tungsten > 0
-					chromium > 0
-				}
-			}
-		}
-		ai_will_do = {
-			base = 1
-			modifier = {
-				check_variable = {
-					var = resource@steel
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				check_variable = {
-					var = resource@oil
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				check_variable = {
-					var = resource@aluminium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				check_variable = {
-					var = resource@tungsten
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				check_variable = {
-					var = resource@chromium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-		}
-		remove_effect = {
-			FROM = {
-				#set_state_flag = wfl_find_resources
-				random_list = {
-					20 = {
-						add_resource = {
-							type = steel
-							amount = 8
-						}
-					}
-					20 = {
-						add_resource = {
-							type = oil
-							amount = 8
-						}
-					}
-					20 = {
-						add_resource = {
-							type = aluminium
-							amount = 8
-						}
-					}
-					20 = {
-						add_resource = {
-							type = tungsten
-							amount = 8
-						}
-					}
-					20 = {
-						add_resource = {
-							type = chromium
-							amount = 8
-						}
-					}
-				}
-			}
-		}
-	}
-	wfl_up_resources_decision_1 = {
-		name = wfl_up_resources_decision.t
+	wfl_find_steel_decision = {
 		icon = generic_construction
 		cost = 100
 		days_remove = 30
-		#days_re_enable = 90
-		on_map_mode = map_and_decisions_view
-		state_target = yes
-		target_array = owned_controlled_states
-		fire_only_once = yes
 		available = {
-			has_tech = excavation2
-			num_of_civilian_factories_available_for_projects > 3
+			num_of_civilian_factories_available_for_projects > 2
+			any_owned_state = {
+				is_controlled_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_run
+				}
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -1717,167 +1611,70 @@ wfl_resources_category = {
 		ai_will_do = {
 			base = 1
 			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = steel
-						amount > 0
-					}
-				}
 				check_variable = {
 					var = resource@steel
 					value = 0
 					compare = less_than
 				}
-				add = 4
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = oil
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@oil
-					value = 0
-					compare = less_than
-				}
 				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = aluminium
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@aluminium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = tungsten
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@tungsten
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = chromium
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@chromium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-		}
-		visible = {
-			FROM = {
-				NOT = {
-					has_state_flag = wfl_up_resources_1
-				}
-			}
-		}
-		target_trigger = {
-			FROM = {
-				#has_state_flag = wfl_find_resources
-				#NOT = {
-				#	has_state_flag = wfl_up_resources_1
-				#}
-				OR = {
-					steel > 0
-					oil > 0
-					aluminium > 0
-					tungsten > 0
-					chromium > 0
-				}
 			}
 		}
 		remove_effect = {
-			FROM = {
-				wfl_up_resources_state = yes
-				set_state_flag = wfl_up_resources_1
+			clr_country_flag = wfl_find_resources_run
+			custom_effect_tooltip = wfl_find_steel_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = steel
+						amount = var:res_amount
+					}
+				}
 			}
 		}
-	}
-	wfl_up_resources_decision_2 = {
-		name = wfl_up_resources_decision.t
-		icon = generic_construction
-		cost = 150
-		days_remove = 45
-		#days_re_enable = 90
-		on_map_mode = map_and_decisions_view
-		state_target = yes
-		target_array = owned_controlled_states
-		fire_only_once = yes
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 5
+		complete_effect = {
+			set_country_flag = wfl_find_resources_run
 		}
-		visible = {
-			FROM = {
-				has_state_flag = wfl_up_resources_1
+	}
+	wfl_find_aluminium_decision = {
+		icon = generic_construction
+		cost = 100
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_owned_state = {
+				is_controlled_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
 				NOT = {
-					has_state_flag = wfl_up_resources_2
+					has_country_flag = wfl_find_resources_run
 				}
 			}
 		}
 		modifier = {
-			civilian_factory_use = 5
+			civilian_factory_use = 3
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = steel
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@steel
-					value = 0
-					compare = less_than
-				}
-				add = 4
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = oil
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@oil
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = aluminium
-						amount > 0
-					}
-				}
 				check_variable = {
 					var = resource@aluminium
 					value = 0
@@ -1885,121 +1682,63 @@ wfl_resources_category = {
 				}
 				add = 1
 			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = tungsten
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@tungsten
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = chromium
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@chromium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-		}
-		target_trigger = {
-			always = yes
 		}
 		remove_effect = {
-			FROM = {
-				wfl_up_resources_state = yes
-				set_state_flag = wfl_up_resources_2
+			clr_country_flag = wfl_find_resources_run
+			custom_effect_tooltip = wfl_find_aluminium_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = aluminium
+						amount = var:res_amount
+					}
+				}
 			}
 		}
-	}
-	wfl_up_resources_decision_3 = {
-		name = wfl_up_resources_decision.t
-		icon = generic_construction
-		cost = 200
-		days_remove = 60
-		#days_re_enable = 90
-		on_map_mode = map_and_decisions_view
-		state_target = yes
-		target_array = owned_controlled_states
-		fire_only_once = yes
-		available = {
-			has_tech = excavation4
-			num_of_civilian_factories_available_for_projects > 7
+		complete_effect = {
+			set_country_flag = wfl_find_resources_run
 		}
-		visible = {
-			FROM = {
-				has_state_flag = wfl_up_resources_2
+	}
+	wfl_find_tungsten_decision = {
+		icon = generic_construction
+		cost = 100
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_owned_state = {
+				is_controlled_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
 				NOT = {
-					has_state_flag = wfl_up_resources_3
+					has_country_flag = wfl_find_resources_run
 				}
 			}
 		}
 		modifier = {
-			civilian_factory_use = 7
+			civilian_factory_use = 3
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = steel
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@steel
-					value = 0
-					compare = less_than
-				}
-				add = 4
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = oil
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@oil
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = aluminium
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@aluminium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = tungsten
-						amount > 0
-					}
-				}
 				check_variable = {
 					var = resource@tungsten
 					value = 0
@@ -2007,121 +1746,63 @@ wfl_resources_category = {
 				}
 				add = 1
 			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = chromium
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@chromium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-		}
-		target_trigger = {
-			always = yes
 		}
 		remove_effect = {
-			FROM = {
-				wfl_up_resources_state = yes
-				set_state_flag = wfl_up_resources_3
+			clr_country_flag = wfl_find_resources_run
+			custom_effect_tooltip = wfl_find_tungsten_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = tungsten
+						amount = var:res_amount
+					}
+				}
 			}
 		}
-	}
-	wfl_up_resources_decision_4 = {
-		name = wfl_up_resources_decision.t
-		icon = generic_construction
-		cost = 250
-		days_remove = 75
-		#days_re_enable = 90
-		on_map_mode = map_and_decisions_view
-		state_target = yes
-		target_array = owned_controlled_states
-		fire_only_once = yes
-		available = {
-			has_tech = excavation5
-			num_of_civilian_factories_available_for_projects > 10
+		complete_effect = {
+			set_country_flag = wfl_find_resources_run
 		}
-		visible = {
-			FROM = {
-				has_state_flag = wfl_up_resources_3
+	}
+	wfl_find_chromium_decision = {
+		icon = generic_construction
+		cost = 100
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_owned_state = {
+				is_controlled_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
 				NOT = {
-					has_state_flag = wfl_up_resources_4
+					has_country_flag = wfl_find_resources_run
 				}
 			}
 		}
 		modifier = {
-			civilian_factory_use = 10
+			civilian_factory_use = 3
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = steel
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@steel
-					value = 0
-					compare = less_than
-				}
-				add = 4
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = oil
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@oil
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = aluminium
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@aluminium
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = tungsten
-						amount > 0
-					}
-				}
-				check_variable = {
-					var = resource@tungsten
-					value = 0
-					compare = less_than
-				}
-				add = 1
-			}
-			modifier = {
-				FROM = {
-					has_resources_amount = {
-						resource = chromium
-						amount > 0
-					}
-				}
 				check_variable = {
 					var = resource@chromium
 					value = 0
@@ -2130,14 +1811,96 @@ wfl_resources_category = {
 				add = 1
 			}
 		}
-		target_trigger = {
-			always = yes
+		remove_effect = {
+			clr_country_flag = wfl_find_resources_run
+			custom_effect_tooltip = wfl_find_chromium_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = chromium
+						amount = var:res_amount
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_run
+		}
+	}
+	wfl_find_oil_decision = {
+		icon = generic_construction
+		cost = 100
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_owned_state = {
+				is_controlled_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_run
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
 		}
 		remove_effect = {
-			FROM = {
-				wfl_up_resources_state = yes
-				set_state_flag = wfl_up_resources_4
+			clr_country_flag = wfl_find_resources_run
+			custom_effect_tooltip = wfl_find_oil_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = oil
+						amount = var:res_amount
+					}
+				}
 			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_run
 		}
 	}
 }

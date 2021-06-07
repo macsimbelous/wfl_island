@@ -21,7 +21,7 @@ bookmarks = {
 			}
 			focuses = {
 				wfl_political_effort
-				wfl_civ_factory
+				wfl_perimetr
 				wfl_nii
 			}
 		}

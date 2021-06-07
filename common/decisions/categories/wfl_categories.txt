@@ -212,27 +212,6 @@ wfl_immigration_category = {
 	}
 }
 
-wfl_propaganda_waifuism_category = {
-	priority = 6
-	icon = decision_category_generic_propaganda
-	picture = GFX_wfl_propaganda_waifuism_category
-	allowed = {
-		always = no
-		#original_tag = WFL
-		#has_dlc = "La Resistance"
-	}
-	visible = {
-		#has_completed_focus = wfl_minpropagand
-		#has_tech = radio
-		has_idea = wfl_minpropagand_idea
-	}
-}
-
-waifuism_on_the_rise = {
-	icon = generic_fascism
-	priority = 1
-}
-
 wfl_campaigning_for_volunteers_category = {
 	priority = 4
 	icon = decision_category_generic_propaganda
@@ -332,5 +311,17 @@ wfl_gacha_category = {
 	priority = 1
 	allowed = {
 		original_tag = WFL
+	}
+}
+wfl_resources_category_2 = {
+	priority = 20
+	icon = generic_prospect_for_resources
+	picture = GFX_wfl_resources_category
+	allowed = {
+		always = no
+		#original_tag = WFL
+	}
+	visible = {
+		is_debug = yes
 	}
 }
