@@ -32,243 +32,10 @@ focus_tree = {
 			navy_experience = 25
 		}
 	}
-	focus = {
-		id = wfl_railway_develop
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
-		prerequisite = {
-			focus = wfl_foreign_expeditions
-		}
-		relative_position_id = wfl_foreign_expeditions
-		x = 6
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			every_owned_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = wfl_upgrade_railway
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
-		prerequisite = {
-			focus = wfl_railway_develop
-		}
-		relative_position_id = wfl_railway_develop
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			every_owned_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
-	focus = {
-		id = wfl_fuel_silo_focus
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10
-		prerequisite = {
-			focus = wfl_upgrade_railway
-		}
-		relative_position_id = wfl_upgrade_railway
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 2
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = synth_resources
-				bonus = 1
-				uses = 1
-				category = synth_resources
-			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = fuel_silo
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
 
 
-	focus = {
-		id = wfl_industrial_tech
-		icon = GFX_focus_generic_industry_3
-		cost = 10
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = -4
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1
-				ahead_reduction = 2
-				uses = 2
-				category = industry
-			}
-		}
-	}
-	focus = {
-		id = wfl_slot_bonus
-		icon = GFX_focus_generic_industry_3
-		cost = 10
-		prerequisite = {
-			focus = wfl_industrial_tech
-		}
-		relative_position_id = wfl_industrial_tech
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
-	focus = {
-		id = wfl_dockyard
-		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10
-		prerequisite = {
-			focus = wfl_slot_bonus
-		}
-		relative_position_id = wfl_slot_bonus
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-			}
-		}
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = wfl_create_rocket_base
-		icon = GFX_focus_rocketry
-		cost = 10
-		prerequisite = {
-			focus = wfl_slot_bonus
-		}
-		relative_position_id = wfl_slot_bonus
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available = {
-			has_tech = advanced_rocket_engines
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				bonus = 2
-				ahead_reduction = 2
-				uses = 1
-				category = rocketry
-			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = rocket_site
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
-	focus = {
-		id = wfl_super_factory_focus
-		icon = GFX_focus_generic_industry_3
-		cost = 20
-		prerequisite = {
-			focus = wfl_slot_bonus
-		}
-		relative_position_id = wfl_slot_bonus
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		available_if_capitulated = yes
-		available = {
-			has_completed_focus = wfl_nii
-		}
-		completion_reward = {
-			add_ideas = wfl_super_factory
-		}
-	}
+
+
 	focus = {
 		id = wfl_infantry_equipment_bonus
 		icon = GFX_goal_generic_small_arms
@@ -779,429 +546,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = wfl_nii
-		icon = GFX_focus_research
-		cost = 10
-		prerequisite = {
-			focus = wfl_coast_defense
-		}
-		relative_position_id = wfl_coast_defense
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 100
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			num_of_factories > 50
-		}
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-		completion_reward = {
-			add_research_slot = 1
-			add_ideas = wfl_nii_idea
-		}
-	}
-	focus = {
-		id = wfl_cloning
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = -2
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = wfl_cloning_idea
-			set_country_flag = wfl_cloning_level_1
-			news_event = {
-				id = wfl_news.3
-				hours = 5
-			}
-			custom_effect_tooltip = wfl_cloning_tt
-		}
-	}
-	focus = {
-		id = wfl_genetic_engineering
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
-		prerequisite = {
-			focus = wfl_cloning
-		}
-		relative_position_id = wfl_cloning
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			#add_ideas = wfl_cloning_idea
-			news_event = {
-				id = wfl_news.4
-				hours = 5
-			}
-			country_event = wfl_event.9
-		}
-	}
-	focus = {
-		id = wfl_tentakles
-		icon = GFX_focus_jap_strike_south
-		cost = 5
-		prerequisite = {
-			focus = wfl_genetic_engineering
-		}
-		relative_position_id = wfl_genetic_engineering
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			add_political_power = 300
-			WFL = {
-				country_event = wfl_event.2
-			}
-			custom_effect_tooltip = wfl_tentakles_tt
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_rocket_effort
-		icon = GFX_focus_rocketry
-		cost = 5
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				bonus = 2
-				ahead_reduction = 2
-				uses = 1
-				category = rocketry
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_nuclear_effort
-		icon = GFX_focus_wonderweapons
-		cost = 5
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = 2
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = nuclear_bonus
-				bonus = 2
-				uses = 2
-				ahead_reduction = 2
-				category = nuclear
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_nuclear_effort_2
-		icon = GFX_focus_wonderweapons
-		cost = 10
-		prerequisite = {
-			focus = wfl_nuclear_effort
-		}
-		relative_position_id = wfl_nuclear_effort
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_tech = nuclear_reactor
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = nuclear_bonus
-				bonus = 2
-				uses = 1
-				ahead_reduction = 2
-				category = nuclear
-			}
-			809 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_perimetr
-		icon = GFX_goal_generic_secret_weapon
-		cost = 52
-		prerequisite = {
-			focus = wfl_nuclear_effort_2
-		}
-		prerequisite = {
-			focus = wfl_kosmos_effort
-		}
-		prerequisite = {
-			focus = wfl_radio_effort
-		}
-		prerequisite = {
-			focus = wfl_computing_effort
-		}
-		relative_position_id = wfl_nuclear_effort_2
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_tech = nukes
-			has_tech = advanced_rocket_engines
-			has_tech = advanced_computing_machine
-			has_tech = improved_centimetric_radar
-		}
-		completion_reward = {
-			add_political_power = 150
-			WFL = {
-				country_event = wfl_event.6
-			}
-			set_global_flag = wfl_perimetr_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_computing_effort
-		icon = GFX_goal_generic_radar
-		cost = 10
-		prerequisite = {
-			focus = wfl_electronics_effort
-		}
-		relative_position_id = wfl_electronics_effort
-		x = 1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_completed_focus = wfl_nii
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = electronics_bonus
-				bonus = 2
-				uses = 1
-				category = computing_tech
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_mecha_musume
-		icon = GFX_goal_generic_army_tanks
-		cost = 10
-		prerequisite = {
-			focus = wfl_computing_effort
-		}
-		relative_position_id = wfl_computing_effort
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_tech = main_battle_tank
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = wfl_mecha_girl_influence
-			WFL = {
-				country_event = wfl_event.5
-			}
-			add_equipment_to_stockpile = {
-				type = modern_tank_equipment
-				amount = 1000
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
-	focus = {
-		id = wfl_electronics_effort
-		icon = GFX_goal_generic_radar
-		cost = 10
-		prerequisite = {
-			focus = wfl_nii
-		}
-		relative_position_id = wfl_nii
-		x = 5
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_completed_focus = wfl_nii
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = electronics_bonus
-				bonus = 2
-				uses = 2
-				category = electronics
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_radio_effort
-		icon = GFX_goal_generic_radar
-		cost = 10
-		prerequisite = {
-			focus = wfl_electronics_effort
-		}
-		relative_position_id = wfl_electronics_effort
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_tech = radio_detection
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = radar_tech_bonus
-				bonus = 2
-				uses = 1
-				category = radar_tech
-			}
-			811 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = radar_station
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_kosmos_effort
-		icon = GFX_focus_rocketry
-		cost = 10
-		prerequisite = {
-			focus = wfl_rocket_effort
-		}
-		relative_position_id = wfl_rocket_effort
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		available = {
-			has_tech = experimental_rockets
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				bonus = 2
-				ahead_reduction = 2
-				uses = 1
-				category = rocketry
-			}
-			809 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = rocket_site
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	focus = {
-		id = wfl_create_rocket_base
-		icon = GFX_focus_rocketry
-		cost = 20
-		prerequisite = {
-			focus = wfl_kosmos_effort
-		}
-		relative_position_id = wfl_kosmos_effort
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available = {
-			has_tech = advanced_rocket_engines
-		}
-		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = rocket_site
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
+
 	focus = {
 		id = wfl_political_effort
 		icon = GFX_goal_generic_demand_territory
@@ -2086,6 +1431,94 @@ focus_tree = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = wfl_railway_develop
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = wfl_foreign_expeditions
+		}
+		relative_position_id = wfl_foreign_expeditions
+		x = 6
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = wfl_upgrade_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = wfl_railway_develop
+		}
+		relative_position_id = wfl_railway_develop
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = wfl_fuel_silo_focus
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10
+		prerequisite = {
+			focus = wfl_upgrade_railway
+		}
+		relative_position_id = wfl_upgrade_railway
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3032,6 +2465,503 @@ focus_tree = {
 					category = artillery
 				}
 			}
+		}
+	}
+	focus = {
+		id = wfl_nii
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = wfl_coast_defense
+		}
+		relative_position_id = wfl_coast_defense
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			num_of_factories > 50
+		}
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = wfl_nii_idea
+		}
+	}
+	focus = {
+		id = wfl_industrial_tech
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = wfl_nii
+		}
+		relative_position_id = wfl_nii
+		x = -4
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = wfl_slot_bonus
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = wfl_industrial_tech
+		}
+		relative_position_id = wfl_industrial_tech
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = wfl_super_factory_focus
+		icon = GFX_focus_generic_industry_3
+		cost = 20
+		prerequisite = {
+			focus = wfl_slot_bonus
+		}
+		relative_position_id = wfl_slot_bonus
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		available = {
+			has_completed_focus = wfl_nii
+		}
+		completion_reward = {
+			add_ideas = wfl_super_factory
+		}
+	}
+	focus = {
+		id = wfl_cloning
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		prerequisite = {
+			focus = wfl_nii
+		}
+		relative_position_id = wfl_nii
+		x = -2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = wfl_cloning_idea
+			set_country_flag = wfl_cloning_level_1
+			news_event = {
+				id = wfl_news.3
+				hours = 5
+			}
+			custom_effect_tooltip = wfl_cloning_tt
+		}
+	}
+	focus = {
+		id = wfl_genetic_engineering
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		prerequisite = {
+			focus = wfl_cloning
+		}
+		relative_position_id = wfl_cloning
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#add_ideas = wfl_cloning_idea
+			news_event = {
+				id = wfl_news.4
+				hours = 5
+			}
+			country_event = wfl_event.9
+		}
+	}
+	focus = {
+		id = wfl_tentakles
+		icon = GFX_focus_jap_strike_south
+		cost = 5
+		prerequisite = {
+			focus = wfl_genetic_engineering
+		}
+		relative_position_id = wfl_genetic_engineering
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_political_power = 300
+			WFL = {
+				country_event = wfl_event.2
+			}
+			custom_effect_tooltip = wfl_tentakles_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_rocket_effort
+		icon = GFX_focus_rocketry
+		cost = 5
+		prerequisite = {
+			focus = wfl_nii
+		}
+		relative_position_id = wfl_nii
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				category = rocketry
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 5
+		prerequisite = {
+			focus = wfl_nii
+		}
+		relative_position_id = wfl_nii
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 2
+				uses = 2
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_nuclear_effort_2
+		icon = GFX_focus_wonderweapons
+		cost = 10
+		prerequisite = {
+			focus = wfl_nuclear_effort
+		}
+		relative_position_id = wfl_nuclear_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = nuclear_reactor
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 2
+				uses = 1
+				ahead_reduction = 2
+				category = nuclear
+			}
+			809 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_perimetr
+		icon = GFX_goal_generic_secret_weapon
+		cost = 52
+		prerequisite = {
+			focus = wfl_nuclear_effort_2
+		}
+		prerequisite = {
+			focus = wfl_kosmos_effort
+		}
+		prerequisite = {
+			focus = wfl_radio_effort
+		}
+		prerequisite = {
+			focus = wfl_computing_effort
+		}
+		relative_position_id = wfl_nuclear_effort_2
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = nukes
+			has_tech = advanced_rocket_engines
+			has_tech = advanced_computing_machine
+			has_tech = improved_centimetric_radar
+		}
+		completion_reward = {
+			add_political_power = 150
+			WFL = {
+				country_event = wfl_event.6
+			}
+			set_global_flag = wfl_perimetr_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_computing_effort
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = wfl_electronics_effort
+		}
+		relative_position_id = wfl_electronics_effort
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_completed_focus = wfl_nii
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 2
+				uses = 1
+				category = computing_tech
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_mecha_musume
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = wfl_computing_effort
+		}
+		relative_position_id = wfl_computing_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = main_battle_tank
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = wfl_mecha_girl_influence
+			WFL = {
+				country_event = wfl_event.5
+			}
+			add_equipment_to_stockpile = {
+				type = modern_tank_equipment
+				amount = 1000
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = wfl_electronics_effort
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = wfl_nii
+		}
+		relative_position_id = wfl_nii
+		x = 5
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_completed_focus = wfl_nii
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 2
+				uses = 2
+				category = electronics
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_radio_effort
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = wfl_electronics_effort
+		}
+		relative_position_id = wfl_electronics_effort
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = radio_detection
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 2
+				uses = 1
+				category = radar_tech
+			}
+			811 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_kosmos_effort
+		icon = GFX_focus_rocketry
+		cost = 10
+		prerequisite = {
+			focus = wfl_rocket_effort
+		}
+		relative_position_id = wfl_rocket_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_tech = experimental_rockets
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 2
+				ahead_reduction = 2
+				uses = 1
+				category = rocketry
+			}
+			809 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rocket_site
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = wfl_create_rocket_base
+		icon = GFX_focus_rocketry
+		cost = 20
+		prerequisite = {
+			focus = wfl_kosmos_effort
+		}
+		relative_position_id = wfl_kosmos_effort
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_tech = advanced_rocket_engines
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = rocket_site
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
 		}
 	}
 }
