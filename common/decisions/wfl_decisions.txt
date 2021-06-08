@@ -1905,7 +1905,7 @@ wfl_resources_category = {
 	}
 }
 wfl_resources_puppets_category = {
-	wfl_find_steel_decision = {
+	wfl_find_steel_puppets_puppets_decision = {
 		icon = generic_construction
 		cost = 150
 		days_remove = 30
@@ -1979,7 +1979,7 @@ wfl_resources_puppets_category = {
 			set_country_flag = wfl_find_resources_puppets_run
 		}
 	}
-	wfl_find_aluminium_decision = {
+	wfl_find_aluminium_puppets_decision = {
 		icon = generic_construction
 		cost = 150
 		days_remove = 30
@@ -2050,7 +2050,7 @@ wfl_resources_puppets_category = {
 			set_country_flag = wfl_find_resources_puppets_run
 		}
 	}
-	wfl_find_tungsten_decision = {
+	wfl_find_tungsten_puppets_decision = {
 		icon = generic_construction
 		cost = 150
 		days_remove = 30
@@ -2121,7 +2121,7 @@ wfl_resources_puppets_category = {
 			set_country_flag = wfl_find_resources_puppets_run
 		}
 	}
-	wfl_find_chromium_decision = {
+	wfl_find_chromium_puppets_decision = {
 		icon = generic_construction
 		cost = 150
 		days_remove = 30
@@ -2192,7 +2192,7 @@ wfl_resources_puppets_category = {
 			set_country_flag = wfl_find_resources_puppets_run
 		}
 	}
-	wfl_find_oil_decision = {
+	wfl_find_oil_puppets_decision = {
 		icon = generic_construction
 		cost = 150
 		days_remove = 30
