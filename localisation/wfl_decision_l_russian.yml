@@ -103,6 +103,9 @@ wfl_not_find_resources_in_this_state:0 "Не проводилась развед
 wfl_not_find_resources_run:0 "Нет активных проектов по резведке ресурсов"
 wfl_find_resources_decision.t:0 "Разведать ресурсы в §Y[From.GetName]§!"
 wfl_up_resources_decision.t:0 "Расширение добычи ресурсов в §Y[From.GetName]§!"
+#resources puppets
+wfl_resources_puppets_category:0 "Ресурсы мирионеток"
+wfl_resources_puppets_category_desc:0 "Разведка и разработка ресурсов на териториях подконторольных стран."
 #propaganda
 wfl_propaganda_waifuism_category:0 "Пропаганда Вайфуйзма"
 wfl_propaganda_waifuism_category_desc:0 "Пропаганда вайфуизма в других странах."

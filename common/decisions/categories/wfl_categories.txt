@@ -98,11 +98,20 @@ wfl_resources_category = {
 	icon = generic_prospect_for_resources
 	picture = GFX_wfl_resources_category
 	allowed = {
-		#always = yes
 		original_tag = WFL
 	}
 	visible = {
-		#has_completed_focus = wfl_resources
+		has_tech = excavation1
+	}
+}
+wfl_resources_puppets_category = {
+	priority = 6
+	icon = generic_prospect_for_resources
+	picture = GFX_wfl_resources_category
+	allowed = {
+		original_tag = WFL
+	}
+	visible = {
 		has_tech = excavation1
 	}
 }

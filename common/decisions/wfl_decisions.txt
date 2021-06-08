@@ -1904,7 +1904,366 @@ wfl_resources_category = {
 		}
 	}
 }
-
+wfl_resources_puppets_category = {
+	wfl_find_steel_decision = {
+		icon = generic_construction
+		cost = 150
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_state = {
+				OWNER = {
+					is_subject_of = ROOT
+				}
+				is_fully_controlled_by = OWNER
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_puppets_run
+				}
+			}
+		}
+		visible = {
+			num_subjects > 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@steel
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		remove_effect = {
+			clr_country_flag = wfl_find_resources_puppets_run
+			custom_effect_tooltip = wfl_find_steel_tt
+			hidden_effect = {
+				random_state = {
+					limit = {
+						OWNER = {
+							is_subject_of = ROOT
+						}
+						is_fully_controlled_by = OWNER
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = steel
+						amount = var:res_amount
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_puppets_run
+		}
+	}
+	wfl_find_aluminium_decision = {
+		icon = generic_construction
+		cost = 150
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_state = {
+				OWNER = {
+					is_subject_of = ROOT
+				}
+				is_fully_controlled_by = OWNER
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_puppets_run
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@aluminium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		remove_effect = {
+			clr_country_flag = wfl_find_resources_puppets_run
+			custom_effect_tooltip = wfl_find_aluminium_tt
+			hidden_effect = {
+				random_state = {
+					limit = {
+						OWNER = {
+							is_subject_of = ROOT
+						}
+						is_fully_controlled_by = OWNER
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = aluminium
+						amount = var:res_amount
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_puppets_run
+		}
+	}
+	wfl_find_tungsten_decision = {
+		icon = generic_construction
+		cost = 150
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_state = {
+				OWNER = {
+					is_subject_of = ROOT
+				}
+				is_fully_controlled_by = OWNER
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_puppets_run
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@tungsten
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		remove_effect = {
+			clr_country_flag = wfl_find_resources_puppets_run
+			custom_effect_tooltip = wfl_find_tungsten_tt
+			hidden_effect = {
+				random_state = {
+					limit = {
+						OWNER = {
+							is_subject_of = ROOT
+						}
+						is_fully_controlled_by = OWNER
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = tungsten
+						amount = var:res_amount
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_puppets_run
+		}
+	}
+	wfl_find_chromium_decision = {
+		icon = generic_construction
+		cost = 150
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_state = {
+				OWNER = {
+					is_subject_of = ROOT
+				}
+				is_fully_controlled_by = OWNER
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_puppets_run
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@chromium
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		remove_effect = {
+			clr_country_flag = wfl_find_resources_puppets_run
+			custom_effect_tooltip = wfl_find_chromium_tt
+			hidden_effect = {
+				random_state = {
+					limit = {
+						OWNER = {
+							is_subject_of = ROOT
+						}
+						is_fully_controlled_by = OWNER
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = chromium
+						amount = var:res_amount
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_puppets_run
+		}
+	}
+	wfl_find_oil_decision = {
+		icon = generic_construction
+		cost = 150
+		days_remove = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			any_state = {
+				OWNER = {
+					is_subject_of = ROOT
+				}
+				is_fully_controlled_by = OWNER
+				custom_trigger_tooltip = {
+					tooltip = wfl_not_find_resources_in_this_state
+					NOT = {
+						has_state_flag = wfl_find_resources
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wfl_not_find_resources_run
+				NOT = {
+					has_country_flag = wfl_find_resources_puppets_run
+				}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				check_variable = {
+					var = resource@oil
+					value = 0
+					compare = less_than
+				}
+				add = 1
+			}
+		}
+		remove_effect = {
+			clr_country_flag = wfl_find_resources_puppets_run
+			custom_effect_tooltip = wfl_find_oil_tt
+			hidden_effect = {
+				random_state = {
+					limit = {
+						OWNER = {
+							is_subject_of = ROOT
+						}
+						is_fully_controlled_by = OWNER
+						NOT = {
+							has_state_flag = wfl_find_resources
+						}
+					}
+					set_state_flag = wfl_find_resources
+					randomize_temp_variable = {
+						var = res_amount
+						distribution = uniform
+						min = 10
+						max = 30
+					}
+					add_resource = {
+						type = oil
+						amount = var:res_amount
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = wfl_find_resources_puppets_run
+		}
+	}
+}
 
 
 
