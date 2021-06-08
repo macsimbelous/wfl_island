@@ -2521,36 +2521,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = wfl_slot_bonus
-		icon = GFX_focus_generic_industry_3
-		cost = 10
-		prerequisite = {
-			focus = wfl_industrial_tech
-		}
-		relative_position_id = wfl_industrial_tech
-		x = 0
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
-	focus = {
 		id = wfl_super_factory_focus
 		icon = GFX_focus_generic_industry_3
 		cost = 20
 		prerequisite = {
-			focus = wfl_slot_bonus
+			focus = wfl_industrial_tech
 		}
-		relative_position_id = wfl_slot_bonus
+		relative_position_id = wfl_industrial_tech
 		x = 0
 		y = 1
 		search_filters = {
