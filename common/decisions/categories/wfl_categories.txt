@@ -85,8 +85,8 @@ wfl_urbanisation_category = {
 	priority = 8
 	icon = generic_construction
 	allowed = {
-		#always = yes
-		original_tag = WFL
+		always = no
+		#original_tag = WFL
 	}
 	visible = {
 		#has_country_flag = wfl_elections_flag

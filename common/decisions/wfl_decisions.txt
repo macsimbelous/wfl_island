@@ -1904,6 +1904,7 @@ wfl_resources_category = {
 		}
 	}
 }
+
 wfl_resources_puppets_category = {
 	wfl_find_steel_puppets_puppets_decision = {
 		icon = generic_construction
@@ -2264,8 +2265,6 @@ wfl_resources_puppets_category = {
 		}
 	}
 }
-
-
 
 wfl_campaigning_for_volunteers_category = {
 	wfl_campaigning_for_volunteers_decision = {
@@ -3156,6 +3155,86 @@ wfl_overseas_puppets_category = {
 			add_named_threat = {
 				threat = 5
 				name = wfl_create_puppet_threat
+			}
+		}
+	}
+}
+
+economy_decisions = {
+	wfl_urbanisation_decision = {
+		icon = generic_construction
+		allowed = {
+			#always = yes
+			original_tag = WFL
+		}
+		cost = 150
+		fire_only_once = no
+		days_re_enable = 30
+		available = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						has_state_category = small_island
+						has_state_category = megalopolis
+					}
+				}
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+			}
+		}
+		visible = {
+			any_owned_state = {
+				NOT = {
+					OR = {
+						has_state_category = small_island
+						has_state_category = megalopolis
+					}
+				}
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+			}
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					NOT = {
+						OR = {
+							has_state_category = small_island
+							has_state_category = megalopolis
+						}
+					}
+					is_fully_controlled_by = ROOT
+					#is_owned_by = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				urbanize_state = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				any_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = no
+					}
+				}
 			}
 		}
 	}

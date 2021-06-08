@@ -78,6 +78,7 @@ wfl_mbr_not:0 "Иметь хотя бы одну §YМБР§!"
 wfl_nuclear_strike_tt:0 "Ядерный удар"
 wfl_sputnik_not:0 "Нужно иметь хотя бы один §Yспутник§! на орбите"
 #urbanize
+wfl_urbanisation_decision:0 "Урбанизация регионов"
 wfl_urbanisation_category:0 "Урбанизация"
 wfl_urbanisation_category_desc:0 "Следуя достижениям в строительстве и государственном промышленном управлении, мы считаем, что обладаем средствами, необходимыми для улучшения и расширения потенциала наших регионов."
 wfl_urbanisation_state.t:0 "Урбанизировать §Y[From.GetName]§!"
