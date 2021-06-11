@@ -722,20 +722,6 @@ ideas = {
 				factor = 1
 			}
 		}
-		wfl_marblehead = {
-			allowed = {
-				original_tag = WFL
-			}
-			available = {
-				#has_completed_focus = wfl_minprom
-			}
-			traits = {
-				wfl_naval_base_engineer
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		wfl_aoi_sakurai = {
 			allowed = {
 				original_tag = WFL
@@ -811,7 +797,7 @@ ideas = {
 			}
 			cost = 150
 			research_bonus = {
-				naval_doctrine = 0.1
+				naval_doctrine = 0.15
 			}
 			traits = {
 				naval_theorist
@@ -827,7 +813,7 @@ ideas = {
 			}
 			cost = 150
 			research_bonus = {
-				cat_fleet_in_being = 0.15
+				cat_fleet_in_being = 0.2
 			}
 			traits = {
 				grand_fleet_proponent
@@ -879,6 +865,24 @@ ideas = {
 			}
 			traits = {
 				submarine_specialist
+			}
+		}
+		wfl_marblehead = {
+			ledger = navy
+			allowed = {
+				original_tag = WFL
+			}
+			available = {
+				#has_completed_focus = wfl_minprom
+			}
+			research_bonus = {
+				cat_base_strike = 0.2
+			}
+			traits = {
+				naval_theorist
+			}
+			ai_will_do = {
+				factor = 1
 			}
 		}
 	}
